@@ -1,0 +1,25 @@
+<!-- 视频数据 -->
+{{each data.list as item index}}
+	<li class="news_commonbox textwrap_box ">
+		<div class="left_graphic">
+			<a href="{{item.videoUrl}}" target="_blank">
+				<img src="{{item.imgUrl}}" width="100%">
+				<span class="bg">{{item.playTimeFormat}}</span>
+			</a>
+		</div>
+		<div class="right_inforbox">
+			<h4><a href="{{item.videoUrl}}" target="_blank">{{item.videoName}}</a></h4>
+			<div class="report_box">
+				<div class="report_office">
+					<span class="text">{{item.createTimeFormat}}</span>
+				</div>
+				<div class="time_reply">
+					<label class="time_label">
+						<i class="iconfont">&#xe914;</i>
+						<span class="number">{{item.playCount}}</span>
+					</label>
+				</div>
+			</div>
+		</div>
+	</li>
+{{/each}}

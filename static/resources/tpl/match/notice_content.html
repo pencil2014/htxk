@@ -1,0 +1,38 @@
+{{if data.length==0}}
+	<div class="default_page_box">
+		<div class="default_img_box">
+			<img src="/resources/images/defaultPage/not_rules.png" width="100%">
+		</div>
+		<p class="default_page_tips">
+			暂无赛事公告
+		</p>
+	</div>
+{{else}}
+	<div class="notice_wrap">
+		<div class="notice_list">
+			<ul>
+				{{each data as item index}}
+					{{if item.top==1}}
+						<li class="stick">
+							<a target="_blank" href="/match/notice/detail?noticeId={{item.id}}">
+								<span class="top">置顶</span>
+					{{else if item.top==0}}
+						<li>
+							<a target="_blank" href="/match/notice/detail?noticeId={{item.id}}">
+								<span class="list_icon iconfont">&#xe6bd;</span>
+					{{/if}}
+								<span class="title">
+									{{item.title}}
+								</span>
+								<span class="user_name">{{item.nickName}}</span>
+								<span class="publish">
+									<em>发布于：</em>
+									<em class="time">{{item.createTime}}</em>
+								</span>
+							</a>
+						</li>
+				{{/each}}
+			</ul>
+		</div>
+	</div>
+{{/if}}

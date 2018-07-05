@@ -1,0 +1,318 @@
+body,html{
+	width: 100%;
+	height: 100%;
+}
+.suggest_box{
+	position: absolute;
+	left: 50%;
+	top:50%;
+	width: 600px;
+	height: 420px;
+	margin-top: -200px;
+	margin-left: -300px;
+	border-radius: 3px;
+	background: #fff;
+	z-index: 9;
+}
+.dialog_title{
+	height: 60px;
+	line-height: 60px;
+	padding:0 10px;
+	font-size: 16px;
+	border-bottom: 1px solid #f0f0f0;
+}
+.close_icon{
+	width: 16px;
+	height: 16px;
+	display: block;
+	float: right;
+	background: url(../images/imagetext_manage.png) -141px -106px;
+	margin-right: 10px;
+	margin-top: 20px;
+	cursor: pointer;
+}
+.dialog_label{
+	width: 70px;
+	text-align: right;
+	float: left;
+}
+
+.content_list .item_box{
+	width: 400px;
+	float: left;
+}
+.content_list .item_box textarea{
+	width: 100%;
+	height: 110px;
+	outline: none;
+	background: #fafafa;
+	border:1px solid #e5e5e5;
+	padding:10px;
+}
+.dialog_tips{
+	height: 30px;
+	line-height: 30px;
+	color: #f00;
+}
+.hspace10{
+	width: 10px;
+	height: 10px;
+}
+.content_list .item_box input{
+	height: 38px;
+    background: #fafafa;
+    border: 1px solid #e5e5e5;
+    line-height: 38px;
+	width: 400px;
+	padding:0 10px;
+}
+.report_submit{
+	width: 150px;
+	height: 36px;
+	background: #00bb90;
+	color: #fff;
+	border-radius: 3px;
+	outline: none;
+	border:0;
+	margin:0 auto;
+	display: block;
+}
+.dialog_label span{
+	width: 100%;
+	display: block;
+}
+.mit_mask{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: #787878;
+	background: rgba(0,0,0,0.5);
+}
+/*举报*/
+.report_box{
+	width: 600px;
+	height: 550px;
+	top: 50%;
+	left: 50%;
+	margin-left: -300px;
+	margin-top: -250px;
+	position: absolute;
+	background: #fff;
+	z-index: 9;
+}
+.mgtop5{
+	margin-top:5px;
+}
+.upload_box {
+    width: 128px;
+    height: 128px;
+    float: left;
+    position: relative;
+}
+.webuploader-container{
+	width: 100%;
+	height: 100%;
+	background: #f7f6f6;
+	border:1px dashed #d3d2d2;
+}
+.upload_icon{
+	background: url(../images/personal.png) no-repeat;
+	width: 28px;
+	height: 28px;
+	background-position:-305px -274px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -14px;
+	margin-left: -14px;
+}
+.webuploader-container .webuploader-pick{
+	width: 100%;
+	height: 100%;
+	background: transparent;
+	padding:0;
+}
+.webuploader-container.reupload{
+	height: 20px;
+	overflow: hidden;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+    background: rgba(255,255,255,0.2);
+    border:1px solid rgba(255,255,255,0.2) ;
+    -webkit-transform: translate(0,20px);
+    -ms-transform: translate(0,20px);
+    -o-transform: translate(0,20px);
+    transform: translate(0,20px);
+    -webkit-transition:.5s all ease;
+    -o-transition:.5s all ease;
+    transition:.5s all ease;
+    opacity: 0;
+}
+.upload_box:hover .webuploader-container.reupload{
+	-webkit-transform: translate(0,0);
+	-ms-transform: translate(0,0);
+	-o-transform: translate(0,0);
+	transform: translate(0,0);
+	opacity: 1;
+}
+.report_box  .content_list .item_box textarea{
+	height: 80px;
+}
+/*input框*/
+/*inputbox*/
+    /* icon*/
+    .arrow,.cb .check_icon,.rb .radio_icon {
+    background-image:url(../images/manage_icon.png);
+}
+/* select box*/
+    .sb {
+    border:solid 1px #e5e5e5;
+    cursor:pointer;
+    background-color:#fafafa;
+    position:relative;
+    margin:0 10px 0 0;
+    display:inline-block;
+    border-radius:1px;
+    -moz-border-radius:1px;
+    -webkit-border-radius:1px;
+    font-size: 14px;
+}
+.sb * {
+    color:#333;
+    cursor:pointer;
+}
+.sb .opts {
+    border:1px solid #e5e5e5;
+    cursor:pointer;
+    display:none;
+    height:auto;
+    left:0;
+    max-height:121px;
+    overflow-x:hidden;
+    overflow-y:auto;
+    position:absolute;
+    top:0;
+    width:auto;
+    z-index:99;
+    background: #fff;
+}
+.sb > .selected {
+    padding:0 15px 0 5px;
+    overflow:hidden;
+    position:absolute;
+    cursor:pointer;
+    left:0;
+    border-radius:1px;
+    -moz-border-radius:1px;
+    -webkit-border-radius:1px;
+}
+.sb .opts a {
+    width:auto;
+    height:24px;
+    line-height:24px;
+    padding:0 5px;
+    cursor:default;
+    outline:none;
+    white-space:nowrap;
+    text-decoration:none;
+    display:block;
+    cursor:pointer;
+}
+.sb .opts a.selected {
+    background:#f5f5f5;
+}
+.sb .opts a.none {
+    background:#fff;
+}
+.sb .opts a:hover {
+    background:#f5f5f5;
+    cursor:pointer;
+}
+.sb .sb_icon {
+    width:9px;
+    height:6px;
+    position:absolute;
+    cursor:pointer;
+    right:6px;
+}
+.sb .arrow {
+    background-position:-54px -18px;
+}
+.sb_active .arrow {
+    background-position:-54px -29px;
+}
+/* checkbox box*/
+    .cb {
+    width:65px;
+    height:30px;
+    display:inline-block;
+    *display:inline;
+    zoom:1;
+    cursor:pointer;
+    line-height: 30px;
+}
+.cb .check_icon {
+    width: 14px;
+    height: 14px;
+    background-position: -29px -23px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -5px;
+    margin-right: 5px;
+}
+.cb_active .check_icon {
+    background-position: -22px -43px;
+}
+/* radio box*/
+.rb {
+    width:170px;
+    height:30px;
+    margin:0 auto;
+    padding:0;
+    display:inline-block;
+    *display:inline;
+    zoom:1;
+    vertical-align:middle;
+    cursor:pointer;
+    line-height: 30px;
+}
+.rb .radio_icon {
+    width: 14px;
+    height: 14px;
+    background-position: -50px 0;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -5px;
+    margin-right: 5px;
+}
+.rb_active .radio_icon {
+    background-position: 0 -53px;
+}
+.report_box  .report_submit{
+	margin-top: 30px;
+}
+.vmiddle{
+    vertical-align: middle;
+    margin-top: 5px;
+}
+.report_verity{
+    width: 120px;
+}
+.report_img{
+    width: 120px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 20px;
+}
+.content_list .item_box .report_verity{
+    width: 120px;
+}
+.verify_report{
+    height:20px;
+    font-size: 12px;
+    width: 100%;
+}
+.verify_report .dialog_tips{
+    font-size: 12px;
+}

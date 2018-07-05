@@ -1,0 +1,28 @@
+<!-- 系统消息 -->
+{{each data.list as item index}}
+	<li {{if (item.operationType == 3)}}class="messageLi" style="cursor:pointer;"{{/if}}>
+		<div class="message_contents">
+			<div class="message_me_name">
+				<strong >{{item.msgTitle}}</strong>
+				<i>{{item.createTime}}</i>
+				<div class="clearx"></div>
+			</div>
+			<div class="message_apply_result" hhly-msgId="{{item.id}}" hhly-operationType="{{item.operationType}}" hhly-url="{{(item.url)||''}}" {{(item.operationType == 3)?'style="cursor:pointer;"':''}}>
+			 	<textarea rows="10" cols="10" style="display: none;" class="message_operation_param">{{item.operationParam}}</textarea>
+				<span>{{item.msgContent }}
+					{{if (item.operationType == 3)}}
+						<a href="javascript:;" class="message_detail">查看详情></a>
+					{{/if}}
+				</span>
+				<div class="message_apply_btn fr">
+					{{if (item.userStatus == 1)}}
+						未读
+					{{else if (item.userStatus == 2)}}
+						已读
+					{{/if}}
+				</div>
+				<div class="clearx"></div>
+			</div>
+		</div>
+	</li>
+{{/each}}

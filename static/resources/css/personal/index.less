@@ -1,0 +1,474 @@
+@import 'teamList';
+@import 'content';
+.inline_block(){
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 14px;
+	*display:inline;*zoom:1;
+}
+.ellipsis{
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+}
+.sex{
+	width:16px;
+	height:16px;
+	position: absolute;
+	bottom: 0;
+	right:4px;
+	background:url(../../images/manage_team.png);
+	&.boy{
+		background-position:-94px -106px;
+	}
+	&.girl{
+		background-position:-94px -132px;
+	}
+}
+.personal_container{
+	overflow:hidden;
+	font-size: 0;
+	.left_box,.right_box{
+		.inline_block();
+		box-sizing: border-box;
+	    padding-bottom: 2000px;
+    	margin-bottom: -2000px;
+	}
+	.left_box{
+		width: 895px;
+    	margin-right: 20px;
+    	background:#fff;
+	}
+	.right_box{
+		width: 285px;
+		vertical-align:top;
+	}
+}
+.index_head{
+	background: #fff;
+	padding:25px 20px;
+	border-bottom: 1px solid #ebf0f5;
+	font-size: 0;
+	.index_logo{
+		width:120px;
+		height:120px;
+		border-radius: 50%;
+		margin:0 30px;
+		overflow: hidden;
+		.inline_block();
+	}
+	.index_infor_box{
+		width: 300px;
+		.inline_block();
+		vertical-align:top;
+		margin-top:20px;
+	}
+	.title_box{
+		font-size: 24px;
+		.title{
+			.ellipsis();
+			max-width: 240px;
+		}
+		.attention{
+			vertical-align:middle;
+			font-weight: normal;
+			padding:5px 10px;
+		}
+	}
+	.approve_box{
+		height:14px;
+		margin:10px 0;
+	}
+	.position{
+		color: #999;
+		.iconfont{
+			font-size: 12px;
+		}
+	}
+	.sign_box{
+		color: #999;
+		padding:5px 0;
+	}
+	.attention_infor{
+		.inline_block();
+		vertical-align:bottom;
+		margin-bottom: 20px;
+		margin-left: 30px;
+		ul li{
+		    padding: 0 30px;
+			float: left;
+			height: 46px;
+			border-right: 1px solid #f0f0f0;
+			text-align: center;
+			&.border0{
+				border:0;
+			}
+			.number{
+				font-size: 18px;
+				color: #fc6f00;
+			}
+			.text{
+				color: #999;
+				padding-top: 5px;
+			}
+		}
+	}
+}
+.infor_subtitle {
+	font-size: 16px;
+	color: #666666;
+	font-weight: normal;
+	border-bottom: 2px solid #f2f2f2;
+	height: 40px;
+	line-height: 40px;
+	padding-left: 30px;
+	background: #fff;
+	span {
+		float: left;
+		cursor: pointer;
+		padding: 0 10px;
+		display: inline-block;
+		margin:0 20px;
+		*display:inline;*zoom:1;
+		&:hover,&.on{
+			border-bottom: 2px solid #00bb90;
+			color: #00bb90;
+		}
+		&.hidden{
+			display: none;
+		}
+	}
+}
+.left_content{
+	border-top: 20px solid #ebf0f5;
+	background:#fff;
+	padding:20px 40px 40px;
+	min-height:400px;
+}
+.content_title{
+	font-size: 0;
+	margin:20px 0;
+
+	li{
+		line-height: 18px;
+		width: 55px;
+		text-align: center;
+		margin-right: 20px;
+		padding: 4px 6px;
+		border-radius: 14px;
+		cursor: pointer;
+		.inline_block();
+		&.on{
+		    background: #00bb90;
+    		color: #fff;
+		}
+	}
+}
+
+.cicle_team{
+	ul li.item{
+		font-size: 0;
+		padding:20px;
+		border-bottom:1px solid #e5e5e5;
+	}
+	.logo_box{
+		width:80px;
+		height:80px;
+		.inline_block();
+		a{
+			border-radius: 50%;
+			overflow:hidden;
+			display: block;
+			height:100%;
+		}
+	}
+	.infor_box{
+		.inline_block();
+		margin-left:20px;
+		font-size: 14px;
+		color: #666;
+		.title_box{
+			font-size: 16px;
+			padding-bottom:5px;
+		}
+		.approve_box{
+			display: inline-block;
+			vertical-align:middle;
+			height:14px;
+		}
+		p.list{
+			padding:5px 0;
+			.iconfont{
+				font-size: 12px;
+				color: #999;
+			}
+			.number{
+				color: #fc6f00;
+				margin-right:20px;
+			}
+		}
+	}
+}
+.circle_match{
+	border-top:1px solid #e5e5e5;
+	padding:0 20px;
+	li.item{
+		padding:20px;
+		margin:20px 0;
+		background:#fafafa;
+		font-size: 0;
+		.time{
+			.inline_block();
+			padding:0 10px;
+			font-size: 12px;
+		}
+		.common_ball{
+			.inline_block();
+			width:150px;
+			padding:0 5px;
+			text-align: right;
+			.picture{
+				width:38px;
+				height:38px;
+				overflow:hidden;
+				border-radius:50%;
+				.inline_block();
+			}
+			.name{
+				.inline_block();
+				font-size: 12px;
+				.ellipsis();
+				padding:0 10px;
+				width: 70px;
+			}
+		}
+		.status_box{
+			.inline_block();
+			font-size: 12px;
+			padding:0 5px;
+			text-align:center;
+			width:58px;
+			.vs{
+				font-size: 28px;
+			}
+			.status{
+				color: #ff7437;
+				font-size: 12px;
+				padding-top:5px;
+			}
+		}
+		.home_ball{
+			text-align:left;
+		}
+		.result{
+			.inline_block();
+			font-size: 12px;
+			width:48px;
+			span{
+				padding:5px 8px;
+				color: #fff;
+				margin:0 10px;
+				&.flat{
+					background:#3983e5;
+				}
+				&.win{
+					background:#fa4535;
+				}
+				&.lose{
+					background:#00bb90;
+				}
+			}
+		}
+		.infor_box{
+			.inline_block();
+			font-size: 12px;
+			padding:0 10px;
+			.data{
+				width:90px;
+				display: inline-block;
+				.ellipsis();
+			}
+		}
+	}
+}
+.fans_box{
+	border-top:1px solid #e5e5e5;
+	ul li.item{
+		font-size: 0;
+		padding:20px;
+		border-bottom:1px solid #e5e5e5;
+	}
+	.logo_box{
+		width:80px;
+		height:80px;
+		.inline_block();
+		a{
+			border-radius: 50%;
+			overflow:hidden;
+			display: block;
+			height:100%;
+		}
+	}
+	.infor_box{
+		.inline_block();
+		margin-left:20px;
+		font-size: 14px;
+		color: #666;
+		width:610px;
+		.title_box{
+			font-size: 16px;
+			padding-bottom:5px;
+		}
+		.approve_box{
+			display: inline-block;
+			vertical-align:middle;
+			height:14px;
+		}
+		p.list{
+			padding:5px 0;
+			.iconfont{
+				font-size: 12px;
+				color: #999;
+			}
+		}
+	}
+	.btn_box{
+		.inline_block();
+		vertical-align:top;
+	}
+}
+.approve_content{
+	padding:40px;
+	.pic_box{
+		width:190px;
+		margin:0 auto;
+	}
+	.approve_btn{
+		width:120px;
+		margin:0 auto;
+		margin-top:30px;
+	}
+}
+.approve_infor{
+	padding:20px 40px;
+	.mod_h1{
+		padding:0 0 20px;
+	}
+	.approve_icon_box{
+		.inline_block();
+		height:14px;
+	}
+	p.list{
+		padding:5px 0;
+	}
+	.intro_box{
+		padding-top:5px;
+		.description{
+			margin-left:50px;
+		}
+	}
+}
+// 赛事
+.match_box{
+	padding-top:20px;
+}
+.train_list,.match_list{
+	padding-bottom:30px;
+	li{
+		padding:30px 0;
+		font-size: 0;
+		border-bottom: 1px solid #e5e5e5;
+		&:hover{
+			background:#fafafa;
+		}
+	}
+	.match_logo{
+		overflow:hidden;
+		display: inline-block;
+		vertical-align:middle;
+		margin-left:10px;
+		float: left;
+		img{
+			width:100%;
+			height: 100%;
+		}
+	}
+	.match_infor{
+		display: inline-block;
+		vertical-align:middle;
+		font-size: 14px;
+		width: 520px;
+		margin-left:30px;
+		.title{
+			font-size: 20px;
+			color: #333;
+			height:26px;
+			overflow:hidden;
+			text-overflow:ellipsis;
+		}
+		.details_box{
+			margin-top:15px;
+			.list{
+				padding:6px 0;
+				font-size: 12px;
+				color: #666;
+			}
+		}
+	}
+	.match_btn{
+		display: inline-block;
+		vertical-align:top;
+	    float: right;
+		margin-top: 6px;
+		.btn{
+			padding:6px 20px;
+		}
+	}
+}
+.train_list{
+	.match_logo{
+		width:160px;
+		height: 120px;
+		border-radius: 0px;
+	}
+	
+}
+.match_list{
+	.match_logo{
+		width:122px;
+		height:122px;
+		border-radius: 50%;
+	}
+}
+@media screen and (max-width: 1200px) {
+	.personal_container .left_box{width: 695px;}
+	.fans_box .infor_box{
+		width:350px;
+	}
+	.index_head .index_infor_box{
+		width: 200px;
+	}
+	.circle_match li.item{
+		padding:10px;
+	}
+	.circle_match li.item .time{
+		width:60px;
+		.ellipsis();
+	}
+	.circle_match li.item .common_ball{
+		width:100px;
+	}
+	.circle_match li.item .common_ball .name{
+		width:30px;
+	}
+	.circle_match li.item .infor_box{
+	    padding: 0 5px;
+		width: 90px;
+		.data{
+			width:50px;
+		}
+	}
+	.circle_match li.item .result{
+		width:38px;
+	}
+}

@@ -1,0 +1,357 @@
+.index_manage{
+	float:right;
+	width:954px;
+}
+.index_manage_top{
+	background: #fff;
+    position: relative;
+    height: 212px;
+    width: 958px;
+    overflow: hidden;    
+}
+.index_manage_top li{
+	position:absolute;
+	top:0px;
+}
+#contents{
+	overflow: hidden;
+}
+
+/* --- 首页下一场 --- */
+.index_manage_top .next_competition{
+	padding:70px 30px;
+}
+.next_competition .next_competition_time{
+	font-size: 14px;
+	color:#333;
+	line-height: 40px;
+	margin-right:20px;
+}
+.next_competition .next_competition_club{
+	max-height:76px;
+	vertical-align: middle;
+	overflow:hidden;
+	line-height:40px;
+	font-weight: bold;
+}
+
+.next_competition .next_competition_club:after{
+  content:'';
+  width:0;
+  height:100%;
+  display:inline-block;
+  vertical-align:middle;
+}
+.next_competition .next_competition_club span{
+	font-size: 12px;
+	color:#333;
+	display: inline-block;
+	float:left;
+	display:block;
+	width:112px;
+}
+.next_competition .next_competition_club strong{
+	margin:0 15px;
+	font-size: 28px;
+	color:#333;
+	float:left;
+	font-weight: 400;
+}
+.next_competition .next_competition_club  i{
+	display: inline-block;
+	width:38px;
+	height:38px;
+	float:left;	
+	margin:0 10px;
+}
+.next_competition .next_competition_club img{
+	display:block;
+	width:100%;
+	height:100%;
+}
+.next_competition .next_competition_address{
+	margin:0 10px;
+	width:125px;
+}
+.next_competition .next_competition_address span{
+	display: block;
+	line-height: 19px;
+	font-size: 12px;
+}
+.next_competition .next_competition_handle{
+	line-height: 38px;
+}
+.next_competition .next_competition_handle span{
+	padding:7px 13px;
+	border:1px solid #e5e5e5;
+	margin-left:4px;
+	border-radius:4px;
+}
+.next_competition .next_competition_handle span:hover{
+	color:#fff;
+	background:#00bb90;
+	cursor: pointer;
+	border:0;
+}
+/*  --- 完善球队资料 --- */
+.complete_team{
+	padding:50px 0 33px 0;
+	text-align: center;
+	font-size: 16px;
+	position: relative;
+}
+.complete_team .complete_team_teammate{
+	margin-top: 40px;
+}
+.complete_team .complete_team_teammate i{
+	display: inline-block;
+	padding:0px 20px;
+	height:34px;
+	line-height: 34px;
+	border:1px solid #e5e5e5;
+	color:#666666;
+	font-size: 12px;
+	cursor: pointer;
+	margin-right: 10px;
+}
+.complete_team .complete_team_teammate i:hover{
+	color:#fff;
+	background:#00bb90;
+}
+.complete_team strong{
+	display: block;
+	width:17px;
+	height:17px;
+	position: absolute;
+	top:16px;
+	right:16px;
+	background:url("../images/imagetext_manage.png") no-repeat -140px -105px;
+	cursor: pointer;
+}
+/* --- 无比赛 --- */
+
+.no_competition{
+	padding:60px 0;
+	line-height: 56px;
+	text-align: center;
+}
+.no_competition i{
+	display: inline-block;
+	width:70px;
+	height:56px;
+	float: left;
+	display: none;
+}
+.no_competition i img{
+	display: block;
+	width:100%;
+	height:100%;
+}
+.no_competition span{
+	line-height: 56px;
+	/*margin:0 60px 0 20px;*/
+}
+.no_competition a{
+	line-height: 34px;
+	padding:0 20px;
+	height:34px;
+	background:#01a87c;
+	color:#fff;
+    display: block;
+    width: 120px;
+    margin: 0 auto;
+}
+/* --- 我的喜欢 --- */
+.index_manage_middle{
+	
+	background:#fff;
+	padding:20px 25px 20px 30px;
+	border-top: 20px solid #ebf0f5;
+	border-bottom: 20px solid #ebf0f5;
+}
+.index_manage_middle h2{
+	font-size: 18px;
+	margin-bottom: 20px;
+	font-weight: 400;
+}
+/*  --- 同城用户 --- */
+
+.local_team{
+	width:265px;
+	background:#fff;
+	padding:10px;
+	border:1px solid #e5e5e5;
+	height:352px;
+}
+.local_team h3{
+	padding-left:10px;
+	border-left: 4px solid #01a87c;
+	line-height: 20px;
+	font-size: 16px;
+}
+.local_teams_list{
+	margin-top:20px;
+}
+.local_team .change_other,.recommended_team .change_other{
+	width:60px;
+	display: block;
+	color:#999;
+	font-size: 12px;
+	margin-top:3px;
+}
+.local_team .change_other i{
+	display: inline-block;
+	width:12px;
+	height:12px;
+	margin-right:10px;
+	background:url("../images/sport_icon.png") no-repeat -179px -210px;
+}
+.local_teams_list li{
+	margin-top:20px;
+}
+.local_teams_list li span{
+	display: -webkit-box;
+	display:block;
+	height:46px;
+	margin-left:10px;
+	width:118px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+	line-height: 46px;
+    white-space: nowrap;
+}
+.local_teams_list li .local_head{
+	display: inline-block;
+	width:46px;
+	height:46px;
+}
+.local_teams_list li .local_head img{
+	width:100%;
+	height:100%;
+	border-radius: 50%;
+}
+.local_teams_list li .team_foucs{
+	display: inline-block;
+	line-height: 24px;
+	padding :0 10px;
+	margin-top:10px;
+	border:1px solid #e5e5e5;
+	color:#666;
+	border-radius: 4px;
+}
+
+.local_teams_list li .team_foucs:hover{
+	color:#fff;
+	background:#00bb90;
+}
+.over_foucs{
+	border:1px solid #00bb90;
+	color:#00bb90;
+}
+.recommended_team {
+	margin:0 19px;
+}
+
+.hot_news{
+	width:265px;
+	padding:10px 10px 6px;
+	border:1px solid #eee;
+	height:356px;
+}
+.hot_news h3{
+	padding-left:10px;
+	border-left: 4px solid #01a87c;
+	line-height: 20px;
+	font-size: 16px;
+	margin-bottom:4px;
+}
+
+.hot_news li{
+	padding-left: 13px;
+	height:33px;
+	line-height: 33px;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    position: relative;
+    font-size: 12px;
+}
+.hot_news li a{
+	display: block;
+	width: 245px;
+	overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+}
+.hot_news li i{
+	display: inline-block;
+	width:4px;
+	height:4px;
+	background:url("../images/indexImages/li.png");
+	position: absolute;
+	top:16px;
+	left:0px;
+	border-radius: 50%;
+}
+.hot_news li:hover a{
+	color:#3983e5;
+}
+/* --- 帮助 --- */
+.index_manage_bottom{
+	background:#fff;
+	padding:20px;
+}
+.index_manage_bottom h3{
+	margin:0 0 18px 16px;
+	font-size: 18px;
+	font-weight: 400;
+}
+.help_list li{
+	padding:0 9px;
+	margin-bottom:20px;
+	position: relative;
+	float:left;
+}
+.help_list li span{
+	position: absolute;
+	top:10px;
+	left:30px;
+	color:#fff;
+	font-size: 18px;
+	cursor: pointer;
+}
+.help_list li a{
+	display: block;
+	width:285px;
+	height:195px;
+}
+.help_list li a img{
+	display: block;
+	width:100%;
+	height:100%;
+}
+
+
+/* --- 媒体查询 --- */
+@media screen and (max-width:1200px){
+	.index_manage{
+		width:754px;
+	}
+	.hot_news{
+		display: none;
+	}
+	.index_manage_top{
+		width:758px;
+	}
+	.next_competition{
+		padding:70px 6px;
+	}
+	.next_competition .next_competition_club span{
+		width:82px;
+	}
+	.index_manage_top .next_competition{
+		padding:70px 10px;
+	}
+}

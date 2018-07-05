@@ -1,0 +1,18 @@
+<!--  用户操作列表模板 -->
+{{if data.fightBall.isManager==1}}
+  <ul class="handle_title clearfix">
+    <li class="active">
+      待处理（<span>{{data.noHandler.total}}</span>人）
+    </li>
+    <li>
+      已加入（<span>{{data.hasHandler.total}}</span>人）
+    </li>
+    <div class="fr handle_btn_box"></div>
+  </ul>
+  {{else}}
+  <ul class="handle_title clearfix">
+    <li>
+      已加入（<span>{{data.hasHandler.total}}</span>人）
+    </li>
+  </ul>
+{{/if}}

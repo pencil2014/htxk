@@ -1,0 +1,17 @@
+<h1 class="intro_title">{{intro.title}}</h1>
+<div class="intro_desc">
+	{{each intro.desc as item index}}
+    	<p class="indent">{{item}}</p>
+    {{/each}}
+</div>
+<h1 class="intro_title condition">{{intro.subTitle}}</h1>
+<div class="condition_box">
+    <div class="left_img">
+        <img src="{{intro.bigThumb}}" width="100%" />
+    </div>
+    <div class="right_img">
+	    {{each intro.smallThumb as thumb j}}
+	        <img  src="{{thumb}}" width="100%" {{if j%2==1}}class="mgin10"{{/if}} />
+        {{/each}}
+    </div>
+</div>

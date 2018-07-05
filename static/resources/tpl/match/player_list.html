@@ -1,0 +1,56 @@
+{{if list.length}}
+<li class="title">
+  <dl>
+    <dt class="user">用户</dt>
+    <dt class="name">姓名</dt>
+    <dt class="time">报名时间</dt>
+    <dt class="edit"></dt>
+  </dl>
+</li>
+{{each list as item index}}
+	{{if index%2==0}}
+		<li class="bg">
+	{{else}}
+		<li>
+	{{/if}}
+		<dl>
+			<dt class="user">
+				<div class="photo">
+					{{if item.iconUrl}}
+						<img src="{{item.iconUrl}}" width="100%">
+					{{else}}
+						<img src="/resources/images/default_photo.jpg" width="100%">	
+					{{/if}}
+					{{if item.sex==2}}
+						<div class="sex girl"></div>
+					{{else}}
+						<div class="sex boy"></div>
+					{{/if}}
+				</div>
+				<div class="nick_name">{{item.nickName}}</div>
+				{{if item.pcImgtxtUrl}}
+					<div class="approve_icon">{{item.pcImgtxtUrl}}</div>
+				{{/if}}
+			</dt>
+			<dt class="name">{{item.commingName}}</dt>
+			<dt class="time">{{item.joinTimeFormat}}</dt>
+			{{if item.status==1}}
+				<dt class="edit">
+					<div class="exit_btn">退出</div>
+				</dt>
+			{{/if}}
+		</dl>
+	</li>
+{{/each}}
+{{else}}
+  {{if page == 1}}
+  <div class="default_page_box">
+		<div class="default_img_box">
+			<img src="/resources/images/defaultPage/not_rules.png" width="100%">
+		</div>
+		<p class="default_page_tips">
+			没有相关数据
+		</p>
+	</div>
+  {{/if}}
+{{/if}}

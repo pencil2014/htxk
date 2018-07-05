@@ -1,0 +1,419 @@
+.mit_merchants {
+  width: 1200px;
+  margin: 0 auto;
+}
+.merchants_head {
+  padding: 30px;
+  background: #fff;
+  font-size: 0;
+}
+.merchants_head .left_ad_pic {
+  width: 520px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.merchants_head .right_infor {
+  width: 570px;
+  display: inline-block;
+  vertical-align: top;
+  font-size: 14px;
+  margin-left: 40px;
+  position: relative;
+  min-height: 290px;
+}
+.merchants_head .right_infor .title {
+  font-size: 24px;
+  font-weight: normal;
+  line-height: 30px;
+}
+.merchants_head .right_infor .infor_tips {
+  margin: 10px 0px 12px;
+}
+.merchants_head .right_infor .infor_tips p {
+  font-size: 12px;
+  color: #999;
+  line-height: 25px;
+}
+.merchants_head .right_infor .infor_content {
+  background: #fafafa;
+  padding: 10px;
+  overflow: hidden;
+}
+.merchants_head .right_infor .infor_content ul li.list {
+  padding: 5px 0;
+  color: #666;
+  float: left;
+  width: 50%;
+}
+.merchants_head .right_infor .infor_content ul li.list .iconfont {
+  padding: 0 5px;
+  color: #ccc;
+}
+.merchants_head .right_infor .btn_wrap {
+  position: absolute;
+  bottom: 0px;
+}
+.merchants_head .right_infor .btn_box {
+  margin-top: 30px;
+  float: left;
+}
+.merchants_head .right_infor .share_box {
+  float: left;
+  margin-top: 40px;
+  margin-left: 30px;
+}
+.merchants_head .right_infor .share_box a {
+  color: #999;
+  margin-right: 20px;
+}
+.merchants_content {
+  margin-top: 20px;
+  overflow: hidden;
+}
+.merchants_content .left_box {
+  background: #fff;
+  box-sizing: border-box;
+}
+.infor_subtitle {
+  font-size: 16px;
+  color: #666666;
+  font-weight: normal;
+  border-bottom: 2px solid #f2f2f2;
+  height: 40px;
+  line-height: 40px;
+  padding-left: 30px;
+  padding-top: 10px;
+}
+.infor_subtitle span {
+  float: left;
+  cursor: pointer;
+  padding: 0 10px;
+  display: inline-block;
+  margin: 0 20px;
+  *display: inline;
+  *zoom: 1;
+}
+.infor_subtitle span:hover,
+.infor_subtitle span.on {
+  border-bottom: 2px solid #00bb90;
+  color: #00bb90;
+}
+.infor_subtitle span.hidden {
+  display: none;
+}
+.detail_common {
+  padding: 20px 0;
+  clear: both;
+}
+.detail_box {
+  padding: 12px 50px;
+}
+.detail_box .mod_h1 {
+  padding: 20px 0;
+}
+.detail_box .basic_message ul.message_box {
+  overflow: hidden;
+}
+.detail_box .basic_message ul.message_box li {
+  margin: 10px 0px;
+  color: #666;
+  width: 33%;
+  float: left;
+}
+.detail_box .basic_message ul.message_box li i {
+  color: #ccc;
+  padding-left: 15px;
+}
+.detail_box .basic_message ul.message_box li span a {
+  color: #3983E5;
+}
+.detail_box .basic_message ul.merchants_box li {
+  width: 100%;
+}
+.detail_box .basic_message .p_con p {
+  line-height: 25px;
+  color: #666;
+  text-indent: 2rem;
+}
+.direct_box {
+  padding: 12px 0;
+}
+.direct_box .unit_label {
+  padding-left: 15px;
+  vertical-align: top;
+  float: left;
+}
+.direct_box .unit_box {
+  display: inline-block;
+  vertical-align: middle;
+}
+.direct_box .unit_box li {
+  padding-right: 20px;
+}
+.direct_box .direct_item {
+  display: table;
+}
+.mask_message {
+  padding-left: 15px;
+  color: #666;
+}
+.mask_message .mask_label {
+  display: block;
+  float: left;
+}
+.mask_message span.message {
+  display: block;
+  margin-left: 45px;
+  line-height: 24px;
+  max-width: 925px;
+}
+.mask_message span.message img {
+  width: 100%;
+}
+.detail_explain {
+  border-bottom: 1px solid #f2f2f2;
+}
+.space_bottom {
+  width: 10px;
+  height: 200px;
+}
+.notice_wrap {
+  padding: 20px 50px;
+}
+.notice_list {
+  font-size: 0;
+}
+.notice_list ul li {
+  height: 70px;
+  line-height: 70px;
+  border-bottom: 1px solid #f2f2f2;
+}
+.notice_list ul li:hover {
+  background: #fafafa;
+}
+.notice_list ul li.stick span.title {
+  width: 772px;
+}
+.notice_list ul li span {
+  display: inline-block;
+  vertical-align: middle;
+}
+.notice_list ul li span.top {
+  width: 44px;
+  height: 22px;
+  line-height: 22px;
+  text-align: center;
+  background: #fc6f00;
+  border-radius: 3px;
+  color: #fff;
+  margin-left: 5px;
+  margin-right: 12px;
+  font-size: 14px;
+}
+.notice_list ul li span.title {
+  width: 800px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 14px;
+  color: #666;
+}
+.notice_list ul li span.user_name {
+  max-width: 60px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 12px;
+  color: #999;
+  margin: 0 12px;
+  height: 70px;
+}
+.notice_list ul li span.publish {
+  font-size: 12px;
+  color: #999;
+  float: right;
+  margin-right: 12px;
+}
+.notice_list ul li span.list_icon {
+  margin-left: 5px;
+  margin-right: 12px;
+  color: #ccc;
+}
+.player_wrap {
+  padding: 35px 50px;
+}
+.player_wrap .mod_h1 {
+  padding: 15px 0;
+}
+.player_wrap .mod_h1 .account {
+  font-size: 14px;
+  font-weight: normal;
+  color: #999999;
+}
+.player_list {
+  padding-bottom: 30px;
+}
+.player_list li {
+  overflow: hidden;
+}
+.player_list li.bg {
+  background: #f5f5f5;
+}
+.player_list li:hover {
+  background: #eee;
+}
+.player_list li.title dt {
+  height: 69px;
+  line-height: 69px;
+}
+.player_list li.title dt.user {
+  padding-left: 110px;
+  font-size: 14px;
+}
+.player_list li dt {
+  width: 28%;
+  float: left;
+  box-sizing: border-box;
+  color: #666666;
+  height: 60px;
+  line-height: 60px;
+}
+.player_list li dt.user {
+  padding-left: 60px;
+  font-size: 0;
+}
+.player_list li dt.user .photo {
+  width: 37px;
+  position: relative;
+  height: 40px;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 14px;
+}
+.player_list li dt.user .photo img {
+  border-radius: 50%;
+}
+.player_list li dt.user .photo .sex {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: url(../../images/manage_team.png);
+}
+.player_list li dt.user .photo .sex.boy {
+  background-position: -94px -106px;
+}
+.player_list li dt.user .photo .sex.girl {
+  background-position: -94px -132px;
+}
+.player_list li dt.user .nick_name {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 14px;
+  padding: 0 10px;
+}
+.player_list li dt.user .approve_icon {
+  display: inline-block;
+  height: 14px;
+  vertical-align: middle;
+  font-size: 14px;
+}
+.player_list li dt.edit {
+  width: 16%;
+}
+.player_list li dt.edit .exit_btn {
+  display: inline-block;
+  padding: 5px 15px;
+  border: 1px solid #e5e5e5;
+  border-radius: 3px;
+  background: #fff;
+  color: #666;
+  line-height: 19px;
+  cursor: pointer;
+}
+.details_wrap {
+  overflow: hidden;
+  min-height: 300px;
+}
+.details_wrap .default_page_box {
+  padding: 70px 0;
+}
+.remark_box {
+  overflow: hidden;
+}
+.rules_box {
+  padding: 50px;
+}
+.notice_box {
+  background: #fff;
+  padding: 40px;
+  box-sizing: border-box;
+}
+.notice_title {
+  font-size: 24px;
+  text-align: center;
+  margin-top: 50px;
+}
+.notice_subinfor {
+  padding: 20px;
+  font-size: 14px;
+  color: #999;
+  text-align: center;
+}
+.notice_subinfor span {
+  padding: 0 10px;
+}
+.set_con .layui-layer-btn {
+  display: none;
+}
+.layui-layer-content .callUsMain {
+  width: 450px;
+  margin: 0 auto;
+}
+.layui-layer-content .usInfo {
+  background: #fafafa;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: left;
+}
+.layui-layer-content .usInfo ul {
+  overflow: hidden;
+}
+.layui-layer-content .usInfo ul > li {
+  line-height: 30px;
+  color: #666;
+}
+.layui-layer-content .usForm {
+  margin-top: 20px;
+}
+.layui-layer-content .usForm .infor_box {
+  text-align: left;
+  overflow: hidden;
+}
+.layui-layer-content .usForm .infor_box input,
+.layui-layer-content .usForm .infor_box textarea {
+  width: 100%;
+}
+.layui-layer-content .usForm .infor_box .item_box {
+  float: left;
+  width: 355px;
+  min-height: 60px;
+  padding: 0px;
+}
+.layui-layer-content .usForm .infor_box .label_title {
+  display: inline-block;
+  width: 75px;
+  text-align: right;
+  margin-right: 20px;
+  vertical-align: top;
+  line-height: 40px;
+  float: left;
+}
+.layui-layer-content .usForm .item_box {
+  display: inline-block;
+}
+.layui-layer-content .usForm textarea.error {
+  color: #333;
+  border-color: #ff0808;
+}
+@media screen and (max-width: 1200px) {
+}

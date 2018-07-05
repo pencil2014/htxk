@@ -1,0 +1,67 @@
+<div class="mod_sort">
+    <!-- 分类条件搜索 -->
+    <div class="race_sort">
+        <span class="sort_name">比赛项目：</span>
+        <div class="sort_con" id="type_wrap"></div>
+    </div>
+    <script type="text/html" id="type_con">
+        <ul class="sort_ul typeClick">
+            {{each data as val index}}
+                <li>
+                    <i class="check_i"></i>
+                    <span data-value={{val.value}}>{{val.label}}</span>
+                </li>
+            {{/each}}
+        </ul>
+        <span class="sort_more">更多<i class="icon iconfont">&#xe617;</i></span>
+    </script>
+    <div class="race_sort">
+        <span class="sort_name">比赛地点：</span>
+        <div class="sort_con" id="area_wrap"></div>
+        <script type="text/html" id="area_con">
+            <ul class="sort_ul areaClick">
+                {{each data as val index}}
+                    <li>
+                        <i class="check_i"></i>
+                        <span data-area={{val.areaId}}>{{val.title}}</span>
+                    </li>
+                {{/each}}
+            </ul>
+            <span class="sort_more">更多<i class="icon iconfont">&#xe617;</i></span>
+        </script>
+    </div>
+    <div class="race_sort">
+        <span class="sort_name">金额范围：</span>
+        <div class="sort_con set_money" id="money_wrap"></div>
+        <script type="text/html" id="money_con">
+            <ul class="sort_ul moneyClick">
+                {{each data as val index}}
+                    <li>
+                        <span data-money={{val.moneyValue}}>{{val.moneyName}}</span>
+                    </li>
+                {{/each}}
+            </ul>
+            <div class="set_con">
+                <input type="text" name="startMoney" maxlength="4" onKeyUp="this.value=this.value.replace(/\D/g,'')">
+                <span>-</span>
+                <input type="text" name="endMoney" maxlength="4" onKeyUp="this.value=this.value.replace(/\D/g,'')">
+                <span>万</span>
+                <input type="button" name="" value="确定" class="btn btn_return btn_md" id="money_btn">
+            </div>
+        </script>
+    </div>
+    <div class="race_sort">
+        <span class="sort_name date_label">时间筛选：</span>
+        <div class="sort_date">
+            <div class="date_wrap">
+                <input class="datainp wicon" id="inpstart" type="text" placeholder="开始日期" value=""  readonly>
+                <i class="icon iconfont">&#xe748;</i>
+            </div>
+            <span>至</span>
+            <div class="date_wrap">
+                <input class="datainp wicon" id="inpend" type="text" placeholder="结束日期"  readonly>
+                <i class="icon iconfont">&#xe748;</i>
+            </div>
+        </div>
+    </div>
+</divbtn_return

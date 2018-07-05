@@ -1,0 +1,407 @@
+.set_con .layui-layer-btn {
+  display: none;
+}
+.merchants-order-head {
+  padding: 30px 60px;
+  background: #FFFFFF;
+}
+.merchants-order-head .left {
+  width: 250px;
+  height: 140px;
+  float: left;
+  overflow: hidden;
+}
+.merchants-order-head .left .imgbox {
+  width: 250px;
+  height: 140px;
+  overflow: hidden;
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+}
+.merchants-order-head .left .imgbox img {
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+.merchants-order-head .middle {
+  width: 530px;
+  float: left;
+  margin-left: 40px;
+  line-height: 20px;
+}
+.merchants-order-head .middle h2 {
+  font-weight: normal;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+.merchants-order-head .middle .time {
+  font-size: 14px;
+}
+.merchants-order-head .middle .sub {
+  font-size: 14px;
+  line-height: 30px;
+  margin-top: 10px;
+}
+.merchants-order-head .middle .sub .money {
+  font-size: 24px;
+  color: #fc6f00;
+  display: inline-block;
+}
+.merchants-order-head .middle .sub .bid {
+  padding: 5px 10px;
+  font-size: 14px;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  display: inline-block;
+  line-height: 18px;
+  max-width: 400px;
+  word-break: break-all;
+}
+.merchants-order-head .right {
+  float: right;
+  width: 230px;
+}
+.merchants-order-head .right .biderror .erroricon {
+  float: left;
+  width: 30px;
+  margin-top: 5px;
+}
+.merchants-order-head .right .biderror .text {
+  width: 190px;
+  float: right;
+  line-height: 24px;
+}
+.merchants-order-head .right .biderror .text p {
+  font-size: 14px;
+}
+.merchants-order-head .right .biderror .text p .lt {
+  width: 70px;
+  display: inline-block;
+}
+.merchants-order-head .right .biderror .text li {
+  padding-left: 8px !important;
+  font-size: 12px;
+  position: relative;
+  padding-left: 15px;
+}
+.merchants-order-head .right .biderror .text li:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 4px;
+  height: 4px;
+  background: #333;
+  border-radius: 50%;
+}
+.merchants-order-head .right .biderror .text li .lt {
+  width: 60px;
+  display: inline-block;
+}
+.workflow-title {
+  font-size: 18px;
+  font-weight: bold;
+  padding-left: 20px;
+}
+.order-workflow {
+  padding-left: 40px;
+  margin-top: 40px;
+}
+.order-workflow li {
+  padding-left: 50px;
+  padding-bottom: 20px;
+  position: relative;
+  min-height: 70px;
+}
+.order-workflow li:after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 10px;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: #cdcdcd;
+  z-index: 5;
+}
+.order-workflow li:last-child:after {
+  background: #FFFFFF;
+}
+.order-workflow li .item {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 21px;
+  height: 21px;
+  line-height: 21px;
+  text-align: center;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  background: #00bb90;
+  color: #FFFFFF;
+  z-index: 6;
+}
+.order-workflow li .content p {
+  font-size: 14px;
+  line-height: 20px;
+  color: #666;
+}
+.order-workflow li .content p.green {
+  color: #00bb90;
+}
+.order-workflow li .content .mr10 {
+  margin-right: 10px;
+}
+.order-workflow li.error .item {
+  background: #fc6f00;
+}
+.order-workflow li.error .content p {
+  color: #fc6f00 !important;
+}
+.order-workflow li.disabled .item {
+  background: #CDCDCD;
+}
+.order-workflow li.disabled .content p {
+  color: #cdcdcd !important;
+}
+.order-workflow li .content .btn_end {
+  color: #999;
+  background: #ddd;
+}
+.merchants_content .left_box {
+  width: 100%;
+}
+.fodder-table {
+  width: 100%;
+  font-size: 14px;
+}
+.fodder-table img {
+  width: 80px;
+  height: 80px;
+}
+.fodder-table tr td {
+  padding: 20px 12px;
+  border-bottom: 1px solid #e5e5e5;
+}
+.fodder-table tr.mheight td {
+  height: 80px;
+}
+.fodder-table tr.title td {
+  padding-top: 56px;
+}
+.order_show .show_item {
+  width: 100%;
+  line-height: 30px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+.order_show .show_item .title {
+  width: 140px;
+  text-align: right;
+  float: left;
+  margin-right: 10px;
+}
+.order_show .show_item .text {
+  max-width: 950px;
+  float: left;
+}
+.order_show .show_item:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+.order_show .show_item.top {
+  color: #000000;
+  font-size: 16px;
+  font-weight: bold;
+}
+.order_show .show_item.red {
+  color: #ff0808;
+}
+.order_show .show_item.mb30 {
+  margin-bottom: 30px;
+}
+.uploadPop {
+  width: 100%;
+  padding: 50px 0;
+  border: 2px dashed #cdcdcd;
+  border-radius: 30px;
+}
+.up_progress .progress_bar {
+  display: block;
+  width: 100%;
+  background: #eaeaea;
+  height: 10px;
+  margin: 20px 0;
+  position: relative;
+  border-radius: 4px;
+}
+.text-left {
+  text-align: left;
+}
+.up_progress .cancel_up {
+  margin-left: 0px;
+}
+.fodder-rule {
+  font-size: 12px;
+  color: #999;
+  line-height: 24px;
+  padding: 70px 0;
+}
+.pt50 {
+  padding-top: 50px;
+}
+.pt40 {
+  padding-top: 40px;
+}
+#fileTypeInfo {
+  color: red;
+  text-align: left;
+  margin-bottom: 10px;
+  margin-top: -20px;
+}
+.contract_table {
+  border: 1px #F1F1F1 solid;
+  width: 100%;
+  margin-bottom: 50px;
+}
+.contract_table thead tr th {
+  height: 42px;
+  background: #F5F5F5;
+  font-size: 12px;
+  color: #666;
+  font-weight: 500;
+  box-sizing: border-box;
+}
+.contract_table tbody tr td {
+  height: 70px;
+  text-align: center;
+  font-size: 14px;
+  color: #333;
+  border-bottom: 1px #F1F1F1 solid;
+}
+.contract_table_item {
+  margin-top: 60px;
+  padding-bottom: 50px;
+  position: relative;
+}
+.contract_table_item p.item_title {
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: 333;
+}
+.contract_table_item .page_box {
+  z-index: 9999;
+}
+.pay_table.contract_table {
+  border: 0px;
+  border-top: 1px #F1F1F1 solid;
+}
+.pay_table.contract_table .next_style {
+  font-weight: 700;
+  color: #01a87c;
+}
+.pay_table.contract_table .last_style {
+  display: inline-block;
+  padding: 0px 4px;
+  background: red;
+  color: white;
+  font-size: 12px;
+}
+.pay_table.contract_table .cb input {
+  display: none;
+}
+.pay_table.contract_table .cb input[type="checkbox"]:checked + .check_icon {
+  background-position: -112px -40px;
+}
+.pay_table.contract_table tfoot.pay_tfoot .pay_box {
+  width: 80px;
+  text-align: center;
+  margin-top: 20px;
+}
+.pay_table.contract_table tfoot.pay_tfoot tr td {
+  height: 70px;
+  text-align: left;
+  overflow: hidden;
+}
+.pay_table.contract_table tfoot.pay_tfoot tr td div {
+  float: left;
+}
+.pay_table.contract_table tfoot.pay_tfoot tr td .pay_con {
+  margin-right: 90px;
+}
+.pay_table.contract_table tfoot.pay_tfoot tr td .pay_con span {
+  font-size: 22px;
+  color: orange;
+}
+.pay_table.contract_table tfoot.pay_tfoot tr td .pay_con,
+.pay_table.contract_table tfoot.pay_tfoot tr td .pay_btn {
+  float: right;
+}
+.pay_table.contract_table tbody.pay_tbody td.title_item {
+  text-align: left;
+}
+.pay_table.contract_table tbody.pay_tbody .title_sub {
+  font-weight: bold;
+}
+.contract_table tbody tr td,
+.contract_table_item .contract_table tbody tr td {
+  padding: 20px 10px;
+  text-align: center;
+  border-bottom: 1px #f5f5f5 solid;
+}
+.contract_table tbody tr.hr_hover:hover,
+.contract_table_item .contract_table tbody tr.hr_hover:hover {
+  cursor: pointer;
+  background: #f7f7f7;
+}
+.contract_table_item .contract_table tbody td {
+  height: 100px;
+}
+.auditMain {
+  padding: 0px 30px;
+}
+.auditMain .infor_box {
+  text-align: left;
+}
+.auditMain .infor_box .rb {
+  width: 48%;
+  margin-bottom: 20px;
+}
+.auditMain .form_input textarea {
+  width: 100%;
+  min-height: 200px;
+}
+.auditMain .btn_box {
+  text-align: center;
+  margin: 40px auto 30px;
+}
+.auditMain .btn_box .btn {
+  min-width: 150px;
+}
+.contract_audit .btn_wrap {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  background: white;
+  padding: 20px 0px;
+  border-top: #F0F0F0 1px solid;
+}
+.contract_audit .btn_wrap .btn_con {
+  width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+.contract_audit .btn_wrap .btn_con .btn {
+  margin-right: 10px;
+}

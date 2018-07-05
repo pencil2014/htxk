@@ -1,0 +1,57 @@
+<!-- 拼球详情模板 -->
+<div class="clearfix">
+    <ul class="fight_ball_plan fl ">
+      <li class="plan_title">
+        <i class="iconfont first_font">&#xe75f;</i>
+        <span>{{data.fightBall.title ? data.fightBall.title : "无"}}</span>
+      </li>
+      <li>
+        <i class="iconfont">&#xe6c6;</i>
+        <span>{{data.fightBall.playNumName ? data.fightBall.playNumName : "无"}}</span>
+      </li>
+      <li>
+        <i class="iconfont">&#xe60f;</i>
+        <span>{{data.fightBall.showTime ? data.fightBall.showTime : "无"}}</span>
+      </li>
+      <li>
+        <i class="iconfont">&#xe627;</i>
+        <span>{{data.fightBall.place ? data.fightBall.place : "无"}}</span>
+      </li>
+      <li>
+        <i class="iconfont">&#xe65e;</i>
+        <span>{{data.fightBall.payMethodName ? data.fightBall.payMethodName : "无" }}</span>
+      </li>
+    </ul>
+    <div class="fight_end_time fr">
+      {{if data.fightBall.status == 1}}
+        <i class="iconfont">&#xe60f;</i>
+        <span>距报名结束<b class="end_time">{{data.fightBall.leaveTime}}</b></span>
+        <b class="fight__ball_state">
+          <span>{{data.fightBall.statusName}}</span>
+        </b>
+      {{else}}
+        <b class="fight__ball_state">
+          <span>{{data.fightBall.statusName}}</span>
+        </b>
+      {{/if}}
+    </div>
+</div>
+<hr />
+<ul class="fight_ball_plan">
+  <li>
+    <i class="iconfont icon-baozhang">&#xe63c;</i>
+    <span>上场时间保障：{{data.fightBall.playTimeName}}</span>
+  </li>
+  <li>
+    <i class="iconfont icon-person">&#xe619;</i>
+    <span>人数：{{data.fightBall.playNumName}}</span>
+  </li>
+  <li>
+    <i class="iconfont icon-lianxi">&#xe6df;</i>
+    <span>联系方式： {{data.fightBall.phone}}</span>
+  </li>
+  <li>
+    <i class="iconfont icon-addmark">&#xe625;</i>
+    <span><b class="remark">备注：</b><b class="remark_content">{{data.fightBall.remarks}}</b></span>
+  </li>
+</ul>

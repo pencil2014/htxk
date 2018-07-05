@@ -1,0 +1,11 @@
+<ul class="cooperate_box">
+{{each business.list as item }}
+    <li>
+        <div class="cooperate">
+            <div class="mod_h1">{{item.title}}</div>
+            <p>电话：{{item.phone}}</p>
+            <p>邮箱：{{item.email}}</p>
+        </div>
+    </li>
+{{/each}}
+</ul>

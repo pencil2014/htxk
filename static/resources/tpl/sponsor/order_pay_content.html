@@ -1,0 +1,111 @@
+<div class="detail_box pt40 contract_box">
+	<table class="pay_table contract_table">
+	    <thead>
+	      <tr>
+	        <!-- <th width="80px"></th> -->
+	        <th>招商名称/权益名称</th>
+	        <th>价格</th>
+	        <th>支付状态</th>
+	        <th>约定支付时间</th>
+	        <th>操作</th>
+	      </tr>
+	    </thead>
+	    <tbody class="contract_wrap pay_tbody">
+	    {{if data.list.length > 0}}
+		    {{each data.list as item index}}
+		      <tr class="hr_hover">
+<!-- 		        <td> 多选支付页以后再做
+		          <label class="cb">
+		            <input type="checkbox" name="pay_code" value={{index+1}} data-code={{item.goodsSku}} data-money={{item.investmentAmount / 100}}>
+		            <div class="check_icon"></div>
+		          </label>
+		        </td> -->
+		        <td width="300px" class="title_item">
+		          {{item.title}}/{{item.rightsName}}
+		          {{if item.sponsorType == 1}}
+		          	<p class="title_sub">第{{item.goodsNumber}}期</p>
+		          {{/if}}
+		        </td>
+		        <td>{{item.investmentAmount / 100}}元</td>
+		        <td>
+		        <!-- goodsStatus: 1：待支付；2：支付成功；3：支付失败；4：支付超时；  sponsorType: 1是现金 2是实物 -->
+		        {{if item.sponsorType == 2}}
+		        	{{if item.goodsStatus == 2}}
+		        	支付成功
+		        	{{else}}
+		        	线下支付
+		        	{{/if}}
+		        {{else}}
+		        	{{if item.goodsStatus == 1}}
+		        	待支付
+		        	{{else if item.goodsStatus == 2}}
+		        	支付成功
+		        	{{else if item.goodsStatus == 3}}
+		        	支付失败
+		        	{{else}}
+		        	支付超时
+		        	{{/if}}
+		        {{/if}}
+		        </td>
+		        <td>
+		          {{item.payTime}}
+		          {{if item.goodsStatus != 2}}
+		          	<p><span class="{{item.formatTime < item.nowTime?'last_style':'next_style'}}">{{item.lastTime}}</span></p>
+		          {{/if}}
+		        </td>
+		        <td>
+		        	{{if item.sponsorType == 1}}
+			        	{{if item.goodsStatus == 1}}
+			        	<button class="btn btn_main btn_md payPage " data-address={{item.addressId}} data-code={{item.goodsSku}} data-money={{item.investmentAmount}}>立即支付</button>
+			        	{{else if item.goodsStatus == 2}}
+			        	支付成功
+			        	{{else if item.goodsStatus == 3 || item.goodsStatus == 4 || item.goodsStatus == 0}}
+			        	<button class="btn btn_main btn_md payPage " data-address={{item.addressId}} data-code={{item.goodsSku}} data-money={{item.investmentAmount}}>重新支付</button>
+			        	{{/if}}
+		        	{{/if}}
+		        </td>
+		      </tr>
+		    {{/each}}
+	    {{else}}
+			<tr>
+				<td colspan="5">
+					<div class="default_page_box">
+						<div class="default_img_box">
+							<img src="/resources/images/defaultPage/not_plan.png" width="100%">
+						</div>
+						<p class="default_page_tips">
+							暂无数据信息
+						</p>
+					</div>
+				</td>
+			</tr>
+		{{/if}}
+	    </tbody>
+<!-- 	    <tfoot class="pay_tfoot"> 多选支付页以后再做
+	      <tr>
+	        <td>
+	          <div class="pay_box">
+	            <label class="cb">
+	              <input type="checkbox" id="allCheck">
+	              <div class="check_icon"></div>
+	            </label>
+	          </div>
+	        </td>
+	        <td>
+	          全选
+	        </td>
+	        <td colspan="3">
+	          <div class="pay_btn">
+	            <button class="btn btn_main btn_lg" id="payPage">立即支付</button>
+	          </div>
+	          <div class="pay_con">
+	            <p>已选择了<i id="totalItem">0</i>笔款项，总价：<span>￥<span id="totalNum">0</span></span></p>
+	          </div>
+	        </td>
+	      </tr>
+	    </tfoot> -->
+  	</table>
+	{{if data.hasNextPage}}
+		<div class="pay_page_box" hhly-type="2" hhly-tpl="payPage_tpl" hhly-total='{{data.total}}' hhly-page="{{data.page}}"></div>
+	{{/if}}
+</div>

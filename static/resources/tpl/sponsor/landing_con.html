@@ -1,0 +1,11 @@
+<h2 class="mod_h1">您可能感兴趣的项目</h2>
+<ul class="project_other">
+	{{each data.list as item index}}
+	<li>
+		<a href="/sponsor/base/detail?merId={{item.id}}" target="_blank">
+			<img src="{{item.logoUrl}}">
+			<p>{{item.title}}</p>
+		</a>
+	</li>
+	{{/each}}
+</ul>

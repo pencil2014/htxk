@@ -1,0 +1,189 @@
+<!-- 咨询数据拼接 -->
+{{if data.list.length>0}}
+	<ul class="infor_list published manage_ul ">
+	{{each data.list as item index}}
+		{{if item.infoType==1}}
+			{{if item.coverUrl.length>0}}
+				<li class="news_commonbox textwrap_box">
+					<dl class="left_graphic">
+						{{each item.coverUrl as picture i}}
+							{{if i==0}}
+								<dt><a href="{{item.url}}" target="_blank"><img src="{{picture}}" width="100%"></a></dt>
+							{{/if}}
+						{{/each}}
+					</dl>
+					<div class="right_inforbox">
+						<h4><a href="{{item.url}}" target="_blank">{{item.title}}</a></h4>
+						<div class="report_box">
+							<div class="report_office">
+								<span class="office_icon smalluser_icon"></span>
+								<span class="text">{{item.authorName}}</span>
+							</div>
+							<div class="time_reply">
+								<p class="time_status">
+									{{if (item.publishStatus == 0)}}
+										<label class="time_label">{{item.publishTimeFormat||0}}</label>
+										{{if (item.isTimming == 1)}}
+											<span class="published_mark">定时发布中</span>
+										{{else}}
+											<span class="published_mark">未发布</span>
+										{{/if}}
+									{{else if (item.publishStatus == 1)}}
+										<label class="time_label">{{item.publishTimeFormat||0}}</label>
+										<span class="published_mark">已发布</span>
+									{{else if (item.publishStatus == 2)}}
+										<label class="time_label">{{item.publishTimeFormat||0}}</label>
+										<span class="published_mark">发布失败</span>
+									{{elseif (item.publishStatus == 3)}}
+										<label class="time_label">{{item.createTime||''}}</label>
+										<span class="published_mark">草稿</span>
+									{{/if}}
+								</p>
+								<div class="report_replybox">
+									<i class="iconfont">&#xe628;</i>
+									<span class="number">{{item.commentCount||0}}</span>
+								</div>
+								<div class="report_likenumber">
+									<i class="iconfont">&#xe65c;</i>
+									<span class="number">{{item.clickCount||0}}</span>
+								</div>
+							</div>
+						</div>
+						<div class="published_handle published_del">
+							{{if (item.publishStatus == 1)}}
+								<span class="rebackItem" hhly-status="1" hhly-newId="{{item.articleId }}">撤回</span>
+							{{else}}
+								{{if (item.isTimming == 1)}}
+									<span class="rebackItem" hhly-newId="{{item.articleId }}">取消发布</span>
+								{{/if}}
+								<a class="editItem" href="/manage/news/publish/article?articleId={{item.articleId }}">编辑</a>
+							{{/if}}
+							<span class="deleteItem" hhly-newId="{{item.articleId }}">删除</span>
+						</div>
+					</div>
+				</li>
+			{{else}}
+				<li class="news_commonbox article_newbox ">
+					<h4 class="title"><a href="{{item.url}}" target="_blank">{{item.title}}</a></h4>
+					<div class="article_box">
+						<p class="article_desc">{{item.summary}}</p>
+					</div>
+					<div class="report_box report_footer">
+						<div class="time_reply">
+							<p class="time_status">
+								{{if (item.publishStatus == 0)}}
+									<label class="time_label">{{item.publishTimeFormat||0}}</label>
+									{{if (item.isTimming == 1)}}
+										<span class="published_mark">定时发布中</span>
+									{{else}}
+										<span class="published_mark">未发布</span>
+									{{/if}}
+								{{else if (item.publishStatus == 1)}}
+									<label class="time_label">{{item.publishTimeFormat||0}}</label>
+									<span class="published_mark">已发布</span>
+								{{else if (item.publishStatus == 2)}}
+									<label class="time_label">{{item.publishTimeFormat||0}}</label>
+									<span class="published_mark">发布失败</span>
+								{{elseif (item.publishStatus == 3)}}
+									<label class="time_label">{{item.createTime||''}}</label>
+									<span class="published_mark">草稿</span>
+								{{/if}}
+							</p>
+							<div class="report_replybox">
+								<i class="iconfont">&#xe628;</i>
+								<span class="number">{{item.commentCount||0}}</span>
+							</div>
+							<div class="report_likenumber">
+								<i class="iconfont">&#xe65c;</i>
+								<span class="number">{{item.clickCount||0}}</span>
+							</div>
+						</div>
+					</div>
+					<div class="published_handle fr published_del">
+						{{if (item.publishStatus == 1)}}
+							<span class="rebackItem" hhly-status="1" hhly-newId="{{item.articleId }}">撤回</span>
+						{{else}}
+							{{if (item.isTimming == 1)}}
+								<span class="rebackItem" hhly-newId="{{item.articleId }}">取消发布</span>
+							{{/if}}
+							<a class="editItem" href="/manage/news/publish/article?articleId={{item.articleId }}">编辑</a>
+						{{/if}}
+						<span class="deleteItem" hhly-newId="{{item.articleId }}">删除</span>
+					</div>
+				</li>
+			{{/if}}
+		{{else}}
+			<li class="news_commonbox picture_newbox ">
+				<h4 class="title"><a href="{{item.url}}" target="_blank">{{item.title}}</a></h4>
+				<div class="picimg_box">
+					<dl>
+						{{each item.coverUrl as picture}}
+							<dt><a href="{{item.url}}" target="_blank"><img src="{{picture}}" width="100%"></a></dt>
+						{{/each}}
+					</dl>
+					<div class="picmore_btn">
+						<a href="{{item.url}}" class="text" target="_blank">查看更多&gt;</a>
+						{{if contentSize>0}}
+							<div class="img_accountbox">
+								<span class="account">{{item.contentSize}}</span><span class="pic">图</span>
+							</div>
+						{{/if}}
+					</div>
+				</div>
+				<div class="report_box report_footer">
+
+					<div class="time_reply">
+						<p class="time_status">
+							{{if (item.publishStatus == 0)}}
+								<label class="time_label">{{item.publishTimeFormat||0}}</label>
+								{{if (item.isTimming == 1)}}
+									<span class="published_mark">定时发布中</span>
+								{{else}}
+									<span class="published_mark">未发布</span>
+								{{/if}}
+							{{else if (item.publishStatus == 1)}}
+								<label class="time_label">{{item.publishTimeFormat||0}}</label>
+								<span class="published_mark">已发布</span>
+							{{else if (item.publishStatus == 2)}}
+								<label class="time_label">{{item.publishTimeFormat||0}}</label>
+								<span class="published_mark">发布失败</span>
+							{{elseif (item.publishStatus == 3)}}
+								<label class="time_label">{{item.createTime||''}}</label>
+								<span class="published_mark">草稿</span>
+							{{/if}}
+						</p>
+						<div class="report_replybox">
+							<i class="iconfont">&#xe628;</i>
+							<span class="number">{{item.commentCount}}</span>
+						</div>
+						<div class="report_likenumber">
+							<i class="iconfont">&#xe65c;</i>
+							<span class="number">{{item.clickCount}}</span>
+						</div>
+					</div>
+					<div class="published_handle fr published_del">
+						{{if (item.publishStatus == 1)}}
+							<span class="rebackItem" hhly-status="1" hhly-newId="{{item.articleId }}">撤回</span>
+						{{else}}
+							{{if (item.isTimming == 1)}}
+								<span class="rebackItem" hhly-newId="{{item.articleId }}">取消发布</span>
+							{{/if}}
+							<a class="editItem" href="/manage/news/publish/image?articleId={{item.articleId }}">编辑</a>
+						{{/if}}
+						<span class="deleteItem" hhly-newId="{{item.articleId }}">删除</span>
+					</div>
+				</div>
+			</li>
+		{{/if}}
+	{{/each}}
+	</ul>
+{{else}}
+	<div class="default_page_box">
+		<div class="default_img_box">
+			<img src="/resources/images/defaultPage/not_news.png" width="100%">
+		</div>
+		<p class="default_page_tips">
+			一个资讯都没有
+		</p>
+	</div>
+{{/if}}

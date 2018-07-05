@@ -1,0 +1,135 @@
+<div class="detail_box pt40 contract_box">
+	<table class="contract_table">
+		<thead>
+			<tr>
+				<th>合同名称</th>
+				<th>合同状态</th>
+				<th>签署时间</th>
+				<th>操作</th>
+			</tr>
+		</thead>
+		<tbody class="contract_wrap">
+			{{if contractList.list.length > 0}}
+				{{each contractList.list as item index}}
+					<tr class="hr_hover">
+						<td width="300px">{{item.contractName}}</td>
+						<td>
+							<!--后台显示：合同状态:0待确认,1确认,2确认失败,3合同关闭，4合同生效，5合同终止，6合同到期'
+							前端显示：合同状态:0待确认,1合同签署中,2合同失效,3合同关闭，4合同生效，5合同终止，6合同到期'-->
+							{{if item.contractStatus == 0}}
+							待确认
+							{{else if item.contractStatus == 1 && (item.signStatus == 0 || item.signStatus == 2)}}
+							<!-- 已同意合同但未签署 -->
+							已确认
+							{{else if item.contractStatus == 1 && (item.signStatus == 1 || item.signStatus == 3)}}
+							<!-- 已同意合同且已签署 -->
+							合同签署中
+							{{else if item.contractStatus == 2}}
+							合同失效
+							{{else if item.contractStatus == 3}}
+							合同关闭
+							{{else if item.contractStatus == 4}}
+							合同生效
+							{{else if item.contractStatus == 5}}
+							合同终止
+							{{else if item.contractStatus == 6}}
+							合同到期
+							{{/if}}
+						</td>
+						<td>{{item.signTime ? item.signTime : '--'}}</td>
+						<td>
+						<!-- 签署状态：0：待签署；1：成功；2：失败,3，签署中 -->
+							{{if item.contractStatus == 0 || item.contractStatus == 2 || item.contractStatus == 4 || item.contractStatus == 5 || item.contractStatus == 6}}
+							<a class="btn btn_ing btn_md" data-id={{item.id}} data-status={{item.contractStatus}} href="/sponsor/contract/audit?contractId={{item.id}}">查看合同</a>
+							{{else if item.contractStatus == 1 && (item.signStatus == 0 || item.signStatus == 2)}}
+							<!-- 已同意合同但未签署 -->
+							<button class="btn btn_ing btn_md" data-id={{item.id}} data-status={{item.contractStatus}} id="signContract">签署合同</button>
+							{{else if item.contractStatus == 3}}
+							合同已关闭
+							{{/if}}
+						</td>
+					</tr>
+				{{/each}}
+			{{else}}
+				<tr>
+					<td colspan="6">
+						<div class="default_page_box">
+							<div class="default_img_box">
+								<img src="/resources/images/defaultPage/not_plan.png" width="100%">
+							</div>
+							<p class="default_page_tips">
+								暂无数据信息
+							</p>
+						</div>
+					</td>
+				</tr>
+			{{/if}}
+		</tbody>
+	</table>
+	{{if contractList.hasNextPage}}
+		<div class="contract_page_box" hhly-type="2" hhly-tpl="contract_tpl" hhly-total='{{contractList.total}}' hhly-page="{{contractList.page}}"></div>
+	{{/if}}
+	{{if fulfillList.list.length > 0}}
+		<div class="contract_table_item">
+			<p class="item_title">合约履行反馈</p>
+			<table class="contract_table">
+				<thead>
+					<tr>
+						<th>序号</th>
+						<th>事项分类</th>
+						<th>事项细则</th>
+						<th>执行情况</th>
+					</tr>
+				</thead>
+				<tbody class="fulfill_wrap">
+				{{if fulfillList.list.length > 0}}
+					{{each fulfillList.list as item index}}
+						<tr class="hr_hover">
+							<td>{{index+1}}</td>
+							<td>
+								<!--1：现场广告2：媒体宣传3：商品展示4：活动接待-->
+								{{if item.itemType == 1}}
+								现场广告
+								{{else if item.itemType == 2}}
+								媒体宣传
+								{{else if item.itemType == 3}}
+								商品展示
+								{{else if item.itemType == 4}}
+								活动接待
+								{{/if}}
+							</td>
+							<td width="500px;">{{item.itemRightsName}}</td>
+							<td> 
+								<!--0：待执行；1：确认执行；2：执行失败-->
+								{{if item.executeStatus == 0}}
+								待执行
+								{{else if item.executeStatus == 1}}
+								已确认完成
+								{{else if item.executeStatus == 2}}
+								已放弃执行
+								{{/if}}
+							</td>
+						</tr>
+					{{/each}}
+				{{else}}
+					<tr>
+						<td colspan="6">
+							<div class="default_page_box">
+								<div class="default_img_box">
+									<img src="/resources/images/defaultPage/not_plan.png" width="100%">
+								</div>
+								<p class="default_page_tips">
+									暂无数据信息
+								</p>
+							</div>
+						</td>
+					</tr>
+				{{/if}}
+				</tbody>
+			</table>
+			{{if fulfillList.hasNextPage}}
+				<div class="page_box" hhly-type="2" hhly-tpl="fulfill_tpl" hhly-total='{{fulfillList.total}}' hhly-page="{{fulfillList.page}}"></div>
+			{{/if}}
+		</div>
+	{{/if}}
+</div>

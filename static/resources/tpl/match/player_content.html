@@ -1,0 +1,32 @@
+
+	<div class="player_wrap">
+		<h2 class="mod_h1">
+			参赛者（个人）
+			<span class="account">(<em class="number">{{data.total}}</em>个)</span>
+		</h2>
+    {{if groupTypeData}}
+    <ul class="tab">
+      <li data-value="" class="active">全部</li>
+      {{each groupTypeData as item index}}
+      <li data-value="{{item.groupType}}">{{groupTypeObject[item.groupType]}}</li>
+      {{/each}}
+    </ul>
+    {{/if}}
+    {{if data.total==0}}
+      <div class="default_page_box">
+        <div class="default_img_box">
+          <img src="/resources/images/defaultPage/not_rules.png" width="100%">
+        </div>
+        <p class="default_page_tips">
+          暂无参与者
+        </p>
+      </div>
+    {{else}}
+		<ul class="player_list">
+			{{include './player_list' data}}
+		</ul>
+		{{if data.hasNextPage}}
+			<div class="load_more" hhly-data-page="{{data.page}}">查看更多</div>
+		{{/if}}
+    {{/if}}
+	</div>

@@ -1,0 +1,21 @@
+<!-- 加载关注 -->
+<div class="fans_box attention_box">
+	{{if data.list.length>0}}
+		<ul>
+			{{include './att_subtpl'}}
+		</ul>
+		{{if data.hasNextPage}}
+			<div data-page="{{data.page}}" class="load_more">查看更多</div>
+		{{/if}}
+	{{else}}
+		<div class="default_page_box">
+			<div class="default_img_box">
+				<img src="/resources/images/defaultPage/not_attention.png" width="100%">
+			</div>
+			<p class="default_page_tips">
+				还没有关注的对象哦
+			</p>
+		</div>
+
+	{{/if}}
+</div>

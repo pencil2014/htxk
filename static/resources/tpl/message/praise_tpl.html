@@ -1,0 +1,34 @@
+<!-- 点赞消息 -->
+{{each data.list as item index}}
+	<li>
+		<div class="message_head fl">
+			<a class="message_head_a" href="{{if (item.userInfoBasicRespVO.orgId)}}>/team/index/{{item.userInfoBasicRespVO.orgId}}{{else}}/personal/index/{{item.userInfoBasicRespVO.userId}}{{/if}}" target="blank_">
+				<img src="{{(item.userInfoBasicRespVO.iconUrl)||'/resources/images/default_photo.jpg'}}">
+			</a>
+		</div>
+		<div class="message_contents fl">
+			<div class="message_me_name">
+				<strong >{{item.userInfoBasicRespVO.nickName}}</strong>
+				<i>{{item.createTime}}</i>
+				<div class="clearx"></div>
+			</div>
+			<span>
+				{{if item.noticeType == 1}}
+					给你的帖子点了赞
+				{{else if (item.noticeType == 2)}}
+					给你的评论点了赞
+				{{/if}}
+			</span>
+			<a href="/personal/index/feedetail/{{item.feedId}}" target="blank_">
+				<p>
+					{{if (item.noticeType == 1)}}
+						我的帖子
+					{{else if (item.noticeType == 2)}}
+						我的评论
+					{{/if}}：{{(item.content)}||''}
+				</p>
+			</a>
+		</div>
+		<div class="clearx"></div>
+	</li>
+{{/each}}

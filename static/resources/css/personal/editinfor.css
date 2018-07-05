@@ -1,0 +1,656 @@
+.hidden{
+    display: none;
+}
+.personal_menu{
+    width:225px;
+    background:#fff;
+    padding-bottom: 100px;
+    padding-top:30px;
+}
+
+.personal_intro .personal_head{
+    width:98px;
+    height:98px;
+    border:4px solid #e7e7e7; 
+    border-radius:50%;
+    margin:0px auto 20px;
+    position: relative;
+}
+.personal_intro .personal_head img{
+    display: block;
+    width:100%;
+    height:100%;
+    border-radius: 50%;
+
+}
+.personal_intro .personal_head .focus_girl,
+.personal_intro .personal_head .focus_boy{
+    display: block;
+    width:22px;
+    height:22px;
+    height:24px \0;
+    position: absolute;
+    top:66px;
+    right:-2px;
+    background:url("../../images/personal_center.png") no-repeat;   
+}
+.personal_intro .personal_head .focus_girl{
+    background-position:0px -32px;  
+}
+.personal_intro .personal_head .focus_boy{
+    background-position:0px 0px;    
+}
+.personal_intro .personal_name{
+    text-align: center;
+    font-size: 16px;
+    font-weight: 900;
+    width:200px;
+    margin: 0 auto;
+}
+/*.personal_intro .personal_name .l_nickName{
+    display: inline-block;
+    width: 73px;
+    height: 30px;
+    box-sizing: border-box;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    vertical-align: middle;
+}*/
+.name_edit{
+    display:inline-block;
+    width:16px;
+    height:18px;
+    cursor:pointer;
+    position:relative;
+    top:2px;
+    left:10px;
+    background:url("../../images/imagetext_manage.png") no-repeat -23px -150px;
+}
+.personal_intro .personal_mark{
+    display: block;
+    margin: 10px auto;
+    width:65px;
+    height:14px;
+    background:url("../../images/imagetext_manage.png") no-repeat -8px -129px;
+}
+.personal_intro .personal_address{
+    display: block;
+    margin: 0 auto;
+    width:200px;
+    text-align: center;
+    color:#999;
+}
+.personal_intro .personal_address i{
+    display: inline-block;
+    width:14px;
+    height:17px;
+    background:url("../../images/team/team_sprite.png") no-repeat 1px 0px;
+    position:relative;
+    top:4px;
+}
+.personal_intro .personal_signature{
+    margin:24px 20px 20px 20px;
+    color:#666;
+    font-size: 12px;
+    line-height:18px;
+}
+
+.personal_signature .l_sign{
+    height:35px;
+    overflow: hidden;
+    cursor: default;
+}
+.personal_count{
+    margin:0 8px 0 12px;
+    padding:0 12px 20px;
+    border-bottom:2px solid #fafafa;
+}
+.personal_count li{
+    float:left;
+    font-size: 12px;
+}
+
+.personal_count.l_focus .personal_focus,
+.personal_count.l_focus .personal_fancs{
+    cursor:pointer;
+}
+
+.personal_count .personal_focus{
+    width:100px;
+    border-right:1px solid #f0f0f0;
+    text-align:center;
+    
+}
+.personal_count .personal_fancs{
+    padding-left:16px;  
+
+}
+.personal_count li span{
+    color:#999;
+}
+.personal_count li i{
+    color:#fc6f00;
+}
+.person_edit .sb{
+    vertical-align: top;
+}
+.person_edit #province-error,.person_edit #city-error,.person_edit #area-error{
+    margin-top: 24px;
+    color: #f00;
+    display: block;
+}
+
+/*基本设置*/
+.basic_box {
+    margin-bottom:40px;
+}
+.basic_box:before {
+    content: '';
+    clear: both;
+}
+
+.message_title .basic_title{
+	margin-bottom:0px;
+}
+.basic_title {
+    padding-left:10px;
+    font-size: 18px;
+    border-left:4px solid #01a87c;
+    line-height: 20px;
+    margin-bottom: 20px;
+}
+.l_foot .message_title .basic_title{
+    margin-bottom: 20px;
+}
+.basic_container {
+    margin:0 auto;
+    padding:60px;
+    background: #fff;
+}
+.label_title {
+    width: 90px;
+    padding-right: 20px;
+    display: inline-block;
+    text-align: right;
+    line-height: 30px;
+    vertical-align: middle;
+    font-size: 14px;
+}
+.nickname_error,.system_type_error{
+    height:20px;
+    width:190px;
+    margin-left: 110px;
+    line-height: 28px;
+    color: red;
+    clear:both;
+    font-size: 12px;
+}
+.system_type_error{
+     margin-left: 0px;
+}
+.publish_classify .system_type_error{
+    margin-left: 0;
+    margin-top: 30px;
+}
+.sb .system_type_error label{
+    color: #f00;
+}
+.publish_classify .sb{
+    vertical-align: top;
+}
+.styetem_error_distance{
+	margin-bottom:20px;
+}
+.system_type_l{
+	margin-left:86px;
+}
+.system_type_b{
+	margin-bottom:40px;
+}
+
+.system_error_r{
+	margin:0 0 20px 76px;
+}
+
+
+
+
+.province_box,.area_boxs,.city_boxs{
+	position:relative;
+}
+.province_error{
+    position:absolute;
+    top: 26px;
+    left: 0px;
+    height:30px;
+    width:190px;
+    line-height: 30px;
+    color: red;
+}
+.publish_select{
+    height:30px;
+    margin-left:60px;
+}
+
+.item_content {
+    display: inline-block;
+    vertical-align: middle;
+}
+.time_plan{
+    height: 30px;	
+    line-height:30px;
+}
+.people_account .define_check {
+    margin-right: 70px;
+    width: 95px;
+}
+.compet_box {
+    width: 520px;
+    padding-left: 10px;
+}
+.compet_box .radio_box {
+    margin-right: 70px;
+}
+.define_check {
+    margin-right: 15px;
+    float:left;
+}
+.mjudge_select{
+    width: auto;
+    float: none;
+}
+.timeplan_select {
+    vertical-align: middle;
+}
+.shradio_box {
+    width: 50px;
+    padding:5px 10px;
+    text-align: center;
+    height: auto;
+    border:2px solid #fff;
+    border-radius: 10px;
+    position: relative;
+    margin-right:60px;
+}
+.shradio_box{line-height: normal}
+.shradio_box .close_radio {
+    background:url(../images/manage_icon.png);
+    background-position:-43px -39px;
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    right: -9px;
+    top: -9px;
+    display: none;
+}
+.shradio_box.cb_active {
+    border-color:#00bb90;
+}
+.shradio_box.cb_active .close_radio {
+    display: block;
+}
+.shradio_box.rb_active {
+    border-color:#00bb90;
+}
+.shradio_box.rb_active .close_radio {
+    display: block;
+}
+.match_box {
+    font-size: 0;
+}
+.sponsor_box ul li {
+    width: 60px;
+    margin-right: 20px;
+    float: left;
+    height:60px;
+}
+.sponsor_box ul li img{
+	display:block
+	width:100%;
+	height:100%;
+}
+.match_text {
+    line-height: 30px;
+    padding:0 20px;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 14px;
+    float:left;
+}
+.timeplan_match {
+    vertical-align: middle;
+    margin:0;
+}
+.sponsor_wrap {
+    height:60px;
+}
+.btn_common {
+    padding: 8px 36px;
+    display: block;
+    float: left;
+    border:1px solid #e5e5e5;
+    border-radius: 3px;
+    color: #666666;
+    cursor: pointer;
+    outline: none;
+    background: #fff;
+}
+
+.mit_submit {
+    background: #00bb90;
+    border-color:#00bb90;
+    color: #fff;
+    margin-right:20px;
+}
+.mit_submit:hover{
+	background:#01a87c;
+}
+.mit_submit:focus{
+    color: #fff;
+}
+.btn_box {
+    margin:0 auto;
+    overflow: hidden;
+    width: 250px;
+}
+.basic_container .btn_box{
+    margin-top: 20px;
+}
+.item_box .text_box,.name_box{
+    float: left;
+    line-height: 30px;
+    font-weight:700;
+}
+.item_box .nickname_edit{
+    padding-left: 20px;
+    color: #00bb90;
+    line-height: 30px;
+}
+.form_edit .define_check.cb{
+    width:auto;
+}
+
+.private_container{
+    width: 834px;
+    padding:60px;
+    background: #fff;
+    float:right;
+    overflow:hidden;
+    
+}
+/*#manage_contents{
+    overflow:hidden;
+}*/
+.form_wrap{
+    overflow:hidden;
+    float:right;
+}
+.infor_box{
+    margin-bottom:20px;
+    min-height:40px;
+    clear:both;
+}
+
+.team_location.sign_wrap{
+    width: 640px;
+}
+.team_location_control .attest_name{
+    float:left;
+    margin:7px 4px;
+    height:14px;
+}
+.team_location_control .attest_name img{
+    height: 100%;
+}
+.auth_img_box{
+    height:14px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.form_wrap .form_edit .infor_box.sex_box{
+    margin-bottom:20px;
+    margin-top:20px;
+}
+.form_wrap .form_edit .infor_box .system_type_error{
+    margin-bottom:0px;
+}
+.form_wrap .form_edit .name_box{
+    font-weight:bold;
+}
+.form_edit .infor_box,
+.l_foot .infor_box,
+.l_foot .infor_boxes{
+    margin-bottom:0px;
+    height:30px;;
+    min-height:auto;
+/*  border:1px red solid; */
+    margin-bottom:23px;
+    position:relative;
+
+
+}
+.l_foot .infor_boxes{
+    font-size: 0;
+}
+
+.form_edit .infor_box .system_type_error,
+.form_edit .infor_box .nickname_error,
+.l_foot .infor_box .system_type_error,
+.l_foot .infor_box .nickname_error{
+    height:auto;
+    display:block;
+    position:absolute;
+    top:30px;
+}
+.form_edit .infor_box .nickname_error{
+    top:30px;
+}
+.infor_img{
+    width:80px;
+    height:80px;
+    float:left;
+}
+.infor_img img{
+    width:100%;
+    height:100%;
+    border-radius:50%;
+}
+.form_edit h3.mit_title{
+    margin-bottom:38px;
+}
+.form_edit .l_private_box .infor_box{
+    height:auto;
+    line-height: auto;
+}
+.form_edit .l_private_box .time_plan{
+    height:auto;
+    line-height: auto;
+}
+h3.mit_title {
+    padding-left: 10px;
+    font-size: 18px;
+    border-left: 4px solid #01a87c;
+    line-height: 20px;
+    margin-bottom: 20px;
+}
+ .infor_container{
+    margin-top:20px;
+}
+#teamIforForm{
+    padding-bottom:123px;
+}
+.infor_portrait{
+    overflow:hidden;
+    margin-bottom:38px;
+}
+
+.infor_portrait .head_box{
+    width: 100px;
+    height: 100px;
+    float: left;
+}
+.head_box img{
+    border-radius: 50%;
+    display: block;
+    width:100%;
+    height:100%;
+}
+.infor_portrait .head_content{
+    float: left;
+    margin-left: 20px;
+    margin-top: 23px;
+}
+/*.infor_portrait .set_headimg{
+    color:#00bb90;
+}*/
+.infor_portrait .headimg_tips{
+    margin-top:5px;
+    color: #999999;
+}
+/*.label_title{
+    width: 90px;padding-right: 20px;float: left;text-align: right;line-height: 30px;
+}*/
+
+
+.item_box{
+    vertical-align: middle;
+    display: inline-block;
+}
+
+.item_box input{
+    outline:none;
+}
+/*.item_box .text_box{
+    float: left;
+    line-height: 30px;
+}*/
+.item_box .nickname_edit,.infor_box .nickname_edit,.infor_box .l_rz{
+    padding-left: 20px;
+    color: #00bb90;
+    line-height: 30px;
+}
+.people_account .define_check {
+    margin-right: 70px;
+    width: 95px;
+}
+.province_box,.area_boxs,.city_boxs{
+    position:relative;
+}
+.province_error{
+    position:absolute;
+    top: 26px;
+    left: 0px;
+    height:30px;
+    width:190px;
+    line-height: 30px;
+    color: red;
+}
+.team_location .province_box{
+    display: block;
+    float: left;
+}
+.team_signbox{
+    width: auto;
+    position: relative;
+    box-sizing: border-box;
+
+}
+.team_signbox input{
+    width: 100%;
+    height: 30px;
+    line-height:30px;
+    background: #fafafa;
+    outline: none;
+    padding:0 10px;
+    box-sizing: border-box;
+}
+.tips_box{
+    position: absolute;
+    right:10px;
+    top:7px;
+}
+textarea.infor_desc{
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+    border:1px solid #e5e5e5;
+    background: #fafafa;
+    padding:10px;
+}
+.textarea_tips{
+    position: absolute;
+    bottom: 10px;right: 10px;
+    top:auto;
+}
+.team_telphone{
+    width: 250px;
+}
+.team_telphone .team_signbox{
+    width: 100%;
+}
+.team_normal {
+    width: 250px;
+}
+.team_normal .team_signbox{
+    width: 100%;
+}
+.infor_morebtn{
+    position: absolute;
+    width: 120px;
+    right: -150px;
+    top: 4px;
+    color: #00bb90;
+    cursor: pointer;
+}
+
+.nickname_input{
+    height: 28px;
+    border: 1px solid #e5e5e5;
+    background: #fafafa;
+    outline: none;
+    padding: 0 10px;
+    box-sizing: border-box;
+    line-height:28px;
+}
+
+.nickname_btn{
+    height:30px;
+    line-height: 30px;
+    padding:0 10px;
+}
+.nickname_sure{
+    background: #00bb90;
+    padding: 4px 10px;
+    color: white;
+    border-radius: 3px;
+    margin-left: 10px;
+}
+.infor_box .timeplan_match{
+    margin:0;
+    float:none;
+    
+}
+.private_infor input{
+    width: 110px;
+    height: 30px;
+    line-height:30px;
+    background: #fafafa;
+    outline: none;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+.monad{
+    margin-left:10px;
+}
+.private_hr{
+    height: 1px;
+    background: #f2f2f2;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+.tag_tips{
+    color: #999;
+}

@@ -1,0 +1,12 @@
+<!-- 咨询数据拼接 -->
+{{each data as item index}}
+	<li class="li_box">
+		<div class="time">{{item.dataTime}}</div>
+		<dl class="list">
+			{{each item.list as picture}}
+				<dt><img src="{{picture.thumbFileName}}" width="100%"></dt>
+			{{/each}}
+			<div class="clearx"></div>
+		</dl>
+	</li>
+{{/each}}

@@ -1,0 +1,39 @@
+<!-- 加载球队 -->
+{{each data.list as item index}}
+	<li class="item">
+		<div class="logo_box">
+			<a href="/team/index/{{item.orgId}}" target="_blank">
+			{{if item.iconUrl}}
+				<img src="{{item.iconUrl}}" width="100%">
+			{{else}}
+				<img src="/resources/images/default_team_logo.png" width="100%">
+			{{/if}}
+			</a>
+		</div>
+		<div class="infor_box">
+			<h3 class="title_box">
+				<span class="title">{{item.teamName}}</span>
+				<div class="approve_box"></div>
+			</h3>
+			<p class="list">
+				<i class="iconfont">&#xe6bc;</i>
+				<span class="text">人数：</span>
+				<span class="number">{{item.joins}}</span>
+				<span class="text">粉丝：</span>
+				<span class="number">{{item.fans}}</span>
+			</p>
+			{{if item.user}}
+				<p class="list">
+					<i class="iconfont">&#xe637;</i>
+					<span class="text">队长：</span>
+					<span>{{item.user}}</span>
+				</p>
+			{{/if}}
+			<p class="list">
+				<i class="iconfont">&#xe627;</i>
+				<span class="text">地区：</span>
+				<span>{{item.area}}</span>
+			</p>
+		</div>
+	</li>
+{{/each}}

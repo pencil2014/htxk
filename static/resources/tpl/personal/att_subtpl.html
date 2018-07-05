@@ -1,0 +1,63 @@
+<!-- 关注数据 -->
+{{each data.list as item index}}
+	<li class="item">
+		<div class="logo_box pr">
+			<a target="_blank" href="/personal/index/{{item.userId}}">
+				<img src="{{if item.iconUrl}}{{item.iconUrl}}{{else}}/resources/images/default_photo.jpg{{/if}}" width="100%">
+				
+			</a>
+			{{if item.sex==2}}
+				<div class="sex girl"></div>
+			{{else}}
+				<div class="sex boy"></div>
+			{{/if}}
+		</div>
+		<div class="infor_box">
+			<h3 class="title_box">
+				<span class="title" title="{{item.nickName}}">{{item.nickName}}</span>
+				{{if item.pcImgtxtUrl}}
+					<div class="approve_box">
+						<img src="{{item.pcImgtxtUrl}}" height="100%" />
+					</div>
+				{{/if}}
+			</h3>
+			<p class="list">
+				<span class="text">关注：</span>
+				<span class="number">{{item.concernNum}}</span>
+				<span class="text">粉丝：</span>
+				<span class="number">{{item.followNum}}</span>
+			</p>
+			<p class="list">
+				<i class="iconfont">&#xe627;</i>
+				<span class="text">地区：</span>
+				<span class="number">
+					{{if item.areaProvName}}
+						{{item.areaProvName}}
+					{{/if}}
+					{{if item.areaCityName}}
+						{{item.areaCityName}}
+					{{/if}}
+					{{if item.areaDistName}}
+						{{item.areaDistName}}
+					{{/if}}
+					{{if item.areaStreet}}
+						{{item.areaStreet}}
+					{{/if}}
+				</span>
+			</p>
+			{{if item.sign}}
+				<p class="list">
+					<span class="text">签名：</span>
+					<span class="number">{{item.sign}}</span>
+				</p>
+			{{/if}}
+		</div>
+		<div class="btn_box">
+			{{if item.isFollowed==1}}
+				<span class="btn btn_return btn_xs btn_border attention">已关注</span>
+			{{else}}
+			<span class="btn btn_return btn_xs btn_border attention" hhly-url="/collect/follow/add/{{item.userId}}"><i>+</i>关注</span>
+			{{/if}}
+		</div>
+	</li>
+{{/each}}

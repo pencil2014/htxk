@@ -1,0 +1,20 @@
+<!-- 加载约战 -->
+<div class="circle_match">
+	{{if data.list.length>0}}
+		<ul>
+		{{include './match_subtpl'}}
+		</ul>
+		{{if data.hasNextPage}}
+			<div data-page="{{data.page}}" class="load_more">查看更多</div>
+		{{/if}}
+	{{else}}
+		<div class="default_page_box">
+			<div class="default_img_box">
+				<img src="/resources/images/defaultPage/no_match.png" width="100%">
+			</div>
+			<p class="default_page_tips">
+				暂无赛事记录
+			</p>
+		</div>
+	{{/if}}
+</div>

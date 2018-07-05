@@ -1,0 +1,23 @@
+<div class="mit_nav">
+    <div class="mod_wrap mit_navBg" id="navListWrap">
+        <script id="navListCon" type="text/html">
+            <a class="logo_wrap" href="/">
+                <img src="../../images/pc_logo_white.png" alt="">
+            </a>
+            <div class="mit_whole">
+                <span class="hhly_areaId" hhly-areaId={{data.dictArea.areaId}}>{{data.dictArea.title}}</span>
+                <a href="cityChange.html?areaId={{data.dictArea.areaId}}&type={{data.dictArea.type}}">切换</a>
+            </div>
+            <div class="mit_link">
+                <!--{{each data.bannerList as val index}}-->
+                <!--<a href="/city/common/index?type={{val.type}}" hhly-type={{val.type}}>{{val.name}}</a>-->
+                <!--{{/each}}-->
+                <a href="cityFightBall.html?type=1" hhly-type='1'>拼球ss</a>
+                <a href="cityPersonal.html?type=3" hhly-type='3'>推荐用户</a>
+                <a href="cityBall.html?type=5" hhly-type='5'>球队</a>
+                <a href="cityWar.html?type=4" hhly-type='4'>约战</a>
+                <a href="cityRecruit.html?type=2" hhly-type='2'>招募</a>
+            </div>
+        </script>
+    </div>
+</div>

@@ -1,0 +1,614 @@
+﻿/* login */
+body {
+  background: #ebf0f5;
+}
+.mit_wrap {
+  background: #ebf0f5;
+}
+.mit_wrap.login_wrap {
+  height: 500px;
+  background: url(../../images/user/login_bg.jpg) no-repeat;
+}
+.mgtop0 {
+  margin-top: 0;
+}
+.form_text.mgtop0 {
+  margin-top: 0;
+}
+.login_container {
+  padding: 30px;
+}
+.left_bg {
+  width: 734px;
+  height: 456px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.right_dialog {
+  width: 300px;
+  height: 380px;
+  margin-right: 50px;
+  display: block;
+  vertical-align: middle;
+  background: #fff;
+  -webkit-box-shadow: 0 0 10px rgba(237, 239, 241, 0.5);
+  -moz-box-shadow: 0 0 10px rgba(237, 239, 241, 0.5);
+  box-shadow: 0 0 10px rgba(237, 239, 241, 0.5);
+  padding: 30px 30px 10px;
+  float: right;
+  position: relative;
+}
+.mit_title {
+  font-size: 18px;
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+.register_btn {
+  color: #3983e5;
+  font-size: 14px;
+}
+.login_tips {
+  margin-top: 10px;
+}
+.login_tips .remember {
+  font-size: 12px;
+  color: #666;
+}
+.remember_tips {
+  vertical-align: middle;
+  margin-top: -3px;
+}
+.remember input[name='auto_login'] {
+  vertical-align: middle;
+}
+.forgot_password {
+  float: right;
+  margin-top: 3px;
+  color: #3983e5;
+  font-size: 12px;
+}
+.auto_login_tips {
+  font-size: 12px;
+  margin-top: -5px;
+  color: #999;
+  height: 16px;
+}
+.login_tips div[name="auto_login"] .check_icon {
+  margin-top: -3px;
+}
+.other_login {
+  margin-top: 15px;
+  text-align: center;
+  overflow: hidden;
+  position: absolute;
+  bottom: 11px;
+  width: 300px;
+}
+.other_login span {
+  padding: 0 15px;
+  position: relative;
+  font-size: 12px;
+  color: #999;
+}
+.other_login span:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -150px;
+  width: 150px;
+  background: #dcdcdc;
+  height: 1px;
+}
+.other_login span:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -150px;
+  width: 150px;
+  background: #dcdcdc;
+  height: 1px;
+}
+.other_login ul.login_way {
+  width: 192px;
+  margin: 0 auto;
+  padding-left: 40px;
+}
+.other_login ul.login_way li {
+  width: 24px;
+  height: 24px;
+  margin-right: 40px;
+  background: url(../../images/user/login_icon.png) no-repeat;
+  float: left;
+  margin-top: 6px;
+  cursor: pointer;
+}
+.other_login ul.login_way li.qq {
+  background-position: -337px 0;
+}
+.other_login ul.login_way li.wechat {
+  background-position: -338px -30px;
+}
+.other_login ul.login_way li.sina {
+  background-position: -338px -61px;
+}
+.eye_box {
+  width: 350px;
+}
+.eye_icon {
+  width: 18px;
+  height: 11px;
+  position: absolute;
+  top: 14px;
+  right: 10px;
+  cursor: pointer;
+  background: url(../../images/user/login_icon.png) no-repeat;
+  background-position: -335px -123px;
+}
+.eye_icon.close {
+  background-position: -336px -146px;
+}
+.verify_box {
+  height: 42px;
+  overflow: hidden;
+}
+.login_content .verify_box input {
+  width: 150px;
+}
+.login_content .verify_img {
+  width: 140px;
+  height: 40px;
+  overflow: hidden;
+  vertical-align: middle;
+  display: inline-block;
+  margin-left: 10px;
+}
+.login_content .verify_img input {
+  width: 180px;
+}
+/* register */
+.register_container {
+  width: 910px;
+  height: 510px;
+  background: #fff;
+  margin-top: 40px;
+  padding: 45px;
+}
+.register_stepbox {
+  border-bottom: 2px solid #f2f2f2;
+}
+.step_container {
+  width: 610px;
+  margin: 0 auto;
+}
+.step_container .menu_step {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 10px 20px;
+  margin: 0 14px;
+  margin-bottom: -2px;
+  font-size: 18px;
+  font-weight: normal;
+}
+.step_container .menu_step.active {
+  border-bottom: 2px solid #00bb90;
+  color: #00bb90;
+}
+.step_container .menu_step.active .number {
+  background: #00bb90;
+}
+.step_container .menu_step .number {
+  width: 15px;
+  height: 15px;
+  display: block;
+  border-radius: 50%;
+  background: #bbb;
+  color: #fff;
+  text-align: center;
+  line-height: 15px;
+  font-size: 12px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.step_container .menu_step .text {
+  margin-left: 10px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.register_box {
+  margin-left: 275px;
+  width: 625px;
+  padding-top: 30px;
+}
+.register_box .form_text input {
+  width: 350px;
+}
+.register_box .verify_box input {
+  width: 200px;
+  display: inline-block;
+  vertical-align: middle;
+}
+div[name="auto_login"] .check_icon {
+  margin-top: 1px;
+}
+.register_tips {
+  margin-top: 5px;
+  font-size: 12px;
+}
+.slide_email {
+  color: #fc6f00;
+  text-decoration: none;
+  margin-top: 10px;
+  display: block;
+}
+.pass_creat {
+  font-size: 12px;
+  color: #999;
+  padding: 10px 0 0;
+}
+.mgtop10 {
+  margin-top: 10px;
+}
+.form_setnick {
+  font-size: 14px;
+  color: #666666;
+  padding-bottom: 5px;
+  margin-top: 30px;
+}
+.form_text.form_nextbtn {
+  margin-top: 40px;
+}
+.nick_tips {
+  width: 14px;
+  height: 14px;
+  background: url(../../images/user/login_icon.png);
+  background-position: -141px -49px;
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+}
+.nick_box input {
+  padding-left: 10px;
+  max-width: 335px\0;
+}
+.set_pass {
+  padding: 5px 0 12px 0;
+  font-size: 14px;
+  font-weight: normal;
+}
+.nickname_tips {
+  padding: 10px;
+  border: 1px solid #f1e784;
+  background: #fff9ef;
+  color: #f17626;
+  display: inline;
+  position: absolute;
+  width: 320px;
+  left: -21px;
+  top: 25px;
+  z-index: 999;
+  display: none;
+}
+.nickname_tips:after {
+  width: 11px;
+  height: 20px;
+  content: '';
+  background: url(../../images/user/login_icon.png);
+  background-position: -175px -50px;
+  position: absolute;
+  left: 20px;
+  top: -15px;
+}
+.nick_tips .nickname_tips.hidden {
+  display: none;
+}
+.nick_tips:hover .nickname_tips {
+  display: block;
+}
+.nick_tips:hover .nickname_tips.hidden {
+  display: none;
+}
+.account_infor {
+  padding-bottom: 30px;
+}
+.account_infor .account {
+  color: #00bb90;
+}
+/*邮箱注册*/
+.emailstep_one {
+  padding-top: 80px;
+}
+.emailstep_two {
+  padding-top: 120px;
+  text-align: center;
+}
+.send_email {
+  font-size: 18px;
+  padding: 10px 0;
+}
+.data_green {
+  color: #00bb90;
+}
+.send_tips {
+  color: #999;
+  margin-bottom: 40px;
+}
+.send_repeat {
+  width: 350px;
+  margin: 14px auto 0;
+}
+.send_repeat .accept_box {
+  float: right;
+  color: #999;
+  font-size: 12px;
+  text-decoration: underline;
+  padding-bottom: 10px;
+  cursor: pointer;
+}
+.send_repeat .accept_box:hover .nickname_tips {
+  display: block;
+}
+.send_repeat .nickname_tips {
+  left: 50%;
+  width: 230px;
+  margin-left: -25px;
+}
+ul.nickname_tips li {
+  color: #fc6f00;
+  text-align: left;
+  padding: 5px 0;
+}
+ul.nickname_tips li span {
+  padding-right: 10px;
+}
+a.again_send,
+a.alter_email {
+  color: #3983e5;
+  text-decoration: underline;
+}
+.email_register .pd0 {
+  padding: 0;
+}
+.warn_icon {
+  width: 14px;
+  height: 14px;
+  background: url(../../images/user/login_icon.png);
+  background-position: -141px -49px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: -1px;
+}
+a.bind_email {
+  color: #3983e5;
+  text-decoration: underline;
+}
+.erfirst_step {
+  padding-top: 90px;
+}
+.alter_container .form_nextbtn {
+  margin-top: 30px;
+}
+.set_pass {
+  font-size: 14px;
+  color: #666666;
+  font-weight: normal;
+  padding: 5px 0 12px 0;
+}
+.form_text.mgtop10 {
+  margin-top: 20px;
+}
+.prfirst_step .form_text {
+  margin-top: 30px;
+}
+.prfirst_step .form_nextbtn {
+  margin-top: 15px;
+}
+.verify_message,
+.bind_message {
+  background: #f0f3f8;
+  color: #00bb90;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+}
+.login_account {
+  position: absolute;
+  bottom: 10px;
+  text-align: center;
+  width: 350px;
+  font-size: 14px;
+  color: #999;
+}
+.login_account a {
+  color: #3983e5;
+}
+.mit_footer p span {
+  line-height: 25px;
+}
+.btn_box {
+  width: 210px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.btn_box .back_home,
+.btn_box .complete_data {
+  width: 100px;
+  height: 40px;
+  text-align: center;
+  background: #00bb90;
+  color: #fff;
+  display: block;
+  line-height: 40px;
+  font-size: 16px;
+  margin-top: 10px;
+  border-radius: 3px;
+  margin: 0 auto;
+}
+.register_success .btn_box {
+  width: 100px;
+}
+p.href_tips {
+  padding: 5px 0;
+}
+.wechat_box {
+  width: 135px;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+.wechat_box span {
+  font-weight: bold;
+}
+.repeat_commit {
+  background: #e94141;
+  color: #fff;
+  padding: 10px 15px;
+  margin-top: 40px;
+  display: inline-block;
+  border-radius: 3px;
+}
+.repeat_commit.gray {
+  background: #ccc;
+}
+.alter_pass_tips {
+  color: #fc6f00;
+  font-size: 12px;
+  padding: 5px 0;
+}
+.alfirst_step.step_box {
+  padding-top: 80px;
+}
+.alfirst_step .form_text.verify_box {
+  margin-top: 30px;
+}
+.alsecond_step {
+  padding: 20px 15px;
+}
+.verify_way_title {
+  font-size: 15px;
+  color: #333;
+  font-weight: normal;
+}
+.verify_way_title .account_name {
+  color: #fc6f00;
+}
+.verity_box {
+  margin-top: 40px;
+}
+.verity_box .verity_list li {
+  padding: 25px 0;
+}
+.verity_box .verity_list li .verity_way_icon {
+  background: url(../../images/user/login_icon.png);
+  width: 60px;
+  height: 60px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.verity_box .verity_list li .verity_way_icon.email_way {
+  background-position: -440px 0;
+}
+.verity_box .verity_list li .verity_way_icon.phone_way {
+  background-position: 0 -101px;
+}
+.verity_box .verity_list li .verity_way_icon.question_way {
+  background-position: -80px -101px;
+}
+.verity_box .verity_list li .verity_text {
+  display: inline-block;
+  vertical-align: middle;
+  width: 480px;
+  margin-left: 20px;
+}
+.verity_box .verity_list li .verity_text .title {
+  font-size: 14px;
+  color: #333;
+  font-weight: normal;
+}
+.verity_box .verity_list li .verity_text .tips {
+  margin-top: 10px;
+}
+.verity_box .verity_list li .verity_way_btn {
+  vertical-align: middle;
+  display: inline-block;
+  width: 110px;
+  height: 40px;
+  line-height: 40px;
+  background: #00bb90;
+  color: #fff;
+  text-align: center;
+  border-radius: 3px;
+}
+.verity_box .verity_list li .verity_way_btn.gray {
+  background: #ccc;
+}
+.resetfirst_step.step_box {
+  padding-top: 60px;
+}
+.email_wrap {
+  padding-bottom: 20px;
+}
+.reset_tips {
+  margin-top: 10px;
+}
+.reset_tips p.text,
+.reset_tips span.text {
+  font-size: 12px;
+  color: #999;
+  padding: 3px 0;
+}
+.reset_tips p.text .login_email,
+.reset_tips span.text .login_email {
+  color: #3983e5;
+}
+.reset_title {
+  color: #333;
+}
+.again_select {
+  color: #3983e5;
+  text-align: center;
+  display: block;
+  width: 350px;
+  margin-top: 50px;
+}
+.reset_two_step.step_box {
+  padding-top: 60px;
+}
+.reset_two_step.step_box .set_pass {
+  padding-bottom: 0;
+}
+.reset_success_tips {
+  display: inline-block;
+  vertical-align: middle;
+}
+.reset_success_tips p {
+  font-size: 12px;
+  color: #666;
+  padding-top: 3px;
+}
+.reset_btn_box {
+  width: 100px;
+  margin: 0 auto;
+  margin-top: 35px;
+}
+.reset_btn_box .back_home {
+  width: 100px;
+  height: 40px;
+  line-height: 40px;
+}
+.reset_success.complate_box {
+  margin-top: 100px;
+}
+.clear_icon {
+  width: 15px;
+  height: 15px;
+  background: url(../../images/user/login_icon.png);
+  background-position: -335px -96px;
+  position: absolute;
+  right: 10px;
+  top: 12px;
+  cursor: pointer;
+}
+@media screen and (max-width: 1200px) {
+  .left_bg {
+    width: 534px;
+  }
+}

@@ -1,0 +1,444 @@
+body{
+	background:#ebf0f5;
+}
+a{
+	color:#333;
+}
+.middle,.mit_middle{
+    width:1200px;
+    margin:0 auto;
+}
+/* --- 图文资讯管理内容 --- */
+#contents{
+	margin-top:40px;
+}
+.clearfix:after,#contents:after,.middle:after,
+.personal_right:after,.mit_middle:after{
+     content:".";
+     display:block;
+     height:0;
+     clear:both;
+     visibility:hidden; 
+
+}
+.manage_r{
+	background:#fff;
+	width:225px;
+}
+.manage_r .star_intro{
+	padding:35px 0;
+	border-bottom: 1px solid #f0f0f0;
+}
+.star_intro .head_img{
+	padding:0 65px 0 62px;
+	width:100px;
+	height:100px;
+	border-radius: 50%;
+}
+.star_intro .head_img img{
+	display: block;
+	width:100%;
+	height:100%;
+	border-radius: 50%;
+}
+.star_intro p{
+	margin:13px auto;
+	font-size: 16px;
+	color:#333;
+	position: relative;
+	width:110px;
+}
+.star_intro p i{
+	display: inline-block;
+	width:18px;
+	height:18px;
+	background:url("../images/imagetext_manage.png") no-repeat -22px -148px;
+	position: absolute;
+	top:-1px;
+	right:-15%;
+}
+.star_intro .label{
+	text-align:center;
+}
+.star_intro .label .club{
+	display: inline-block;
+	width:62px;
+	height:16px;
+	background:url("../images/imagetext_manage.png") no-repeat -8px -70px;
+	margin-right:10px;
+}
+.star_intro .label .team_institutions{
+	display: inline-block;
+	width:72px;
+	height:16px;
+	background:url("../images/imagetext_manage.png") no-repeat -8px -110px;
+}
+.team_start li{
+	width: 14px;
+	height: 14px;
+	line-height: 14px;
+	float: left;
+	margin-right: 5px;
+	position: relative;
+	color:#999;
+}
+.team_start li span{
+	color:#999;
+}
+
+.team_start {
+	margin: 10px auto 10px;
+	overflow: hidden;
+	width:130px;
+}
+.team_start li img{
+	position: absolute;
+	top: 0px;
+	left: 0;
+	z-index: 99;
+}
+.team_start li .team_starbox{
+	position: absolute;
+	top: -1px;
+	left: 0;
+	width: 14px;
+	height: 14px;
+	background: #ff7437;
+	z-index:0;
+}
+.star_intro .area{
+	font-size: 12px;
+	color:#999;
+	display:block;
+	height:20px;
+	line-height:20px;
+}
+.star_intro .area i{
+	margin-left:44px;
+	display: inline-block;
+	width:18px;
+	height:20px;
+	margin-right:6px;
+	background:url("../images/schedule/place.png") no-repeat center;
+}
+.star_intro .area span{
+    display: block;
+    width: 150px;
+    line-height: 20px;
+    height: 20px;    
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;    
+}
+/*  --- 管理项列表 --- */
+.manage_list {
+	padding-bottom: 60px;
+    min-height: 480px;
+}
+.manage_list  .manage_list_title{
+	cursor: pointer;
+	position:relative;
+    padding:0;
+    margin:15px 0;
+    border-left: 2px solid #fff;
+}
+.maname_message_list li{
+	position:relative;	
+}
+.manage_list  .manage_list_title b,.maname_message_list b{
+	display:block;
+	width:20px;
+	height:20px;
+	background:red;
+	position:absolute;
+	top:4px;
+	right:20%;
+	border-radius:50%;
+}
+
+.manage_list  .manage_list_title span{
+    display: block;
+    font-size: 16px;
+    text-align: center;
+    line-height: 40px;
+}
+.manage_list  .manage_list_title .manage_list_btn{
+    text-align: left;
+    padding-left: 80px;
+}
+.manage_list  .manage_list_title span:hover{
+	color:#00bb90;
+}
+.manage_list_title span i{
+	display:block;
+	position: absolute;
+	top:14px;
+	right:10%;
+	width:12px;
+	height:10px;
+	background:url("../images/manage_team.png") no-repeat;
+    background-position:-548px -94px;
+}
+.personal_menu .left_menu_box{
+    line-height: 40px;
+}
+.personal_menu.manage_list  .manage_list_title{
+
+}
+.manage_list_title span i.slider_up{
+	background:url("../images/manage_icon.png") no-repeat -52px -14px;
+}
+
+.manage_list  .manage_list_title .manage_list_menu{
+	padding-top:10px;
+}
+.manage_list  .manage_list_title .manage_list_menu li{
+	font-size:14px;
+	min-width:130px;
+	text-align:left;
+    padding-left: 38%;
+    height:38px;
+    line-height:38px;
+    border-left:2px solid #fff;
+}
+.manage_list  .manage_list_title .manage_list_menu li:hover{
+	background:#f0fcf9;
+	color:#00bb90;
+	border-left:2px solid #01a87c;
+	/*margin-left:-2px;*/
+}
+.manage_list  .manage_list_title .manage_list_menu li.active{
+	background:#f0fcf9;
+	color:#00bb90;
+	border-left:2px solid #01a87c;
+	/*margin-left:-2px;	*/
+}
+
+/*input框*/
+/*inputbox*/
+    /* icon*/
+    .arrow,.cb .check_icon,.rb .radio_icon{
+    background-image:url(../images/manage_icon.png);
+}
+/* select box*/
+    .sb {
+    border:solid 1px #e5e5e5;
+    cursor:pointer;
+    background-color:#fafafa;
+    position:relative;
+    margin:0 20px 0 0;
+    display:inline-block;
+    border-radius:1px;
+    -moz-border-radius:1px;
+    -webkit-border-radius:1px;
+    font-size: 14px;
+}
+
+.sb * {
+    color:#333;
+    cursor:pointer;
+}
+.sb .opts {
+    border:1px solid #e5e5e5;
+    cursor:pointer;
+    display:none;
+    height:auto;
+    left:0;
+    max-height:121px;
+    overflow-x:hidden;
+    overflow-y:auto;
+    position:absolute;
+    top:0;
+    width:auto;
+    z-index:99;
+    background: #fff;
+}
+.sb > .selected {
+    padding:0 15px 0 5px;
+    overflow:hidden;
+    position:absolute;
+    cursor:pointer;
+    left:0;
+    border-radius:1px;
+    -moz-border-radius:1px;
+    -webkit-border-radius:1px;
+}
+.sb .opts a {
+    width:auto;
+    height:24px;
+    line-height:24px;
+    padding:0 5px;
+    cursor:default;
+    outline:none;
+    white-space:nowrap;
+    text-decoration:none;
+    display:block;
+    cursor:pointer;
+    text-align: left;
+}
+.sb .opts a.hidden{
+    display: none;
+}
+.sb .opts a.selected {
+    background:#f5f5f5;
+}
+.sb .opts a.none {
+    background:#fff;
+}
+.sb .opts a:hover {
+    background:#f5f5f5;
+    cursor:pointer;
+}
+.sb .sb_icon {
+    width:9px;
+    height:6px;
+    position:absolute;
+    cursor:pointer;
+    right:6px;
+}
+.sb .arrow {
+    background-position:-54px -18px;
+}
+.sb_active .arrow {
+    background-position:-54px -29px;
+}
+/* checkbox box*/
+    .cb {
+    width:65px;
+    height:30px;
+    display:inline-block;
+    *display:inline;
+    zoom:1;
+    cursor:pointer;
+    line-height: 30px;
+}
+.cb .check_icon {
+    width: 14px;
+    height: 14px;
+    background-position: -29px -23px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -5px;
+    margin-right: 5px;
+}
+.cb_active .check_icon {
+    background-position: -22px -43px;
+}
+/* radio box*/
+.rb {
+    width:95px;
+    height:30px;
+    margin:0 auto;
+    padding:0;
+    display:inline-block;
+    *display:inline;
+    zoom:1;
+    vertical-align:middle;
+    cursor:pointer;
+    line-height: 30px;
+}
+.rb .radio_icon {
+    width: 14px;
+    height: 14px;
+    background-position: -50px 0;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -5px;
+    margin-right: 5px;
+}
+.rb_active .radio_icon {
+    background-position: 0 -53px;
+}
+/* 遮罩层*/
+.mit_maskhidden{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background:rgb(95,95,95);
+    background:rgba(0,0,0,0.6);
+    z-index: 99;
+}
+
+
+.monolayer_container_top{
+    width:100%;
+    height:50px;
+    border-bottom:1px solid #f0f0f0;
+    line-height:50px;
+    font-size:16px;
+    text-indent: 20px;
+}
+.monolayer_container_top span{
+    display: block;
+    width:16px;
+    height:16px;
+    background:url(../images/imagetext_manage.png) -141px -106px;
+    float: right;
+    margin-top:17px;
+    margin-right:20px;
+    cursor: pointer;
+}
+.team_right{
+    width:955px;
+    float:right;
+    position: relative;
+    min-height: 700px;
+    padding-bottom: 2000px;
+    margin-bottom: -2000px;
+    background: #fff;
+}
+.sport_loading{
+    width: 500px;
+    position: absolute;
+    left: 200px;
+    top: 200px;
+    z-index: 99999;
+}
+.manage_list_menu span.menu_subtitle{
+    text-align: left;
+    font-size:14px;
+}
+.manage_list_title .message_circle{
+    display: inline-block;
+    min-width: 12px;
+    height: 12px;
+    border-radius: 7px;
+    background: red;
+    color: #fff;
+    font-size: 10px;
+    line-height: 12px;
+    text-align: center;
+    padding: 1px;
+	/*margin-left:10px;*/
+
+}
+.manage_list .message_center_infor .team_manage_btn{
+    margin-right: -20px;
+}
+.manage_no_list.active{
+    background: #f0fcf9;
+    color: #00bb90;
+    border-left: 2px solid #01a87c;
+    /*margin-left: -2px;*/
+}
+/* #manage_contents{
+    padding-bottom: 2000px;
+    margin-bottom: -2000px;
+    background: #fff;
+} */
+
+
+
+@media screen and (max-width: 1200px) {
+	.team_right{
+		width:755px;
+	}
+	.middle,.mit_middle{
+		width:1000px;
+	}
+}
+

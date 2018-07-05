@@ -1,0 +1,16 @@
+<div class="mit_container">
+    <div class="intro_content">
+        <h2>{{service.title}}</h2>
+        <p>{{service.desc}}</p>
+    </div>
+    <ul class="service_list">
+        {{each service.list as item j}}
+            <li>
+                <div class="img_box">
+                    <img src="{{item.icon}}" width="100%">
+                </div>
+                <p>{{item.title}}</p>
+            </li>
+        {{/each}}
+    </ul>
+</div>

@@ -1,0 +1,12 @@
+<div class="mit_container">
+    <h2 class="welfare_title">{{welfare.title}}</h2>
+    <ul class="welfare_box">
+	    {{each welfare.list as item }}
+	        <li>
+	            <img src="{{item.thumb}}" width="100%" />
+	            <div class="list_title">{{item.title}}</div>
+	            <div class="list_desc">{{item.desc}}</div>
+	        </li>
+        {{/each}}
+    </ul>
+</div>

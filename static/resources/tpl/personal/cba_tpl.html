@@ -1,0 +1,20 @@
+<!-- 加载赛事 -->
+<div class="match_box">
+	{{if data.list.length>0}}
+		<ul class="match_list">
+			{{include './cba_subtpl'}}
+		</ul>
+		{{if data.hasNextPage}}
+			<div data-page="{{data.page}}" class="load_more">查看更多</div>
+		{{/if}}
+	{{else}}
+		<div class="default_page_box">
+			<div class="default_img_box">
+				<img src="/resources/images/defaultPage/no_match36.png" width="100%">
+			</div>
+			<p class="default_page_tips">
+				还没有参与的赛事
+			</p>
+		</div>
+	{{/if}}
+</div>

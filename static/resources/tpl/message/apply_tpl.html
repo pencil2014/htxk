@@ -1,0 +1,49 @@
+<!-- 申请消息 -->
+{{each data.list as item index}}
+	<li {{if (item.operationType == 3)}} class="messageLi" style="cursor:pointer;"{{/if}}>
+		<div class="message_head fl">
+			<a class="message_head_a" href="{{if (item.orgId)}}/team/index/{{item.orgId}}{{else}}/personal/index/{{item.fromUserId}}{{/if}}" target="blank_"><img src="{{(item.iconUrl)||'/resources/images/default_photo.jpg'}}"></a>
+		</div>
+		<div class="message_contents message_apply_contents fl">
+			<div class="message_me_name">
+				<strong >{{item.nickName }} {{item.msgTitle }}</strong>
+				<i>{{item.createTime}}</i>
+				<div class="clearx"></div>
+			</div>
+			<div class="message_apply_result" hhly-msgId="{{item.id}}" hhly-operationType="{{item.operationType }}" hhly-url="{{(item.url)||''}}"
+			{{if (item.operationType == 3)}}style="cursor:pointer;"{{/if}}>
+			 	<textarea rows="10" cols="10" style="display: none;" class="message_operation_param">{{item.operationParam}}</textarea>
+				<div class="message_apply_mark fl">
+					<div>
+						<b>{{item.msgContent }} </b>{{if (item.operationType == 3)}}<a href="javascript:;" class="message_detail">查看详情</a>{{/if}}
+						<div class="message_apply_btn fr">
+							{{if (item.userStatus == 1)}}
+								{{if (item.operationType == 2)}}
+								<i class="agree operateMsg" hhly-operateCode="4" hhly-msgId="${item.id}">同意</i>
+								<i class="operateMsg" hhly-operateCode="3" hhly-msgId="${item.id}">拒绝</i>
+								{{/if}}
+								{{if (item.operationType == 3)}}
+								未读
+								{{/if}}
+							{{else if (item.userStatus == 2)}}
+								{{if (item.operationType == 2)}}
+								<i class="agree operateMsg" hhly-operateCode="4" hhly-msgId="${item.id}">同意</i>
+								<i class="operateMsg" hhly-operateCode="3" hhly-msgId="${item.id}">拒绝</i>
+								{{else}}
+								已读
+								{{/if}}
+							{{else if (item.userStatus == 3)}}
+								已拒绝
+							{{else if (item.userStatus == 4)}}
+								已同意
+							{{/if}}
+							<div class="clearx"></div>
+						</div>
+					</div>
+				</div>
+				<div class="clearx"></div>
+			</div>
+		</div>
+		<div class="clearx"></div>
+	</li>
+{{/each}}

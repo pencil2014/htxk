@@ -1,0 +1,11 @@
+<h1 class="product_title">{{service.title}}</h1>
+<ul class="product_content">
+	{{each service.list as item}}
+    <li>
+        <img src="{{item.icon}}" width="100%">
+        <div class="title">
+            {{item.title}}
+        </div>
+    </li>
+   {{/each}}
+</ul>

@@ -1,0 +1,34 @@
+{
+  "friendLinks":[
+    {
+      "id":1,
+      "img":"/resources/images/friendlyLink/link1.jpg",
+      "src":"http://live.13322.com"
+    },
+    {
+      "id":2,
+      "img":"/resources/images/friendlyLink/link2.jpg",
+      "src":"http://dj.13322.com"
+    },
+    {
+      "id":3,
+      "img":"/resources/images/friendlyLink/link3.jpg",
+       "src":"http://game.13322.com/"
+    },
+    {
+      "id":4,
+      "img":"/resources/images/friendlyLink/link4.jpg",
+      "src":"http://kf.13322.com/"
+    },
+    {
+      "id":5,
+      "img":"/resources/images/friendlyLink/link5.jpg",
+      "src":"http://www.hao13322.com"
+    },
+    {
+      "id":6,
+      "img":"",
+      "src":""
+    }
+  ]
+}

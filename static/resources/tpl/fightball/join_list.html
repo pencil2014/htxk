@@ -1,0 +1,20 @@
+<!--管理者退出拼球模板-->
+ <ul class="transfer_list clearfix ">
+    <form>
+    {{each list as item i}}
+      <li>
+        <div class="player_header">
+          <img src="{{item.iconUrl == null ? '/resources/images/default_photo.jpg' : item.iconUrl}}">
+        </div>
+        <span class="player_name" title="{{item.nickName}}">{{item.nickName}}</span>
+        {{if item.pcImgtxtUrl != null}}
+          <img class="player_mark" src="{{item.pcImgtxtUrl}}" />
+        {{/if}}
+        <div class="check_btn">
+          <img src="/resources/images/fightball/common/checkmark_icon.png" class="hide">
+          <input name="val" type="radio" value="{{item.userId}}">
+        </div>
+      </li>
+    {{/each}}
+    </form>
+  </ul>

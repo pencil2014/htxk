@@ -1,0 +1,244 @@
+body{
+	background:#ebf0f5;
+}
+.post_center{
+	width:1200px;
+	margin:0 auto;
+}
+.clearx{
+	clear: both;
+}
+/* --- 帖子详情内容 --- */
+
+.table_nav h1{
+	font-size: 12px;
+	line-height: 64px;
+}
+.table_nav a{
+	color:#999999;
+}
+.table_nav h1 .table_index{
+	color:#3983e5;
+}
+.share_list{
+	width:94px;
+	text-align: center;
+}
+.share_list h3{
+	font-size: 14px;
+	color:#333;
+	margin-bottom: 20px;
+}
+.share_list li{
+	width: 34px;
+	margin:0 auto 10px;
+
+}
+.post_content_box{
+	background:#fff;
+	width:802px;	
+}
+.post_content_detail{
+	padding:30px 60px;
+	width:682px;
+	position: relative;
+	border-bottom: 1px solid #e5e5e5;
+}
+.post_author{
+	padding-bottom: 20px;
+	border-bottom: 1px solid #e5e5e5;
+}
+.post_author .post_author_head{
+	width:70px;
+	height:70px;
+	border-radius: 50%;
+	margin-right: 20px;
+}
+.post_author .post_author_head img{
+	display: block;
+	width: 100%;
+	height:100%;
+	border-radius: 50%;
+}
+.post_author_name h1{
+	font-weight: normal;
+}
+.post_author_name strong{
+	font-size: 20px;
+	font-weight: normal;
+	display: inline-block;
+	line-height: 35px;
+}
+.post_author_name h1 span{
+	display: inline-block;
+	font-size:12px;
+	color:#333;
+	padding:4px 8px;
+	border-radius: 4px;
+	border:1px solid #e5e5e5;
+	cursor: pointer;
+}
+.post_author_name h1 span:hover{
+	background:#00cd9d;
+	color:#fff;
+}
+.post_author_name span.already_focus{
+	border:1px solid #00cd9d;
+	color:#00cd9d;
+}
+.post_author_name i{
+	display: inline-block;
+	color:#00cd9d;
+	border-radius: 4px;
+	border:1px solid #00cd9d;
+	padding:0 4px;
+	margin-top: 5px;
+}
+.post_content_detail h2{
+	margin:16px 0 16px;
+	font-size: 22px;
+}
+.post_publish_time{
+	line-height:40px;
+	color:#999999;
+	font-size: 12px;
+	margin-bottom: -12px;
+}
+.post_content_detail p{
+	line-height: 26px;
+	margin-bottom: 26px;
+	text-indent: 30px;
+	font-size: 14px;
+}
+.post_content_detail h4{
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 26px;
+}
+.post_content_detail .post_praise{
+	margin:30px auto;
+	width: 90px;
+	height:90px;
+	border-radius: 50%;
+	background:#00bb90;
+	background-image: url("../images/praiseBig.png");
+	background-repeat: no-repeat;
+	background-position: 30px 14px;
+	position: relative;
+}
+.post_content_detail .post_praise span{
+	position: absolute;
+	bottom: 10px;
+	right:36px;
+	color:#fff;
+}
+.report_btn {
+	position: absolute;
+	bottom: 20px;
+	right:30px;
+	color: #999;
+	cursor: pointer;
+}
+.report_btn i{
+	display: block;
+	width:18px;
+	height:18px;
+	position: absolute;
+	top:2px;
+	left:-22px;
+	background:url(../images/sport_other.png) no-repeat -136px -79px;	
+}
+
+/* --- 评论列表 ---  */
+.post_comments{
+	padding:30px;
+}
+.post_comments h3{
+	font-size: 20px;
+	font-weight: normal;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #e5e5e5;
+}
+.post_comments_list li{
+	padding:20px 0 10px;
+	border-bottom: 1px solid #e5e5e5;
+}
+.post_comments_list li .comments_head{
+	width:50px;
+	height:50px;
+}
+.post_comments_list li .comments_head img{
+	display: block;
+	width:100%;
+	height:100%;
+}
+.comments_content{
+	margin-left: 14px;
+}
+.post_comments_list li p{
+	color:#999999;
+	width:674px;
+}
+.post_comments_list li strong{
+	font-weight: normal;
+	display: inline-block;
+	margin-top: 10px;
+	width:500px;
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;	
+}
+.post_praise{
+	margin-top: 20px;
+	color:#666666;
+}
+.post_praise i{
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+	background:url("../images/manage_team.png") no-repeat -410px -30px
+}
+.more_comments{
+	background:#f5f5f5;
+	display: block;
+	width: 100%;
+	text-align: center;
+	margin-top: 20px;
+	line-height: 30px;
+	color:#999999;
+}
+.advertising_list a{
+	display: block;
+}
+.post_content_detail img{
+	padding:5px 0;
+}
+.post_content_detail .approve_show_icon {
+	/*display: block;*/
+	margin-left: 0;
+}
+.post_content_detail .approve_show_icon img{
+	padding:0;
+}
+
+
+
+@media screen and (max-width: 1250px){
+	.post_center{
+		width:1000px;
+	}
+	.post_content_box{
+		width:602px;
+	}
+	.post_content_detail{
+		width:482px;
+	}
+	.post_comments_list li strong{
+		width:300px;
+	}
+	.post_comments_list li p{
+		width:474px;
+	}	
+}

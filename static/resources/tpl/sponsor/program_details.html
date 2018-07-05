@@ -1,0 +1,18 @@
+<div class="detail_box">
+	<div class="detail_common detail_content">
+		<div class="basic_message">
+			<div class="direct_box">
+				<label class="unit_label">招商方案：</label>
+				<ul class="unit_box">
+					{{if data.length>0}}
+						{{each data as item index}}
+						<li><a href='/sponsor/attachment/download?fileId={{item.id}}' target="_blank" class="a_style">{{item.fileName}}</a></li>
+						{{/each}}
+					{{else}}
+					--
+					{{/if}}
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>

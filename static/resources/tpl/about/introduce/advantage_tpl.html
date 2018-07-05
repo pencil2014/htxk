@@ -1,0 +1,20 @@
+<div class="mit_container">
+    <div class="intro_content">
+        <h2>{{advantage.title}}</h2>
+    </div>
+    <ul class="advantage_list">
+        {{each advantage.list as item index}}
+            <li>
+                <div class="img_box">
+                    <img src="{{item.icon}}" width="100%">
+                </div>
+                <div class="desc">
+                    <div class="title">{{item.title}}</div>
+                    {{each item.desc as text }}
+                        <p class="text">{{text}}</p>
+                    {{/each}}
+                </div>
+            </li>
+        {{/each}}
+    </ul>
+</div>

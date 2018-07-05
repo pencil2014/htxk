@@ -1,0 +1,42 @@
+{
+	"slideList":[
+		{
+			"url":"/resources/images/about/banner/banner_02.png",
+			"href":"/",
+			"title":"体育资源共享平台",
+			"desc":"求苗体育聚集各类体育产业IP，包含但不限于体育赛事、体育培训、体育旅游、体育赞助、体育用品等各大板块，实现多种资源的聚合与互通"
+		},{
+			"url":"/resources/images/about/banner/banner_03.png",
+			"href":"/",
+			"title":"体育消费和服务平台",
+			"desc":"赛事运营管理、合作机构对接、消费数据统计及线上推广等多服务轻松一键搞定"
+		}
+	],
+	"business":{
+		"title":"联系我们",
+		"list":[
+			{
+				"title":"商务合作",
+				"phone":"86338324转8843",
+				"email":"htxk-BD@13322.com"
+			},
+			{
+				"title":"战略合作",
+				"phone":"86338109转8868",
+				"email":"hhlykj@13322.com"
+			},
+			{
+				"title":"媒体合作",
+				"phone":"86338324转8843",
+				"email":"htxk-brand@13322.com"
+			}
+		]
+	},
+	"address":{
+		"title":"办公地址",
+		"desc":"深圳华体星空体育文化有限公司，位于集团总部——有中国“硅谷”之称的南山科技园 办公室面积约2500㎡，团队目前有数百人。",
+		"address":"深圳市南山区讯美科技大厦2号楼16层",
+		"phone":"0755-86338324-8843",
+		"email":"htxk-HR@13322.com"
+	}
+}

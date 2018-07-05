@@ -1,0 +1,96 @@
+<!-- 咨询数据拼接 -->
+{{each data.list as item index}}
+	{{if item.infoType==1}}
+		{{if item.coverUrl.length>0}}
+			<li class="news_commonbox textwrap_box">
+				<dl class="left_graphic">
+					{{each item.coverUrl as picture i}}
+						{{if i==0}}
+							<dt><a href="{{item.url}}" target="_blank"><img src="{{picture}}" width="100%"></a></dt>
+						{{/if}}
+					{{/each}}
+				</dl>
+				<div class="right_inforbox">
+					<h4><a href="{{item.url}}" target="_blank">{{item.title}}</a></h4>
+					<div class="report_box">
+						<div class="report_office">
+							<span class="office_icon smalluser_icon"></span>
+							<span class="text">{{item.authorName}}</span>
+						</div>
+						<div class="time_reply">
+							<label class="time_label">{{item.publishTimeFormat}}</label>
+							<div class="report_replybox">
+								<i class="iconfont">&#xe628;</i>
+								<span class="number">{{item.commentCount||0}}</span>
+							</div>
+							<div class="report_likenumber">
+								<i class="iconfont">&#xe65c;</i>
+								<span class="number">{{item.clickCount||0}}</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+		{{else}}
+			<li class="news_commonbox article_newbox ">
+				<h4 class="title"><a href="{{item.url}}" target="_blank">{{item.title}}</a></h4>
+				<div class="article_box">
+					<p class="article_desc">{{item.summary}}</p>
+				</div>
+				<div class="report_box report_footer">
+					<div class="report_office ">
+						<span class="office_icon smalluser_icon"></span>
+						<span class="text">{{item.authorName}}</span>
+					</div>
+					<div class="time_reply">
+						<label class="time_label">{{item.publishTimeFormat}}</label>
+						<div class="report_replybox">
+							<i class="iconfont">&#xe628;</i>
+							<span class="number">{{item.commentCount||0}}</span>
+						</div>
+						<div class="report_likenumber">
+							<i class="iconfont">&#xe65c;</i>
+							<span class="number">{{item.clickCount||0}}</span>
+						</div>
+					</div>
+				</div>
+			</li>
+		{{/if}}
+	{{else}}
+		<li class="news_commonbox picture_newbox ">
+			<h4 class="title"><a href="{{item.url}}" target="_blank">{{item.title}}</a></h4>
+			<div class="picimg_box">
+				<dl>
+					{{each item.coverUrl as picture}}
+						<dt><a href="{{item.url}}" target="_blank"><img src="{{picture}}" width="100%"></a></dt>
+					{{/each}}
+				</dl>
+				<div class="picmore_btn">
+					<a href="{{item.url}}" class="text" target="_blank">查看更多&gt;</a>
+					{{if contentSize>0}}
+						<div class="img_accountbox">
+							<span class="account">{{item.contentSize}}</span><span class="pic">图</span>
+						</div>
+					{{/if}}
+				</div>
+			</div>
+			<div class="report_box report_footer">
+				<div class="report_office">
+					<span class="office_icon smalluser_icon"></span>
+					<span class="text">{{item.authorName}}</span>
+				</div>
+				<div class="time_reply">
+					<label class="time_label">{{item.publishTimeFormat}}</label>
+					<div class="report_replybox">
+						<i class="iconfont">&#xe628;</i>
+						<span class="number">{{item.commentCount}}</span>
+					</div>
+					<div class="report_likenumber">
+						<i class="iconfont">&#xe65c;</i>
+						<span class="number">{{item.clickCount}}</span>
+					</div>
+				</div>
+			</div>
+		</li>
+	{{/if}}
+{{/each}}

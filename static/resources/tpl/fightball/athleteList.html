@@ -1,0 +1,49 @@
+<!--  成员列表模板  -->
+  <ul class="player_list  clearfix ">
+    {{each data.list as item i}}
+    <li>
+      <div class="player_header">
+        <a href="/personal/index/{{item.userId}}" target="_blank">
+          <img src="{{item.iconUrl == null ? '/resources/images/default_photo.jpg' : item.iconUrl}}">
+        </a>
+      </div>
+      <span class="player_name">{{item.nickName}}</span>
+      {{if item.pcImgtxtUrl != null}}
+      <img class="player_mark" src="{{item.pcImgtxtUrl}}">
+      {{/if}}
+      {{if isManager == 1}}
+        {{if isJoinUser == 0}}
+          <div class="handle_btn">
+            <button isSingle="true" class="btn refused_btn">拒绝</button>
+            <button isSingle="true" class="btn agree_btn">同意</button>
+          </div>
+        {{else}}
+          <div class="handle_btn">
+            <button isSingle="true" class="btn kickout_btn">踢出</button>
+          </div>
+        {{/if}}
+          <div class="check_btn">
+            <img src="/resources/images/fightball/common/checkmark_icon.png" class="hide">
+            <input type="checkbox" value={{item.userId}} />
+          </div>
+      {{/if}}
+      {{if isManager == 0}}
+        {{if item.statusCode == 1}}
+          <div class="handle_btn">
+            <button class="exit_fight_btn">退出</button>
+          </div>
+        {{/if}}
+      {{/if}}
+    </li>
+    {{/each}}
+    {{if data.list.length == 0}}
+      <div class="no_join_text">
+        暂时无人申请加入，分享给你的好友，一起运动吧！
+      </div>
+    {{/if}}
+  </ul>
+  {{if data.hasNextPage}}
+  <div class="view_more">
+    <span href="javascript:;">查看更多</span>
+  </div>
+  {{/if}}

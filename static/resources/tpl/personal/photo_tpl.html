@@ -1,0 +1,22 @@
+<!-- 加载相册 -->
+{{if data.length>0}}
+	<div class="share_photo">
+		<ul>
+		{{include './photo_subtpl'}}
+		</ul>
+		{{if data.hasNextPage}}
+			<div data-page="{{data.page}}" class="load_more">查看更多</div>
+		{{/if}}
+	</div>
+{{else}}
+	<div class="share_photo">
+		<div class="default_page_box">
+			<div class="default_img_box">
+				<img src="/resources/images/defaultPage/not_publish_image.png" width="100%">
+			</div>
+			<p class="default_page_tips">
+				没有发布图片哦
+			</p>
+		</div>
+	</div>
+{{/if}}

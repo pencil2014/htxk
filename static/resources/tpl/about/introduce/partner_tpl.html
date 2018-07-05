@@ -1,0 +1,10 @@
+<h2 class="about_text">
+    <span>{{partner.title}}</span>
+</h2>
+<ul class="partner_box">
+{{each partner.list as item index}}
+    <li>
+        <img src="{{item.icon}}" width="100%">
+    </li>
+   {{/each}}
+</ul>

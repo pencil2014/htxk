@@ -1,0 +1,57 @@
+<div class="schedule_list">
+  {{if data.list.length}}
+  <div class="table_layout">
+    <div class="table_header_group">
+      <div class="table_header_col" style="width:92px">轮次</div>
+      <div class="table_header_col" style="width:140px">比赛日期</div>
+      <div class="table_header_col" style="width:140px">比赛时间</div>
+      <div class="table_header_col" style="width:210px;">主场</div>
+      <div class="table_header_col"></div>
+      <div class="table_header_col" style="width:210px;">客场</div>
+      <div class="table_header_col" style="width:200px">比赛地点</div>
+    </div>
+    {{each data.list as item index}}
+    <div class="table_body_group">
+      <div class="table_body_col"><a href=""><img src="">第{{item.grade}}轮</a></div>
+      <div class="table_body_col">{{item.endTime&&item.endTime.split(' ')[0]}}</div>
+      <div class="table_body_col">{{item.endTime&&item.endTime.split(' ')[1].split(':').slice(0,2).join(':')}}</div>
+      <div class="table_body_col host_col">
+        <span class="schedule_item_name" title="{{item.hostOrgName}}">{{item.hostOrgName}}</span><img class="photo_40x" src="{{item.hostIcon||'/resources/images/default_team_logo.png'}}">
+        {{if item.result == 3}}
+          <span class="schedule_lost">弃权</span>
+        {{/if}}
+      </div>
+      <div class="table_body_col">
+        {{if item.result == 0}}
+          vs
+        {{else if item.result ==5}}
+          已取消
+        {{else}}
+          <span style="{{item.homeScore==0?'color:#ff0808':''}}">{{item.homeScore}}</span>:<span style="{{item.guestScore==0?'color:#ff0808':''}}">{{item.guestScore}}</span>
+        {{/if}}
+      </div>
+      <div class="table_body_col guest_col">
+        {{if item.result == 4}}
+          <span class="schedule_lost">弃权</span>
+        {{/if}}
+        <img class="photo_40x" src="{{item.guestIcon||'/resources/images/default_team_logo.png'}}">
+        <span class="schedule_item_name" title="{{item.guestOrgName}}">{{item.guestOrgName}}</span>
+      </div>
+      <div class="table_body_col">{{item.place}}<br/>{{item.placeNumber}}</div>
+    </div>
+    {{/each}}
+  </div>
+  {{if data.hasNextPage}}
+  <div class="load_more" hhly-has-next="{{data.hasNextPage}}" hhly-page="{{data.page}}">加载更多</div>
+  {{/if}}
+  {{else}}
+  <div class="default_page_box">
+		<div class="default_img_box">
+			<img src="/resources/images/match/schedule_empty.png" width="100%">
+		</div>
+		<p class="default_page_tips">
+			暂无数据
+		</p>
+	</div>
+  {{/if}}
+</div>

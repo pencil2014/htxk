@@ -1,0 +1,394 @@
+﻿.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.share_box {
+  border-top: 1px solid #f2f2f2;
+}
+.share_box li.list {
+  padding: 20px;
+  border-bottom: 1px solid #e5e5e5;
+}
+.share_box li.list a:hover {
+  color: #3983e5;
+}
+.share_box .user_box .user_head {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 14px;
+  *display: inline;
+  *zoom: 1;
+}
+.share_box .user_box .user_infor {
+  margin-left: 20px;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 14px;
+  *display: inline;
+  *zoom: 1;
+}
+.share_box .user_box .user_infor .author {
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+}
+.share_box .user_box .user_infor .author .approve_icon {
+  display: inline-block;
+  height: 14px;
+}
+.share_box .user_box .user_infor .time {
+  display: block;
+  font-size: 12px;
+  color: #999;
+}
+.share_box .share_content {
+  padding: 15px 0;
+  line-height: 30px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  height: 50px;
+  overflow: hidden;
+}
+.share_box .share_images {
+  margin-top: 20px;
+}
+.share_box .share_images li {
+  width: 180px;
+  height: 100px;
+  margin: 0px 10px 10px 0;
+  float: left;
+  overflow: hidden;
+}
+.share_box .share_footer .share_remark span {
+  padding: 2px 12px;
+  background: #f0f0f0;
+  color: #999;
+  margin-right: 10px;
+}
+.share_box .share_footer .share_reply {
+  color: #999;
+}
+.share_box .share_footer .share_reply .replay {
+  margin-right: 10px;
+}
+.topic_box {
+  padding: 20px;
+  background: #fff;
+}
+.topic_box .mod_h1 {
+  padding-bottom: 15px;
+  font-size: 18px;
+}
+.topic_box .topic_list li {
+  padding: 8px 0;
+}
+.topic_box .topic_list li .dot {
+  padding: 0 5px;
+  vertical-align: middle;
+  color: #999;
+}
+.topic_box .topic_list li a {
+  width: 220px;
+  display: inline-block;
+  vertical-align: middle;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.publicity_box {
+  margin-top: 20px;
+}
+.publicity_box img {
+  display: block;
+}
+.news_box .news_commonbox,
+.share_video .news_commonbox {
+  padding: 10px 0;
+  border-bottom: 1px solid #f2f2f2;
+}
+.news_box .news_commonbox:hover h4 a,
+.share_video .news_commonbox:hover h4 a {
+  color: #3983e5;
+}
+.news_box .mit_graphicnew,
+.share_video .mit_graphicnew {
+  width: 894px;
+  background: #fff;
+  display: inline-block;
+  font-size: 14px;
+  *display: inline;
+  *zoom: 1;
+}
+.news_box .mit_inforbox,
+.share_video .mit_inforbox {
+  padding: 30px 60px;
+  min-height: 700px;
+}
+.news_box .infor_subtitle,
+.share_video .infor_subtitle {
+  font-size: 16px;
+  color: #666666;
+  font-weight: normal;
+  border-bottom: 2px solid #f2f2f2;
+  height: 40px;
+  line-height: 40px;
+}
+.news_box .infor_subtitle span,
+.share_video .infor_subtitle span {
+  float: left;
+  cursor: pointer;
+  padding: 0 10px;
+  display: inline-block;
+  margin-right: 22px;
+  *display: inline;
+  *zoom: 1;
+}
+.news_box .infor_subtitle span:hover,
+.share_video .infor_subtitle span:hover,
+.news_box .infor_subtitle span.on,
+.share_video .infor_subtitle span.on {
+  border-bottom: 2px solid #00bb90;
+  color: #00bb90;
+}
+.news_box .left_graphic,
+.share_video .left_graphic {
+  width: 160px;
+  display: inline-block;
+  vertical-align: middle;
+  *display: inline;
+  *zoom: 1;
+  position: relative;
+}
+.news_box .left_graphic span.bg,
+.share_video .left_graphic span.bg {
+  width: 100%;
+  display: block;
+  height: 20px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  font-size: 12px;
+  padding-left: 5px;
+  box-sizing: border-box;
+}
+.news_box .left_graphic dt,
+.share_video .left_graphic dt {
+  height: 90px;
+}
+.news_box .left_graphic img,
+.share_video .left_graphic img {
+  display: block;
+}
+.news_box .textwrap_box,
+.share_video .textwrap_box {
+  padding: 20px 0;
+  border-bottom: 1px solid #f2f2f2;
+}
+.news_box .report_box,
+.share_video .report_box {
+  color: #999999;
+}
+.news_box .report_office span.text,
+.share_video .report_office span.text {
+  color: #666;
+  padding-left: 5px;
+}
+.news_box .report_office,
+.share_video .report_office {
+  float: left;
+}
+.news_box .report_office .office_icon,
+.share_video .report_office .office_icon {
+  width: 11px;
+  height: 12px;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+.news_box .report_box .time_reply,
+.share_video .report_box .time_reply {
+  display: inline-block;
+  margin-left: 20px;
+  *display: inline;
+  *zoom: 1;
+  font-size: 12px;
+}
+.news_box .report_replybox,
+.share_video .report_replybox {
+  display: inline-block;
+  margin-left: 20px;
+  *display: inline;
+  *zoom: 1;
+}
+.news_box .time_label,
+.share_video .time_label {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+.news_box .report_likenumber,
+.share_video .report_likenumber {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  margin-left: 20px;
+}
+.news_box .reply_icon,
+.share_video .reply_icon {
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  background-position: -53px -134px;
+  vertical-align: middle;
+}
+.news_box .likenumber_icon,
+.share_video .likenumber_icon {
+  width: 14px;
+  height: 14px;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  background-position: -142px -22px;
+  vertical-align: middle;
+}
+.news_box .time_reply span.number,
+.share_video .time_reply span.number {
+  padding-left: 5px;
+}
+.news_box .report_footer,
+.share_video .report_footer {
+  padding: 10px 0 5px;
+}
+.news_box .border0,
+.share_video .border0 {
+  border: 0;
+}
+.news_box .picture_newbox h4.title,
+.share_video .picture_newbox h4.title,
+.news_box .article_newbox h4.title,
+.share_video .article_newbox h4.title {
+  padding: 10px 0;
+  font-size: 20px;
+  color: #333333;
+}
+.news_box .picture_newbox h4 a,
+.share_video .picture_newbox h4 a,
+.news_box .article_newbox h4 a,
+.share_video .article_newbox h4 a,
+.news_box .right_inforbox h4 a,
+.share_video .right_inforbox h4 a {
+  color: #333333;
+  display: block;
+  height: 26px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.news_box .right_inforbox,
+.share_video .right_inforbox {
+  display: inline-block;
+  margin-left: 20px;
+  vertical-align: top;
+  width: 625px;
+  *display: inline;
+  *zoom: 1;
+}
+.news_box .right_inforbox h4,
+.share_video .right_inforbox h4 {
+  font-size: 20px;
+  padding: 15px 0;
+}
+.news_box .picimg_box,
+.share_video .picimg_box {
+  padding: 10px 0;
+  overflow: hidden;
+  margin-right: -5px;
+  margin-left: -5px;
+}
+.news_box .picimg_box dl dt,
+.share_video .picimg_box dl dt {
+  width: 160px;
+  float: left;
+  padding: 0 5px;
+  height: 90px;
+}
+.news_box .picimg_box dl dt img,
+.share_video .picimg_box dl dt img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.news_box .picmore_btn,
+.share_video .picmore_btn {
+  width: 135px;
+  height: 90px;
+  background: #e8e8e8;
+  text-align: center;
+  display: inline-block;
+  margin-left: 5px;
+  position: relative;
+  *display: inline;
+  *zoom: 1;
+}
+.news_box .picmore_btn a.text,
+.share_video .picmore_btn a.text {
+  line-height: 90px;
+  color: #3983e5;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 10;
+}
+.news_box .img_accountbox,
+.share_video .img_accountbox {
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+  background: #454545;
+  color: #fff;
+  padding: 0 3px;
+  border-radius: 3px;
+}
+.news_box .img_accountbox .pic,
+.share_video .img_accountbox .pic {
+  margin-left: 3px;
+}
+.news_box .article_desc,
+.share_video .article_desc {
+  line-height: 24px;
+  color: #666666;
+  padding-bottom: 20px;
+}
+.news_box,
+.share_video,
+.cicle_team,
+.circle_ball {
+  border-top: 1px solid #e5e5e5;
+}
+.share_photo {
+  border-top: 1px solid #e5e5e5;
+  padding: 15px 20px;
+}
+.share_photo ul .li_box {
+  padding: 10px 0 10px;
+}
+.share_photo ul .li_box .time {
+  padding: 10px 0;
+}
+.share_photo ul .li_box dl.list dt {
+  float: left;
+  margin: 0 10px 10px 0;
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+}

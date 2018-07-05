@@ -1,0 +1,109 @@
+<div class="detail_box item-box">
+	<div class="detail_common">
+		<div class="basic_message">
+			<div class="direct_box">
+				<label class="unit_label">招商名称：</label>
+				<ul class="unit_box">
+					<li>{{data.sponsorBase.title}}</li>
+				</ul>
+			</div>
+			<div class="direct_box">
+				<label class="unit_label">主办单位：</label>
+				<ul class="unit_box">
+					<li>
+						{{if data.sponsorOrganizationRespVO != '' || data.sponsorOrganizationRespVO.sponsorsList}}
+							{{each data.sponsorOrganizationRespVO.sponsorsList as item index}}
+							{{item ? item : '--'}}
+							{{/each}}
+						{{else}}
+							--
+						{{/if}}
+					</li>
+				</ul>
+			</div>
+			<div class="direct_box">
+				<label class="unit_label">承办单位：</label>
+				<ul class="unit_box">
+					<li>
+						{{if data.sponsorOrganizationRespVO != '' || data.sponsorOrganizationRespVO.organizersList}}
+							{{each data.sponsorOrganizationRespVO.organizersList as item index}}
+							{{item ? item : '--'}}
+							{{/each}}
+						{{else}}
+							--
+						{{/if}}
+					</li>
+				</ul>
+			</div>
+			<div class="direct_box">
+				<label class="unit_label">活动类型：</label>
+				<ul class="unit_box">
+					<li>{{data.sponsorBase.activeTypeName}}</li>
+				</ul>
+			</div>
+			<div class="direct_box">
+				<label class="unit_label">活动规模：</label>
+				<ul class="unit_box">
+					<li>{{data.sponsorBase.activeScale == 1 ? '单一区域' : '系列赛'}}</li>
+				</ul>
+			</div>
+		</div>
+		<div class="basic_message">
+			<ul class="item_ul">
+				{{each data.sponsorAreaList as item index}}
+				<li>
+					<div class="address_sub">
+						<em>活动地点{{index+1}}：</em>
+						<span class="sport_type">
+							{{item.provinceName ? item.provinceName+'，' : ''}}
+							{{item.cityName ? item.cityName+'，' : ''}}
+							{{item.detailsAddress ? item.detailsAddress : ''}}
+						</span>
+					</div>
+					<div class="time_sub">
+						<em>活动时间：</em>
+						<span class="sport_type">
+							{{item.startTime + ' - '}}{{item.endTime}}
+						</span>
+					</div>
+				</li>
+				{{/each}}
+			</ul>
+		</div>
+		<div class="basic_message">
+			<div class="direct_box">
+				<label class="unit_label">比赛项目：</label>
+				<ul class="unit_box">
+					<li>
+						{{each data.sponsorProjectList as item index}}
+						{{item.projectName+'&nbsp;&nbsp;'}}
+						{{/each}}
+					</li>
+				</ul>
+			</div>
+			<div class="direct_box">
+				<label class="unit_label">赛事级别：</label>
+				<ul class="unit_box">
+					<li>{{data.sponsorBase.activeLevelName}}</li>
+				</ul>
+			</div>
+			<div class="direct_box">
+				<label class="unit_label">参加人数：</label>
+				<ul class="unit_box">
+					<li>{{data.sponsorBase.joinNumber}}人</li>
+				</ul>
+			</div>
+			<div class="direct_box">
+				<label class="unit_label">现场观众：</label>
+				<ul class="unit_box">
+					<li>{{data.sponsorBase.audience}}人</li>
+				</ul>
+			</div>
+		</div>
+		{{if data.sponsorBaseDetails != ''}}
+			<div class="basic_content" id="mydiv">
+				<p>{{#data.sponsorBaseDetails.pcDetails}}</p>
+			</div>
+		{{/if}}
+	</div>
+</div>

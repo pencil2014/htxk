@@ -1,0 +1,69 @@
+{{if data.length==0}}
+    <div class="default_page_box">
+        <div class="default_img_box">
+            <img src="/resources/images/defaultPage/not_rules.png" width="100%">
+        </div>
+        <p class="default_page_tips">
+            暂无招商方案
+        </p>
+    </div>
+
+{{else}}
+    <div class="detail_box">
+        <div class="detail_common detail_content">
+            <h2 class="mod_h1">传播渠道</h2>
+            <div class="basic_message">
+                <ul class="message_box merchants_box">
+                    {{each data.listChannel as val index}}
+                    <li>
+                        <em>
+                            {{if val.channelType == 1}}
+                            电视台
+                            {{else if val.channelType == 2}}
+                            网络媒体
+                            {{else if val.channelType == 3}}
+                            社交媒体
+                            {{else if val.channelType == 4}}
+                            平面媒体
+                            {{else if val.channelType == 5}}
+                            户外媒体
+                            {{/if}}
+                        ：</em>
+                        <span class="apply_cost">{{val.channelValue ? val.channelValue : '--'}}</span>
+                    </li>
+                    {{/each}}
+                </ul>
+                <div class="p_con">
+                    <p>{{data.complement}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="detail_common">
+            <h2 class="mod_h1">招商方案</h2>
+            <div class="basic_message">
+                <div class="direct_box">
+                    <label class="unit_label">招商数量：</label>
+                    <ul class="unit_box">
+                        <li>{{data.quantity ? data.quantity : '--'}}名</li>
+                    </ul>
+                </div>
+                <div class="direct_box">
+                    <label class="unit_label">招商金额：</label>
+                    <ul class="unit_box">
+                        <li>{{data.money/1000000 ? data.money/1000000+'万元' : '--'}}</li>
+                    </ul>
+                </div>
+                {{each data.listRights as val index}}
+                <div class="direct_box">
+                    <label class="unit_label">{{val.parentRightsName}}：</label>
+                    <div class="direct_item">
+                        <p>{{val.rightsName}}</p>
+                        <p>{{val.rightsDesc}}</p>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+    <div class="space_bottom"></div>
+{{/if}}

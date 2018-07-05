@@ -1,0 +1,22 @@
+
+<p class="mod-title">参与招标</p>
+{{if data.length>0}}
+<ul class="tender-box">
+	{{each data as item index}}
+	<li>
+		<dl>
+			<dt>
+				{{if item.iconUrl}}
+				<img src="{{item.iconUrl}}">
+				{{else}}
+				<img src="/resources/images/default_team_logo.png">
+				{{/if}}
+			</dt>
+			<dd>{{item.nickName}}</dd>
+		</dl>
+	</li>
+	{{/each}}
+</ul>
+{{else}}
+<p class="no_tender">暂无参与招标信息</p>
+{{/if}}

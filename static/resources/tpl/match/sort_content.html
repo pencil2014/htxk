@@ -1,0 +1,109 @@
+<div class="sort_box detail_box">
+  <h2 class="mod_h1">排行榜</h2>
+  {{if (basketballPage && basketballPage.list.length) || (footballPage && footballPage.list.length)}}
+  <div class="table_layout">
+    {{if basketballPage}}
+    <div class="table_header_group">
+      <div class="table_header_col" style="width:80px">排名</div>
+      <div class="table_header_col" style="width:260px">选手</div>
+      <div class="table_header_col" style="width:150px">胜/负</div>
+      <div class="table_header_col" style="width:150px">胜率</div>
+      <div class="table_header_col" style="width:60px">得分</div>
+      <div class="table_header_col" style="width:60px">失分</div>
+      <div class="table_header_col">分差</div>
+      <div class="table_header_col"style="width:150px">连胜/负</div>
+    </div>
+    {{each basketballPage.list as item index}}
+    <div class="table_body_group">
+      <div class="table_body_col">
+        {{if item.chartNo < 4}}
+        <img src="/resources/images/match/sort/0{{item.chartNo}}.png" alt="">
+        {{else}}
+          {{item.chartNo}}
+        {{/if}}
+      </div>
+      <div class="table_body_col" style="text-align:left;padding-left:20px">
+        <a href="/personal/index/{{item.userId}}" target="_blank">
+          <img class="photo_40x" src="{{item.iconUrl||'/resources/images/default_photo.jpg'}}">
+          <span class="schedule_item_name" style="max-width:180px" title="{{item.userName}}">{{item.userName}}</span>
+        </a>
+      </div>
+      <div class="table_body_col">{{item.countWin}}/{{item.countLost}}</div>
+      <div class="table_body_col">{{item.winningPercentage}}%</div>
+      <div class="table_body_col">{{item.pointAvgWin}}</div>
+      <div class="table_body_col">{{item.pointAvgLost}}</div>
+      <div class="table_body_col">{{item.pointAvgDifference}}</div>
+      <div class="table_body_col">{{item.consecutiveWin>=0?item.consecutiveWin:-item.consecutiveWin}}{{item.consecutiveWin!=0 && '连'}}{{item.consecutiveWin>0&&'胜'}}{{item.consecutiveWin<0&&'负'}}</div>
+    </div>
+    {{/each}}
+    {{/if}}
+    {{if footballPage}}
+    <div class="table_header_group">
+      <div class="table_header_col" style="width:80px">排名</div>
+      <div class="table_header_col" style="width:260px">选手</div>
+      <div class="table_header_col" style="width:80px">场次</div>
+      <div class="table_header_col">胜/平/负</div>
+      <div class="table_header_col">进/失</div>
+      <div class="table_header_col">净胜球</div>
+      <div class="table_header_col">积分</div>
+    </div>
+    {{each footballPage.list as item index}}
+    <div class="table_body_group">
+      <div class="table_body_col">
+        {{if item.chartNo < 4}}
+        <img src="/resources/images/match/sort/0{{item.chartNo}}.png" alt="">
+        {{else}}
+          <span style="font-size:18px">{{item.chartNo}}</span>
+        {{/if}}
+      </div>
+      <div class="table_body_col" style="text-align:left;padding-left:20px">
+        <a href="/personal/index/{{item.userId}}" target="_blank">
+          <img class="photo_40x" src="{{item.iconUrl||'/resources/images/default_photo.jpg'}}">
+          <span class="schedule_item_name" style="max-width:180px" title="{{item.userName}}">{{item.userName}}</span>
+        </a>
+      </div>
+      <div class="table_body_col">{{item.countAll}}</div>
+      <div class="table_body_col">{{item.countWin}} / {{item.countTie}} / {{item.countLost}}</div>
+      <div class="table_body_col">{{item.goalIn}} / {{item.goalLost}}</div>
+      <div class="table_body_col">{{item.goalDifference }}</div>
+      <div class="table_body_col">{{item.point}}</div>
+    </div>
+    {{/each}}
+    {{/if}}
+  </div>
+  {{if (basketballPage && basketballPage.hasNextPage) || (footballPage && footballPage.hasNextPage)}}
+  <div class="load_more" hhly-has-next="{{footballPage ? footballPage.hasNextPage : basketballPage.hasNextPage}}" hhly-data-page="{{footballPage ? footballPage.page : basketballPage.page}}">加载更多</div>
+  {{/if}}
+  
+  {{else}}
+  <div class="default_page_box">
+		<div class="default_img_box">
+			<img src="/resources/images/defaultPage/not_rules.png" width="100%">
+		</div>
+		<p class="default_page_tips">
+			暂无数据
+		</p>
+	</div>
+  {{/if}}
+  {{if basketballPage || footballPage}}
+  <div class="sort_content_rule">
+    排名规则：<br/>
+    {{if basketballPage}}
+    1、联赛按比赛胜场率确定总排名，胜场率高者名次列前。<br/>
+
+    2、如两队胜率相同，则以两队胜负场数决定名次，胜场多者名次列前；若再相同，则以联赛所有比赛总得失分差排定名次，得失分差高者，名次列前。<br/>
+
+    3、若三队或三队以上胜场率相同，则以胜负场数排定名次，胜场多者名次列前；若再相同，则以联赛所有比赛总得失分差排定名次，得失分差高者名次列前。<br/>
+
+    4、若以上情况比较后，仍然分不出排名高低，则先报名的排在前面。
+    {{/if}}
+    {{if footballPage}}
+    1、胜积3分，平积1分，负积0分，积分高的，排名靠前。<br/>
+
+    2、当有同分球队时，优先比较净胜球。<br/>
+
+    3、若以上情况比较后，仍然分不出排名高低，则先报名的排在前面。
+    {{/if}}
+  </div>
+  {{/if}}
+</div>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html {{ HTML_ATTRS }}>
+  <head>
+    <meta name="renderer" content="webkit" />
+    <meta http-equiv="Cache-Control" content="max-age=1200" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <link rel="dns-prefetch" href="//f1.13322cc.com">
+    <link rel="dns-prefetch" href="//f2.13322cc.com">
+    <link rel="dns-prefetch" href="//f3.13322cc.com">
+    <link rel="dns-prefetch" href="//f4.13322cc.com">
+    <link rel="dns-prefetch" href="//f5.13322cc.com">
+    <link rel="dns-prefetch" href="//f6.13322cc.com">
+    <link rel="dns-prefetch" href="//f7.13322cc.com">
+    <link rel="dns-prefetch" href="//f8.13322cc.com">
+    <link rel="dns-prefetch" href="//f9.13322cc.com">
+    <link rel="dns-prefetch" href="//f10.13322cc.com">
+    <link rel="dns-prefetch" href="//f11.13322cc.com">
+    <link rel="dns-prefetch" href="//f12.13322cc.com">
+    <script>
+      if (navigator.userAgent.indexOf('Trident') > -1) {
+        document.writeln("<script type=\"text/javascript\" src=\"https://libs.cdnjs.net/babel-polyfill/6.0.14/polyfill.min.js\"><\/script>");
+      }
+    </script>
+    <style>
+      input::-ms-clear{
+        display:none;
+      }
+      /* 返回顶部相关 */
+      .go-top{
+        line-height: 1;
+        position:fixed;
+        z-index: 100;
+        background:rgba(0,0,0,0.4);
+        color:#fff;
+        border-radius:50%;
+        text-align:center;
+        width:50px;
+        height:50px;
+        bottom:30px;
+        right:30px;
+        box-sizing: border-box;
+        padding-top: 4px;
+        cursor: pointer;
+        opacity:0;
+        transition: opacity 0.5s ease 0s,background 0.2s ease 0s;
+      }
+      .go-top .iconfont{
+        font-size:20px;
+        color:#fff;
+        margin-left: 2px;
+      }
+      .go-top:hover{
+        background:rgba(0,0,0,0.6)
+      }
+    </style>
+    <script type="text/javascript">
+      var _hmt = _hmt || [];
+    </script>
+    {{ HEAD }}
+  </head>
+  <body {{ BODY_ATTRS }}>
+  <!--[if lt IE 9]>
+    <style>
+      .browser-install{
+        position:fixed;
+        top:0;
+        left:0;
+        background:#fff;
+        z-index:100000;
+        width:100%;
+        height:100%;
+        text-align:center;
+        display:table;
+        color:#333;
+      }
+      .browser-install-inner{
+        display:table-cell;
+        vertical-align:middle;
+        padding:100px 0;
+      }
+      .browser-install h1{
+        font-size: 30px;
+      }
+      .browser-install p{
+        color:#666;
+        font-size: 16px;
+      }
+    </style>
+    <div class="browser-install">
+      <div class="browser-install-inner">
+        <h1>您当前的浏览器过低</h1>
+        <p>
+          建议安装或者升级更高版本的谷歌，IE9+，火狐浏览器
+        </p>
+      </div>
+    </div>
+  <![endif]-->
+    {{ APP }}
+    <div class="go-top" >
+      <i class="iconfont">&#xe647;</i>
+      <br>
+      顶部
+    </div>
+    <script type="text/javascript">
+      var onload = function(){
+        if (location.href.indexOf('oooseed') > -1 || location.href.indexOf('13322ty') > -1) {
+          var hm = document.createElement("script");
+          var qm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?f25468e31a85e05f31fa6d32bb11aef2";
+          qm.src = "http://tajs.qq.com/stats?sId=65574749";
+          var s = document.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(hm, s);
+          s.parentNode.insertBefore(qm, s);
+        }
+        // 返回顶部相关
+        var node = document.querySelector('.go-top');
+        var timer;
+        document.addEventListener('scroll', function(e){ // 返回顶部是否显示逻辑
+          timer && clearTimeout(timer);
+          timer = setTimeout(function(){
+            var scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+            node.style.opacity = scrollTop > 400 ? 1 : 0;
+            node.style.display = scrollTop > 400 ? 'block' : 'none';
+          }, 100);
+        }, false);
+        node.onclick = function() {
+          document.body.scrollTop = document.documentElement.scrollTop = 0;
+        }
+        if (navigator.userAgent.indexOf('MSIE 9.0') > -1) {
+          document.body.style.display = 'none';
+          (function () {
+            var IE9Init = function () {
+              var path = window.$nuxt.$route.path;
+              var query = window.$nuxt.$route.query;
+              if (path != '/') {
+                window.$nuxt.$router.push({path: '/'}, function () {
+                  window.$nuxt.$router.push({path: path, query: query}, function () {
+                    document.body.style.display = '';
+                  });
+                });
+              } else {
+                document.body.style.display = '';
+              }
+            }
+            var interval = setInterval(function () {
+              if (window.$nuxt && window.$nuxt.$route && window.$nuxt.$router) {
+                clearInterval(interval)
+                setTimeout(IE9Init, 48);
+              }
+            }, 100)
+          })()
+        }
+      }
+      if (window.addEventListener) {
+        window.addEventListener('load', onload);
+      } else if (window.attachEvent) {
+        window.attachEvent('onload', onload);
+      }
+    </script>
+    
+  </body>
+</html>

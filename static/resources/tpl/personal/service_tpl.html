@@ -1,0 +1,57 @@
+<!-- 加载服务 -->
+{{if data.ipAuth}}
+	{{if data.ipAuth.authStatus == 1}}
+		<div class="approve_content">
+			<div class="approve_check">
+				<div class="pic_box"><img src="/resources/images/has_approve.jpg" width="100%"></div>
+				<div class="btn approve_btn">认证审核中</div>
+			</div>
+		</div>
+	{{else if data.ipAuth.authStatus == 2}}
+		<div class="approve_content">
+			<div class="unapprove">
+				<div class="pic_box"><img src="/resources/images/not_approve.jpg"></div>
+				<div class="btn approve_btn">身份未验证</div>
+				<div class="mbtn" style="display:none">立即认证</div>
+			</div>
+		</div>
+	{{else}}
+		<div class="approve_infor">
+			<h3 class="mod_h1">个人资料</h3>
+			<div class="message">
+				<p class="list">
+					<em class="label_text">名字：</em>
+					<span class="name">{{data.ipAuth.personName}}</span>
+				</p>
+				<p class="list">
+					<em class="label_text">身份：</em>
+					<span class="approve_icon_box">
+					{{if data.ipAuthCate && data.ipAuthCate.pcImgTxtUrl}}
+						<a class="identity_id">
+							<img src="{{data.ipAuthCate.pcImgTxtUrl}}" height="100%" />
+						</a>
+					{{/if}}
+					</span>
+				</p>
+				<div class="intro_box">
+					<span class="label_text fl">简介：</span>
+					<div class="description">
+					{{if data.userInfo.intro}}
+						{{data.userInfo.intro}}
+					{{else}}
+						暂无简介
+					{{/if}}
+					</div>
+				</div>
+			</div>
+		</div>
+	{{/if}}
+{{else}}
+	<div class="approve_content">
+		<div class="unapprove">
+			<div class="pic_box "><img src="/resources/images/not_approve.jpg"></div>
+			<div class="btn approve_btn">身份未验证</div>
+			<div class="mbtn" style="display:none">立即认证</div>
+		</div>
+	</div>
+{{/if}}

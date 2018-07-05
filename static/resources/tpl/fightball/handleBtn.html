@@ -1,0 +1,19 @@
+   <!--  发起者处理按钮-->
+  {{if data.list.length > 0}}
+    {{if isJoinUser == 0}}
+      <div class="handle_btn  wait_handle fl hide">
+        <button class='btn reset_btn btn_s' type=" reset">重置</button>
+        <button class='btn all_checked btn_s'>全选</button>
+        <button class="btn refused_btn judge_btn" disabled="disabled">拒绝</button>
+        <button class="btn agree_btn judge_btn" disabled="disabled">同意</button>
+      </div>
+      <span class="btn fr  batch_btn wait_handle_btn" type="button">批量管理</span>
+    {{else}}
+      <div class="handle_btn  already_handle fl hide">
+        <button class='btn reset_btn btn_s' type=" reset">重置</button>
+        <button class='btn all_checked btn_s'>全选</button>
+        <button class="btn kickout_btn judge_btn" disabled="disabled">踢出</button>
+      </div>
+      <span class="btn fr  batch_btn already_handle_btn" type="button">批量管理</span>
+    {{/if}}
+  {{/if}}

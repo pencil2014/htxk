@@ -1,0 +1,45 @@
+{{each data.list as item index}}
+<a href="/personal/index/feed/detail?feedId={{item.feedId}}" target="_blank">
+	<div class="cbox l_cbox">
+        <div class="cbox_oli">
+            <div class="per_pic"><img src="{{item.userIcon||'/resources/images/default_photo.jpg'}}"></div>
+            <div class="cont">
+                <div class="per_user">
+                    <p>{{item.nickName}}</p>
+                    {{if item.pcImgTxtUrl}}
+                    	<div class="approve_show_icon">
+                    		<img src="{{item.pcImgTxtUrl}}" height="100%" />
+                		</div>
+                    {{/if}}
+                </div>
+                <div class="per_time"><span>{{item.publishTime}}</span></div>
+            </div>
+        </div>
+		{{each item.feedContents as content}}
+        	{{if (content.contentType == 1)}}
+				<div class="cbox_tli">{{content.content}}</div>
+        	{{/if}}
+        {{/each}}
+        <div class="cbox_thli">
+            <ul>
+			{{each item.feedContents as content}}
+            	{{if (content.contentType == 2)}}
+                	<li><img src="{{content.content||'/resources/images/pCard/pic.jpg'}}"></li>
+            	{{/if}}
+            {{/each}}
+			</ul>
+        </div>
+        <div class="cbox_fli">
+            <div class="cbox_op">
+            	{{each item.labels as label}}
+            		<span>{{label.labelName}}</span>
+            	{{/each}}
+        	</div>
+            <div class="cbox_tp">
+                <p class="op"><i></i><span>{{item.commentCount}}</span></p>
+                <p class="tp"><i></i>点赞(<span>{{item.diggCount}}</span>)</p>
+            </div>
+        </div>
+    </div>
+</a>
+{{/each}}

@@ -1,0 +1,62 @@
+<!-- 分享数据拼接 -->
+{{each data.list as item index}}
+	<li class="list">
+		<a href="/personal/index/feed/detail?feedId={{item.feedId}}" target="_blank">
+			<div class="user_box">
+				<div class="user_head">
+				<img src="
+				{{if item.userIcon}}
+					{{item.userIcon}}
+				{{else}}
+					/resources/images/default_photo.jpg
+				{{/if}}
+				" width="100%">
+				</div>
+				<div class="user_infor">
+					<span class="author">
+						<em>{{item.nickName}}</em>
+						{{if item.pcImgTxtUrl}}
+							<span class="approve_icon">
+								<img src="{{#item.pcImgTxtUrl}}" height="100%" />
+							</span>
+						{{/if}}
+					</span>
+					<span class="time">{{item.publishTime}}</span>
+				</div>
+			</div>
+			{{each item.feedContents as content}}
+				{{if content.contentType == 1}}
+				<p class="share_content">
+					{{content.content}}
+       			</p>
+            	{{/if}}
+			{{/each}}
+            <ul class="share_images">
+            	{{each item.feedContents as content}}
+					{{if content.contentType == 2}}
+						<li><img src={{content.content}} width="100%"></li>
+	            	{{/if}}
+				{{/each}}
+				<div class="clearx"></div>
+			</ul>
+			<div class="share_footer">
+				<div class="share_remark fl">
+					{{each item.labels as content}}
+            			<span class="label">{{content.labelName}}</span>
+        			{{/each}}
+				</div>
+				<div class="share_reply fr">
+					<span class="number_box replay">
+						<i class="iconfont">&#xe628;</i>
+						<em class="number">{{item.commentCount}}</em>
+					</span>
+                	<span class="number_box praice">
+						<i class="iconfont">&#xe65c;</i>
+						<em class="number">{{item.diggCount}}</em>
+					</span>
+				</div>
+				<div class="clearx"></div>
+			</div>
+		</a>
+	</li>
+{{/each}}

@@ -1,0 +1,35 @@
+<div class="mechanism_box">
+	<div class="base_info">
+		<span class="base_img">
+			{{if iconUrl}}
+			<img src="{{iconUrl}}">
+			{{else}}
+			<img src="/resources/images/default_team_logo.png">
+			{{/if}}
+		</span>
+		<dl>
+			<dt>{{nickName}}</dt>
+			<dd class="hidden"><i class="icon iconfont">&#xe603;</i>聊天</dd>
+		</dl>
+	</div>
+	<div class="base_con">
+		<p>
+			<span class="attest">资质：
+			{{if authStatus == 1}}
+				<img src="{{appImgtxtUrl}}">
+			{{else}}
+				未认证
+			{{/if}}
+			</span>
+			<span class="gold hidden"><i class="icon iconfont">&#xe606;</i>保证金</span>
+		</p>
+		<p>所在地：{{areaProvName}}</p>
+		<p class="base_introduction">简介：
+		{{if intro}}
+			{{intro}}
+		{{else}}
+			--
+		{{/if}}
+		</p>
+	</div>
+</div>

@@ -1,0 +1,18 @@
+<div class="intro_content">
+    <h2>{{know.title}}</h2>
+    {{each know.desc as desc j}}
+    	<p>{{desc}}</p>
+    {{/each}}
+</div>
+<ul class="intro_list">
+	{{each know.list as list index}}
+        <li>
+            <div class="img_box"> 
+                <a href="{{list.href}}"><img src="{{list.icon}}" width="100%" /></a>
+            </div>
+            <p class="desc">
+                {{list.desc}}
+            </p>
+        </li>
+    {{/each}}
+</ul>

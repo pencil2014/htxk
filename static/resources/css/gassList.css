@@ -1,0 +1,178 @@
+@charset "utf-8";
+/*草根推荐*/
+.mit_gassroot {
+	background: #f1f2f3;
+}
+
+.mit_gasssection {
+	margin-right: -10px;
+	margin-left: -10px;
+	overflow: hidden;
+	margin-bottom: 16px;
+}
+
+.hotlist_wrap {
+	width: 386px;
+	border-right: 10px solid #f1f2f3;
+	border-left: 10px solid #f1f2f3;
+	float: left;
+}
+
+.hotlist_rankicon {
+	width: 40px;
+	height: 40px;
+	display: block;
+	float: left;
+	background: url(../images/sport_other.png) no-repeat;
+	background-position: -66px -56px;
+}
+
+h2.hotlist_title {
+	font-size: 20px;
+	color: #333333;
+	font-weight: normal;
+	line-height: 40px;
+	margin: 15px 0;
+}
+
+h2.hotlist_title span.text {
+	padding-left: 10px;
+}
+
+.hotlist_box {
+	background: #fff;
+	min-height: 666px;
+}
+
+.hotlist_wrap .table_menu {
+	font-weight: normal;
+	color: #666666;
+	height: 42px;
+	border-bottom: 2px solid #f2f2f2;
+	padding: 0 30px;
+	font-size: 0;
+}
+
+.hotlist_wrap .table_menu span {
+	display: inline-block;
+	font-size: 16px;
+	padding: 0 15px;
+	margin-left: 44px;
+	cursor: pointer;
+	line-height: 40px;
+	*display:inline;*zoom:1;
+}
+
+.hotlist_wrap .table_menu span:hover,.hotlist_wrap .table_menu span.on {
+	border-bottom: 2px solid #00bb90;
+	color: #00bb90;
+}
+
+.hotlist_wrap .table_menu span.first {
+	margin-left: 0;
+}
+
+.table_contentbox {
+	padding: 15px 30px;
+}
+
+.table_contentbox .rank_number {
+	width: 24px;
+	height: 33px;
+	display: block;
+	float: left;
+	margin-top: 8px;
+	margin: 8px 5px 0 0;
+	font-size: 20px;
+	color: #999999;
+	text-align: center;
+	font-style: italic;
+}
+
+.rank_headimg {
+	width: 50px;
+	height: 50px;
+	display: block;
+	float: left;
+	margin: 0 22px;
+}
+
+.rank_titlebox {
+	margin-left: 130px;
+	overflow: hidden;
+}
+
+.rank_listcontainer {
+	overflow: hidden;
+	padding: 12px 0;
+}
+
+.rank_titlebox .text_box {
+	width: 100px;
+	float: left;
+}
+
+.rank_titlebox .text_box .rank_name {
+	line-height: 30px;
+	font-size: 16px;
+}
+
+.rank_infor {
+	color: #999999;
+	font-size: 12px;
+}
+
+.rank_btn {
+	float: right;
+	padding: 3px 0;
+	border: 1px solid #e5e5e5;
+	color: #666666;
+	border-radius: 3px;
+	margin-top: 10px;
+	font-size: 12px;
+	cursor: pointer;
+	width: 50px;
+	text-align: center;
+}
+
+.rank_btn label {
+	cursor: pointer;
+}
+
+.rank_btn.on .take {
+	display: none;
+}
+
+.rank_btn.on .token {
+	display: block;
+}
+
+.rank_btn .token {
+	display: none;
+}
+
+.rank_btn:hover {
+	color: #fff;
+	background: #00bb90;
+}
+
+.rank_btn.on {
+	background: #cccccc;
+	color: #fff;
+}
+
+.cred {
+	color: #ff5352
+}
+
+.corg {
+	color: #ff8800
+}
+
+.cblu {
+	color: #1e88d2
+}
+
+.mit_gassroot .mit_crumbs {
+	padding-bottom: 10px;
+}

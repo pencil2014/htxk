@@ -1,0 +1,28 @@
+<div class="detail_box plan-box">
+	{{if data}}
+		{{each data as item index}}
+		<div class="basic_content">
+			<p class="mod-title">{{item.rightsName}}</p>
+			{{if item.investmentAmount!=0}}
+				<p>招商金额：￥{{item.investmentAmount/100}}</p>
+			{{/if}}
+			{{if item.realPrice!=0}}
+				<p>货物价值：￥{{item.realPrice/100}}</p>
+			{{/if}}
+			{{each item.rightsDetails as item index}}
+			<p>{{item}}</p>
+			{{/each}}
+			<p>行业排他：{{item.exclusiveStatus == 0 ? '否' : '是'}}</p>
+		</div>
+		{{/each}}
+	{{else}}
+	<div class="default_page_box">
+		<div class="default_img_box">
+			<img src="/resources/images/defaultPage/not_plan.png" width="100%">
+		</div>
+		<p class="default_page_tips">
+			暂无数据信息
+		</p>
+	</div>
+	{{/if}}
+</div>

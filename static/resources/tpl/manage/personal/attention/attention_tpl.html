@@ -1,0 +1,48 @@
+{{each data.list as item index}}
+<li>
+	<div class="personal_focus_head fl">
+		<a href="/personal/index/{{item.userId}}">
+			<img src="{{item.iconUrl||'/resources/images/default_photo.jpg'}}">
+			<i class="{{item.sex==2?'focus_girl':'focus_boy'}}"></i>
+		</a>
+	</div>
+	<div class="personal_focus_intro fl">
+		<h4>{{item.nickName}}</h4>
+	<ul class="personal_focus_count">
+		<li class="personal_focus">
+			<span>关注：</span>
+			<i>{{item.concernNum}}</i>
+		</li>
+		<li class="personal_fancs">
+			<span>粉丝：</span>
+			<i>{{item.followNum}}</i>
+		</li>
+		<div class="clearx"></div>
+	</ul>
+	{{if item.areaProvName}}
+		<i class="personal_focus_address">
+			<i></i>
+			<span>{{item.areaProvName||''}}{{item.areaCityName||0}}{{item.areaDistName||''}}{{item.areaStreet||''}}</span>
+		</i>
+	{{/if}}
+	{{if item.sign}}
+		<p class="personal_focus_signature">
+			签名：{{item.sign}}
+		</p>
+	{{/if}}
+	</div>
+	<div class="personal_focus_mark fr">
+	<div class="foucs_warp status fl">
+		<div class="foucs_warp fl">
+			{{if (item.isFollowed == 1)}}
+				<a class="followClick star_focus" href="javascript:;">已关注</a>
+			{{else}}
+				<a class="followClick" hhly-url="/collect/follow/add/{{item.userId}}" href="javascript:;">+ 关注</a>
+			{{/if}}
+		</div>
+	</div>
+		<div class="clearx"></div>
+	</div>
+	<div class="clearx"></div>
+</li>
+{{/each}}

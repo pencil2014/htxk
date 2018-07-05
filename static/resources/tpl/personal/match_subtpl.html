@@ -1,0 +1,59 @@
+<!-- 约战数据 -->
+{{each data.list as item index}}
+	<li class="item">
+		<span class="time">{{item.matchDate}} </span>
+		<div class="common_ball gust_ball ">
+			<span class="name" title="{{item.homeTeamName}}">{{item.homeTeamName}}</span>
+			<div class="picture">
+				<img src="{{if item.homeTeamIcon}}{{item.homeTeamIcon}}{{else}}/resources/images/default_team_logo.png{{/if}}" width="100%">
+			</div>
+		</div>
+		<div class="status_box">
+			{{if item.status == 0}}
+				<p class="cancel">约战取消</p>
+			{{else if item.status == 1}}
+				<p class="match_ing">约战中</p>
+			{{else if item.status == 2}}
+				{{if item.matchState == -1}}
+					<p>{{item.homeScore||0}}-{{item.guestScore||0}}</p>
+				{{else}}
+					<span class="vs">vs</span>
+					<p class="status">末开赛</p>
+				{{/if}}
+			{{else if item.status == 3}}
+				<p class="cancel">约战取消</p>
+			{{/if}}
+		</div>
+		<div class="common_ball home_ball">
+			<div class="picture">
+				<img src="{{if item.guestTeamIcon}}{{item.guestTeamIcon}}{{else}}/resources/images/default_team_logo.png{{/if}}" width="100%">
+			</div>
+			<span class="name" title="{{item.guestTeamName}}">{{item.guestTeamName}}</span>
+		</div>
+		<div class="result">
+			{{if item.status == 2}}
+				{{if item.matchState == -1}}
+					{{if item.homeScore == item.guestScore}}
+						<span class="flat">平</span>
+					{{else if (item.homeScore > item.guestScore)}}
+						<span class="win hidden">胜</span>
+					{{else}}
+						<span class="lose hidden">负</span>
+					{{/if}}
+				{{else}}
+					<span class="lose">待</span>
+				{{/if}}
+			{{/if}}
+		</div>
+		<div class="infor_box">
+			<p class="infor">
+				<span class="text">赛制：</span>
+				<span class="data">{{item.formatName}}</span>
+			</p>
+			<p class="infor">
+				<span class="text">球场：</span>
+				<span class="data">{{item.fieldName}}</span>
+			</p>
+		</div>
+	</li>
+{{/each}}

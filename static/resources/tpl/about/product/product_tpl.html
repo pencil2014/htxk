@@ -1,0 +1,11 @@
+<h1 class="product_title">{{intro.title}}</h1>
+<ul class="product_container">
+    {{each intro.list as item index}}
+    <li>
+        <div class="img_box"><img src="{{item.icon}}" width="100%" /></div>
+        <div class="product_desc">
+            {{item.desc}}
+        </div>
+    </li>
+    {{/each}}
+</ul>

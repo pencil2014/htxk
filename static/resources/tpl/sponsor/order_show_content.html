@@ -1,0 +1,60 @@
+<div class="detail_box pt40">
+  <div class="order_show">
+    <div class="show_item top">
+      <div class="title">您投标的内容： </div>
+      <div class="text">
+              {{rightsName}}
+      </div>
+    </div>
+    <div class="show_item">
+      <div class="title">行业排他：</div>
+      <div class="text">
+              {{exclusiveStatus==0?'否':'是'}}
+      </div>
+    </div>
+    {{if investmentAmount != 0}}
+    <div class="show_item">
+      <div class="title">现金赞助：</div>
+      <div class="text">
+              {{investmentAmount / 100}}元
+      </div>
+    </div>
+    {{/if}}
+    {{if realPrice != 0}}
+    <div class="show_item">
+      <div class="title">物品金额：</div>
+      <div class="text">
+              {{realPrice / 100 }}元
+      </div>
+    </div>
+    {{/if}}
+    <div class="show_item mb30">
+      <div class="title">权益内容： </div>
+      <div class="text">
+        {{each rightsDetailsRespVOs as item index}}
+          <p>{{item.itemRightsName}}</p>
+        {{/each}}
+
+      </div>
+    </div>
+    <div class="show_item red">
+      <div class="title red">*</div>
+      <div class="text red">
+              具体合作内容以双方协商签约为准；
+      </div>
+    </div>
+    <div class="show_item red">
+      <div class="title red">*</div>
+      <div class="text red">
+合约权益不可合作方转让或分包权益 ;
+      </div>
+    </div>
+    <div class="show_item red">
+      <div class="title red">*</div>
+      <div class="text red">
+实物的总价金额 = 市场参考单价 x 货物数量
+      </div>
+    </div>
+  </div>
+</div>
+<div class="space_bottom"></div>

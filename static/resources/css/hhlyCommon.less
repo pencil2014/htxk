@@ -1,0 +1,758 @@
+
+
+///LESS内置函数：
+//ceil(@number);                               // 向上取整
+//floor(@number);                              // 向下取整
+//percentage(@number);                         // 将浮点数转换为百分比，例如 0.5 -> 50%
+//round(number, [places: 0]);                  // 四舍五入取整
+//saturate(@color, 10%);                       // 饱和度增加 10%
+//desaturate(@color, 10%);                     // 饱和度降低 10%
+//lighten(@color, 10%);                        // 亮度增加 10%
+//darken(@color, 10%);                         // 亮度降低 10%
+//fadein(@color, 10%);                         // 透明度增加 10%
+//fadeout(@color, 10%);                        // 透明度降低 10%
+// 公共主题样式
+
+@color:#01a87c;//整站的主体颜色
+@orange:#fc6f00;//eg:失败颜色
+@blue:#01a87c;//eg:报名颜色
+@green:#89d035;//成功颜色
+@gray:#bbbbbb;//结束或者关闭状态的颜色
+@images: "../images";//图片路径
+@f_size:14px;//整站的主体字号
+@mod_main:#fff;
+@f_color:#333;//整站的主体颜色
+@main_color:#00bb90;
+@l:left;
+@r:right;
+.fl{
+  float: @l;
+}
+.fr{
+  float: @r;
+}
+
+//圆角
+.border-radius(@radius:4px){
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  -ms-border-radius: @radius;
+  -o-border-radius: @radius;
+  border-radius: @radius;
+}
+
+.pr{
+  position: relative;
+}
+.btn_status{
+  padding:5px 10px;
+  min-width: 100px;
+  text-align:center;
+  color:@mod_main;
+  font-size: @f_size;
+  cursor:default;
+  .btn_ing{//报名中的按钮
+    &:hover{
+      background: @blue;
+    }
+  }
+  .btn_fail{//失败的按钮
+    &:hover{
+      background: @orange;
+    }
+  }
+  .btn_success{//成功的按钮
+    &:hover{
+      background: @green;
+    }
+  }
+  .btn_end{//结束的按钮
+    &:hover{
+      background: @gray;
+    }
+  }
+
+
+
+
+}
+.btn_style(){
+  padding: 10px 20px;
+  text-align:center;
+  color:@mod_main;
+  font-size: @f_size;
+  background:@color;
+  cursor:pointer;
+  .border-radius(3px);
+  // &:disabled{
+  //   border:1px red solid;
+  //   cursor:default;
+  // }
+}
+.disabled(){
+  &:disabled{
+    background:@gray;
+    color:white;
+    border-color:@gray;
+    cursor:default;
+  }
+}
+.btn_border{
+  border:1px solid #e5e5e5;
+}
+.btn{
+  .btn_style();
+  &:focus{
+    color:white;
+  }
+  i{
+    font-size: @f_size;
+    font-style: inherit;
+    margin-right:2px;
+  }
+  &.btn_ing{//报名中的按钮
+    &:hover{
+      color:white;
+      background: darken(@blue,5%);
+    }
+    .disabled()
+  }
+  &.btn_fail{//失败的按钮
+    &:hover{
+      color:white;
+      background: darken(@orange,5%);
+    }
+    .disabled()
+  }
+  &.btn_success{//成功的按钮
+    &:hover{
+      color:white;
+      background: darken(@green,5%);
+    }
+    .disabled()
+  }
+  &.btn_end{//结束的按钮
+    &:hover{
+      color:white;
+      background: darken(@gray,5%);
+    }
+    .disabled()
+  }
+
+  &.btn_error{
+    background: #e94141;
+    &:hover{
+      color:white;
+      cursor:default;
+    }
+    .disabled()
+  }
+  &.btn_return{
+    color: #666;
+    background: #fff;
+    &:hover{
+      background:#00bb90;
+      color:white;
+      border-color:#00bb90;
+    }
+    .disabled();
+  }
+}
+.btn_big{
+  padding: 15px 30px;
+  font-size:20px;
+  font-weight: bold;
+}
+.btn_md{
+  padding: 5px 12px;
+  font-size:14px;
+}
+.btn_xs{
+  padding:3px 6px;
+  font-size:12px;
+}
+.btn_ing{//报名中的按钮
+  background:@blue;
+}
+.btn_fail{//失败的按钮
+  background:@orange;
+}
+.btn_success{//成功的按钮
+  background:@green;
+}
+.btn_end{//结束的按钮
+  background:@gray;
+}
+.btn_ing_hollow{
+  background: white;
+  border:1px @orange solid;
+  color:@orange;
+}
+.btn_end_hollow{
+  background: white;
+  border:1px @gray solid;
+  color:@gray;
+}
+.btn_focus{
+  color:@color;
+  border-color: @color;
+  background:white;
+  cursor:default;
+  &:hover{
+    color:@color;
+  }
+  &:focus{
+    color:@color;
+  }
+}
+
+.mod_h1{
+  color:@f_color;
+  font-size: @f_size + 4px;
+  position:relative;
+  line-height:20px;
+  font-weight:500;
+  &:after{
+    display:inline-block;
+    float:@l;
+    margin-right: 10px;
+    vertical-align:middle;
+    content: "";
+    width:4px;
+    height:20px;
+    background:@color;
+  }
+}
+
+.hidden{
+  display:none;
+}
+
+/*自定义开始*/
+.nav_bg{
+  background: #01a87c;
+}
+.border{
+  border:1px solid #e5e5e5;
+  border-radius: 2px;
+  -moz-border-radius:2px;
+}
+.hr_color{
+  background: #f0f0f0;
+}
+
+/*文字*/
+
+.tips{
+  font-size: 12px;
+  color: #999;
+}
+.desc{
+  color:#757575;
+}
+
+.focus{
+  font-size: 12px;
+  color: #666;
+  background: #fafafa;
+  border:1px solid #e5e5e5;
+}
+.focus:hover{
+  background: #fc6f00;
+  border:1px solid #fc6f00;
+}
+.focus1{
+  font-size: 12px;
+  color: #666;
+  background: #fc6f00;
+  border:1px solid #fc6f00;
+}
+.focus1:hover{
+  background: #f06a00;
+  border:1px solid #f06a00;
+}
+.focus1.select{
+  background: #fafafa;
+  border:1px solid #e5e5e5;
+}
+.invite{
+  font-size: 12px;
+  color: #fc6f00;
+  background: #fff;
+  border:1px solid #fc6f00;
+}
+.invite:hover{
+  background: #f06a00;
+  border:1px solid #f06a00;
+}
+.form_input input,.form_input textarea{
+  font-size: 14px;
+  background: #fafafa;
+  border:1px solid #e5e5e5;
+  line-height: 36px;
+  height:36px;
+  padding:0 12px;
+  color: #999;
+  outline: none;
+  border-radius:2px;
+  -moz-border-radius:2px;
+  -webkit-border-radius:2px;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+.form_input textarea{
+  height: auto;
+}
+input{
+  border:1px solid #e5e5e5;
+}
+input[type='text']:focus,textarea:focus{
+  border-color: #00bb90;
+  color: #333;
+}
+input[type='button']:focus,button:focus{
+  outline: none;
+}
+input.button:focus{
+  color: #fff;
+}
+input.error,textarea.error{
+  color: #333;
+  border-color: #ff0808;
+}
+input.forbidden{
+  color: #ccc;
+  background: #f0f0f0;
+  border-color: #e5e5e5;
+}
+.error_tips{
+  font-size: 12px;
+  color: #ff0808;
+}
+textarea{
+  padding:12px;
+}
+/*input框*/
+/*inputbox*/
+/* icon*/
+.arrow,.cb .check_icon,.rb .radio_icon{
+  background:data-uri("@{images}/base_icon.png");
+  //background-image:url(../images/base_icon.png);
+}
+/* select box*/
+.sb {
+  border:solid 1px #e5e5e5;
+  cursor:pointer;
+  background-color:#fafafa;
+  position:relative;
+  margin:0 20px 0 0;
+  display:inline-block;
+  border-radius:2px;
+  -moz-border-radius:2px;
+  -webkit-border-radius:2px;
+  font-size: 12px;
+  color: #333;
+  height:30px;
+  line-height:30px;
+}
+.sb.error{
+  border-color: #ff0808;
+  color: #ff0808;
+}
+.sb.forbidden{
+  background: #f0f0f0;
+}
+.sb.error .selected{
+  color: #ff0808;
+}
+.sb.error .arrow{
+  background-position:-132px 0;
+}
+
+.sb.disabled{
+  background:#ddd;
+}
+.sb.disabled *{
+  color:#999;
+}
+.sb * {
+  cursor:pointer;
+  color: #666;
+}
+.select_common{
+  width:100px;
+  height:28px;
+}
+.sb .opts {
+  border:1px solid #e5e5e5;
+  cursor:pointer;
+  display:none;
+  height:auto;
+  left:0;
+  max-height:121px;
+  overflow-x:hidden;
+  overflow-y:auto;
+  position:absolute;
+  top:0;
+  width:auto;
+  z-index:99;
+  background: #fff;
+  display: none;
+  box-sizing:border-box;
+}
+.sb > .selected {
+  padding:0 10px 0 12px;
+  overflow:hidden;
+  position:absolute;
+  cursor:pointer;
+  left:0;
+  border-radius:1px;
+  -moz-border-radius:1px;
+  -webkit-border-radius:1px;
+}
+.sb .opts a {
+  width:auto;
+  height:24px;
+  line-height:24px;
+  padding:0 5px;
+  cursor:default;
+  outline:none;
+  white-space:nowrap;
+  text-decoration:none;
+  display:block;
+  cursor:pointer;
+  text-align: left;
+}
+.sb .opts a.hidden{
+  display: none;
+}
+.sb .opts a.selected {
+  background:#f5f5f5;
+}
+.sb .opts a.none {
+  background:#fff;
+}
+.sb .opts a:hover {
+  background:#f5f5f5;
+  cursor:pointer;
+  color:#666;
+}
+.sb .sb_icon {
+  width:9px;
+  height:6px;
+  position:absolute;
+  cursor:pointer;
+  right:10px;
+}
+.sb .arrow {
+  background-position:-132px -22px;
+}
+.sb_active .arrow {
+  background-position:-132px -11px;
+}
+/* checkbox box*/
+.cb {
+  //width:85px;
+  height:30px;
+  display:inline-block;
+  *display:inline;
+  zoom:1;
+  cursor:pointer;
+  line-height: 30px;
+  color: #666;
+}
+.cb .check_icon{
+  width: 14px;
+  height: 14px;
+  background-position:-112px -20px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: -5px;
+  margin-right: 5px;
+}
+.cb .check_icon.forbidden{
+  background-position:-112px 0;
+}
+.cb_active .check_icon {
+  background-position:-112px -40px;
+}
+/* radio box*/
+.rb {
+  width:95px;
+  height:30px;
+  margin:0 auto;
+  padding:0;
+  display:inline-block;
+  *display:inline;
+  zoom:1;
+  vertical-align:middle;
+  cursor:pointer;
+  line-height: 30px;
+  color: #666;
+}
+.rb .radio_icon {
+  width: 14px;
+  height: 14px;
+  background-position:-22px -112px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: -5px;
+  margin-right: 5px;
+}
+.rb_active .radio_icon {
+  background-position:-112px -60px;
+}
+/* 选项卡样式 */
+h3.slider_menu{
+  font-weight: normal;
+  font-size: 14px;
+  border-bottom: 1px solid #f2f2f2;
+}
+.slider_menu li{
+  display: inline-block;
+  margin:0 20px;
+  padding:10px 15px;
+  color: #333;
+  cursor: pointer;
+  margin-bottom: -1px;
+}
+.slider_menu li:hover{
+  color: #00bb90;
+}
+.slider_menu li.active{
+  color: #00bb90;
+  border-bottom: 2px solid #00bb90;
+}
+.slider_box{
+  padding:10px;
+}
+
+/*表单公用样式*/
+
+.item_box{
+  padding:6px 0;
+  position: relative;
+}
+.item_box .form_input{
+  margin-left: 30px;
+}
+.form_input .text_account_wrap{
+  position: absolute;
+  right: 20px;
+  bottom: 10px;
+  color: #999;
+  font-size: 12px;
+}
+.form_tips{
+  color: #ff0000;
+  font-size: 12px;
+  margin:3px 0 3px 30px;
+  height: 20px;
+  width: 100%;
+}
+/*弹框样式重置*/
+body .layui-layer-btn{
+  text-align: center;
+  padding: 10px 10px 30px;
+}
+body .layui-layer-btn .layui-layer-btn0{
+  display: inline-block;
+  background: #00bb90;
+  color: #fff;
+  border-color: #00bb90;
+}
+body .layui-layer-btn a{
+  height: 34px;
+  line-height: 34px;
+  min-width: 60px;
+}
+body .layui-layer-title{
+  background: #fff;
+}
+body .layui-layer-dialog .layui-layer-content{
+  text-align:center;
+  padding:30px;
+  box-sizing: border-box;
+  width:100%;
+}
+body .layui-layer-dialog .layui-layer-content span.dialog_tips{
+  // padding:28px 0;
+  display: table-cell;
+  text-align: left;
+  font-size: 14px;
+}
+body .layui-layer-title{
+  font-size: 16px;
+  font-weight: bold;
+  height: 50px;
+  line-height: 50px;
+}
+body .layui-layer-setwin .layui-layer-close1{
+  margin-top: 5px;
+}
+body .layui-layer-title{
+  border-radius: 20px 20px 0 0;
+}
+body .layui-layer-dialog{
+  border-radius: 6px;
+}
+body .layui-layer-dialog .layui-layer-content .dialog_content .content_list{
+  text-align: left;
+}
+body .layui-layer-btn a.layui-layer-btn0:hover{
+  background:#01a87c;
+}
+.layui-layer .lay_tips{
+  width: 50px;
+  height: 50px;
+  display: block;
+  background: url(../images/base_icon.png) no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right:10px;
+}
+.lay_tips.warn{
+  background-position:-56px 0;
+}
+.lay_tips.success{
+  background-position:0 0;
+}
+.lay_tips.error{
+  background-position:0 -56px;
+}
+
+.load_more{
+  height: 40px;
+  line-height: 40px;
+  width:100%;
+  background:#f1f2f3;
+  text-align:center;
+  margin:20px 0px;
+  &:hover{
+    cursor:pointer;
+    background:darken(#f1f2f3,2%)
+  }
+}
+.mod-load{
+  // 正在加载的load效果
+  text-align: center;
+  margin-top: 20px;
+}
+.argreement{
+  margin-left:90px;
+}
+.page_box{
+  margin:20px;
+  position: absolute;
+  bottom: 20px;
+  right:20px;
+  font-size: 0;
+  .prev_page{
+    background-image:url(../images/base_icon.png);
+    background-position:-56px -56px;
+    width: 50px;
+    height: 30px;
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+  }
+  .next_page{
+    background-image:url(../images/base_icon.png);
+    background-position:-56px -92px;
+    width: 50px;
+    height: 30px;
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+  }
+  .last_page{
+    width: 50px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border:1px solid #e5e5e5;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 15px;
+    font-size: 14px;
+  }
+}
+.page_list{
+  display: inline-block;
+  margin-left: 15px;
+  margin-right:15px;
+  font-size: 0;
+  vertical-align: middle;
+  li{
+    width: 28px;
+    height:28px;
+    border:1px solid #e5e5e5;
+    border-radius: 2px;
+    background: #fff;
+    line-height: 28px;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+    font-size: 12px;
+    margin-right: 10px;
+    &:hover{
+      background: #f5f5f5;
+    }
+    &.active{
+      background: #00bb90;
+      color: #fff;
+      border:1px solid #00bb90;
+    }
+    &.mgin0{
+      margin:0;
+    }
+  }
+}
+.pic_con{width:980px;margin:50px auto 0px;position:relative}
+.pic_lists{float:left;width:9999999999px;height:106px;overflow:hidden;position:absolute;top:0px;left:0px}
+.btn_change{width:40px;height:60px;position:absolute;text-indent:-9999px;cursor:pointer}
+.left_btn{top:50%;margin-top:-30px;left:8px}
+.right_btn{top:50%;margin-top:-30px;right:0px}
+
+.pic_content{overflow:hidden;height:120px;width:480px;position:relative;margin:50px auto 0px}
+.pic_content ul li{float:left;width:150px;text-align:center;margin:0 0 0 10px;position:relative;border:1px solid #fff;}
+.pic_content ul li p{height:24px;background:#333;line-height:24px;color:#fff;width:151px;position:absolute;bottom:2px;left:2px;text-align:center;display:none}
+.pic_content ul li img{display: block;}
+.pic_content ul li:hover,.pic_content ul li.active{border:1px solid #00dd90;}
+.ui-paging-container{color:#666;font-size:12px}
+.ui-paging-container ul{overflow:hidden;text-align: right;padding-right: 40px;}
+.ui-paging-container li,.ui-paging-container ul{list-style:none}
+.ui-paging-container li{min-width: 16px;padding:0 8px;height: 28px;border: 1px solid #e5e5e5;border-radius: 2px;background: #fff;line-height: 28px;text-align: center;display: inline-block;vertical-align: middle;cursor: pointer;font-size: 12px;margin-right: 10px;}
+.ui-paging-container li.ui-pager{cursor:pointer;border:1px solid #ddd;border-radius:2px}
+.ui-paging-container li.focus,.ui-paging-container li.ui-pager:hover{background: #00bb90;color: #fff;border: 1px solid #00bb90;}
+.ui-paging-container li.ui-paging-ellipse{border:none}
+.ui-paging-container li.ui-paging-toolbar{padding:0;border:none;height:30px;}
+.ui-paging-container li.ui-paging-toolbar select{height:22px;border:1px solid #ddd;color:#666;display: none;}
+.ui-paging-container li.ui-paging-toolbar input{width: 28px;padding:0 8px;height: 28px;;border:1px solid #e5e5e5;text-align:center;margin-right: 10px;vertical-align:top;}
+.ui-paging-container li.ui-paging-toolbar a{text-decoration:none;display:inline-block;min-width: 16px;padding:0 8px;height: 28px;border:1px solid #e5e5e5;vertical-align:top;border-radius:2px;cursor:pointer;margin-right: 10px;color:#666}
+.ui-paging-container li.ui-pager-disabled,.ui-paging-container li.ui-pager-disabled:hover{background-color:#f6f6f6;cursor:default;border:none;color:#ddd}
+
+
+// 改写jedate日历插件的默认样式
+.jedateblue .jedatetop,
+.jedateblue .jedaul li.action, 
+.jedateblue .jedaul li.action:hover, 
+.jedateblue .jedaul li.action .lunar,
+.jedateblue .jedatebot .jedatebtn span.jedateok,
+.jedateblue .jedatebot .jedatebtn span.jedatetodaymonth,
+.jedateblue .jedaym li.action, .jedateblue .jedaym li.action:hover{
+  background-color:@main_color;
+}
+.jedateblue{
+  border-color:@main_color;
+}
+.jedateblue .jedatebot .jedatebtn span.jedateclear{
+  border: 1px solid #e5e5e5;
+  color: #666666;
+  background: #fff;
+}
+.jedateblue .jedateym .triangle:hover{
+  background-color: darken(@main_color,10%);
+}

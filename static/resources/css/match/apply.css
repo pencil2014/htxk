@@ -1,0 +1,185 @@
+﻿body {
+  background: #fff;
+}
+.apply_wrap {
+  background: url(../../images/match/apply_bg.jpg) no-repeat;
+  background-position: top center;
+  min-height: 900px;
+}
+.apply_container {
+  width: 1006px;
+  padding-top: 30px;
+}
+.apply_box {
+  background: #fff;
+  padding: 28px 64px 120px;
+}
+h3.apply_title {
+  font-weight: 500;
+  padding: 30px 0;
+  text-align: center;
+  font-size: 24px;
+  color: #666;
+  overflow: hidden;
+}
+h3.apply_title span.title {
+  padding: 0 30px;
+  background: #fff;
+  display: inline-block;
+  position: relative;
+}
+h3.apply_title span.title:after {
+  position: absolute;
+  top: 50%;
+  width: 400px;
+  height: 1px;
+  background: #f2f2f2;
+  content: '';
+  left: 180px;
+}
+h3.apply_title span.title:before {
+  position: absolute;
+  top: 50%;
+  width: 400px;
+  height: 1px;
+  background: #f2f2f2;
+  content: '';
+  right: 180px;
+}
+.apply_form {
+  width: 550px;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+.apply_form .form_tips {
+  padding-left: 110px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.apply_form .form_tips .province_tips {
+  width: 170px;
+}
+.form_box {
+  font-size: 0;
+  margin-bottom: 20px;
+}
+.form_box .form_label {
+  width: 120px;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: right;
+  font-size: 14px;
+  padding-right: 20px;
+  color: #666;
+}
+.form_box .form_label.remark_label {
+  vertical-align: top;
+  padding-top: 5px;
+}
+.form_box .form_input {
+  display: inline-block;
+  vertical-align: middle;
+  width: 324px;
+  font-size: 14px;
+}
+.form_box .form_input.cash {
+  color: #fc6f00;
+}
+.form_box .location_control {
+  font-size: 0;
+  width: 344px;
+}
+.form_box .location_control .sb {
+  vertical-align: middle;
+}
+.form_input input {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.apply_btn {
+  text-align: center;
+  margin-top: 50px;
+}
+.apply_btn .gray.apply_submit {
+  background: #ddd;
+}
+.btn.apply_submit {
+  outline: none;
+  border: 0;
+  background: #00bb90;
+  width: 182px;
+}
+.btn.apply_submit:hover {
+  background: #01a87c;
+}
+.agreement_tips {
+  text-align: center;
+  margin-top: 8px;
+  font-size: 12px;
+}
+.agreement_tips .apply_agree {
+  color: #3983e5;
+  cursor: pointer;
+}
+.form_input .remark {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none;
+  border: 1px solid #e5e5e5;
+  background: #fafafa;
+  padding: 10px;
+  height: 104px;
+}
+.apply_bottom {
+  position: relative;
+  bottom: 80px;
+  z-index: -1;
+}
+.apply_box .form_input .text_account_wrap {
+  right: 10px;
+  bottom: -15px;
+}
+.form_box .verity_input input {
+  width: 175px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.get_verity {
+  width: 134px;
+  height: 40px;
+  overflow: hidden;
+  vertical-align: middle;
+  display: inline-block;
+  margin-left: 10px;
+  background: #f0f3f8;
+  color: #00bb90;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+}
+.count_down {
+  background: #cccccc;
+  color: #fff;
+}
+.account_tips {
+  display: none;
+}
+.count_down span.text {
+  display: none;
+}
+.count_down .account_tips {
+  display: block;
+}
+.phone_tips {
+  font-size: 12px;
+  position: absolute;
+  left: 480px;
+  width: 200px;
+  top: 11px;
+  color: #fc6f00;
+}

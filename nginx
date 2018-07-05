@@ -1,0 +1,88 @@
+#!/usr/bin/env node
+
+/**
+ * 备注： 需要配置nginx环境变量
+ * ./nginx 启动 需要在根目录下进行
+ * 后面参数沿用了nginx的默认参数，含有 ./nginx -s stop/quit/reload
+ * 添加 -f [true] 是否拷贝并使用当前项目的nginx文件 没有-f参数默认为false即，不拷贝使用当前项目的nginx文件
+ * 常用命令
+ * ./nginx
+ * ./nginx -f true
+ * ./nginx -s reload -f true
+ * ./nginx -s stop
+ */
+
+var path = require('path')
+var shell = require('shelljs')
+var { exec } = require('child_process')
+var argv = require('yargs').argv
+var globalConfig = {
+  nginxPath: '',
+  startType: argv.s,
+  isNeedNCF: argv.f
+}
+var nginxFun = {
+  start: function () {
+    let child = exec('start nginx.exe', {async: true})
+    child.on('exit', function (data) {
+      shell.echo('>>>>>>nginx启动完成，请Ctrl+C退出，再次使用npm run dev启动项目')
+    })
+  },
+  stop: function (callback) {
+    exec('tasklist /fi "imagename eq nginx.exe"', function (code2, stout2) {
+      let pids = stout2.match(/\d+(?=.+Console)/gm)
+      if (pids) {
+        shell.echo('>>>>>>正在关闭nginx')
+        exec('taskkill /im nginx.exe -f', function () {
+          shell.echo('>>>>>>关闭完成')
+          callback && callback()
+        })
+      } else {
+        shell.echo('>>>>>>没有进程，无需关闭')
+        callback && callback()
+      }
+    })
+  },
+  other: function (type) {
+    shell.echo('>>>>>>' + nginxStateEnum[type.toUpperCase()].text + 'nginx任务完成')
+    exec('nginx.exe -s ' + type)
+  },
+  conpyConf: function () {
+    if (globalConfig.isNeedNCF) {
+      shell.echo('>>>>>>拷贝nginx配置文件')
+      shell.cp(path.join(__dirname, 'nginx.conf'), path.join(globalConfig.nginxPath, 'conf'))
+    }
+  },
+  before: function (callback) {
+    if (globalConfig.startType === nginxStateEnum.START || !globalConfig.startType) {
+      nginxFun.stop(callback)
+    } else {
+      callback && callback()
+    }
+  }
+}
+var nginxStateEnum = {
+  START: {name: 'start', text: '启动'},
+  STOP: {name: 'stop', text: '停止'},
+  RELOAD: {name: 'reload', text: '重启'},
+  QUIT: {name: 'quit', text: '退出'}
+}
+nginxFun.before(function () {
+  exec('where nginx', function (code, stout) {
+    if (code) {
+      shell.echo('>>>>>>请配置nginx的环境变量')
+    }
+    globalConfig.nginxPath = stout.match(/[\r\n](.+nginx.exe)/)[1]
+    globalConfig.nginxPath = globalConfig.nginxPath.slice(0, globalConfig.nginxPath.lastIndexOf('\\'))
+    shell.cd(globalConfig.nginxPath)
+    if (globalConfig.startType === nginxStateEnum.RELOAD.name) {
+      nginxFun.conpyConf()
+      nginxFun.other(globalConfig.startType)
+    } else if (globalConfig.startType === nginxStateEnum.STOP.name || globalConfig.startType === nginxStateEnum.QUIT.name) {
+      nginxFun.stop()
+    } else {
+      nginxFun.conpyConf()
+      nginxFun.start()
+    }
+  })
+})

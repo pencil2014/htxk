@@ -1,0 +1,22 @@
+<!-- 加载分享 -->
+{{if data.list.length>0}}
+	<div class="share_box">
+		<ul>
+			{{include './share_subtpl'}}
+		</ul>
+		{{if data.hasNextPage}}
+			<div data-page="{{data.page}}" class="load_more">查看更多</div>
+		{{/if}}
+	</div>
+{{else}}
+	<div class="share_box">
+		<div class="default_page_box">
+			<div class="default_img_box">
+				<img src="/resources/images/defaultPage/no_description.png" width="100%">
+			</div>
+			<p class="default_page_tips">
+				没有发布帖子哦
+			</p>
+		</div>
+	</div>
+{{/if}}

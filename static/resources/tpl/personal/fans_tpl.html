@@ -1,0 +1,20 @@
+<!-- 加载粉丝 -->
+<div class="fans_box fans_content">
+	{{if data.list.length>0}}
+		<ul>
+			{{include './fans_subtpl'}}
+		</ul>
+		{{if data.hasNextPage}}
+			<div data-page="{{data.page}}" class="load_more">查看更多</div>
+		{{/if}}
+	{{else}}
+		<div class="default_page_box">
+			<div class="default_img_box">
+				<img src="/resources/images/defaultPage/not_fans.png" width="100%">
+			</div>
+			<p class="default_page_tips">
+				还没有粉丝关注你哦
+			</p>
+		</div>
+	{{/if}}
+</div>

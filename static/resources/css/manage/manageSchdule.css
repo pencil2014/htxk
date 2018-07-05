@@ -1,0 +1,28 @@
+@media screen and (max-width:1200px){
+	.middle, .mit_middle,.mit_container {
+		width: 1200px;
+		min-width: 1200px;
+	}
+	.mit_subnav{
+		min-width: 1200px;
+	}
+	.personal_sched, #contents>.middle>.personal_right{
+		width: 955px;
+	}
+	.footer-wrap{
+		min-width: 1200px;
+	}
+	.team_right{
+		width: 955px;
+	}
+	#contents{
+		min-width: 1200px;
+	}
+	#header{
+		min-width: 1200px;
+	}
+	.mit_graphic,.an_container {
+		min-width: 1200px;
+	}
+	
+}

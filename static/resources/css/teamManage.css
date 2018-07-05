@@ -1,0 +1,309 @@
+.cup_selectbox {
+	font-size: 14px;
+	padding-bottom:20px;
+	border-bottom:1px solid #f0f0f0;
+	padding-left: 20px;
+}
+.custom_select {
+	width: 112px;
+	height: 30px;
+	border:1px solid #e5e5e5;
+	text-align: center;
+	position: relative;
+	display: inline-block;
+	*display:inline;*zoom:1;
+}
+.select_text {
+	height: 30px;
+	line-height: 30px;
+	cursor: pointer;
+	text-align: left;
+	padding-left: 15px;
+}
+.select_list {
+	display: none;
+	background: #fff;
+	width: 100%;
+	position: absolute;
+	top: 31px;
+	left: -1px;
+	border:1px solid #e5e5e5;
+	border-top:0;
+}
+.select_list li {
+	cursor: pointer;
+	text-align: left;
+	padding-left: 15px;
+	height: 30px;
+	line-height: 30px;
+}
+.select_list li:hover {
+	background: #f1f2f3;
+}
+.select_text .arow {
+	width:11px;
+	height: 7px;
+	background: url(../images/team/team_sprite.png) no-repeat;
+	background-position:-4px -55px;
+	position: absolute;
+	right: 10px;
+	top: 11px;
+}
+.mit_teamnews .mit_content {
+	padding-top:20px;
+	background: #fff;
+	border-bottom: 20px solid #f1f2f3;
+}
+.year_selectbox {
+	display: inline-block;
+	vertical-align: center;
+	margin-right: 10px;
+	*display:inline;*zoom:1;
+}
+.year_selectbox label {
+	padding:0 10px;
+	display: inline-block;
+	*display:inline;*zoom:1;
+}
+.cup_wrap {
+	font-size: 14px;
+	padding:30px 30px 20px;
+	overflow: auto;
+}
+.cup_title {
+	font-size: 18px;
+	font-weight: bold;
+	color: #333;
+	margin-bottom: 16px;
+	padding-left: 14px;
+	border-left: 2px solid #01a87c;
+}
+.battle_head {
+	font-size: 14px;
+	font-weight: bold;
+}
+.battle_head td {
+	padding:10px 0;
+}
+.battle_box {
+	width: 98%;
+}
+.battle_container {
+	width:100%;
+	height: 630px;
+	overflow: hidden;
+}
+.header_img {
+	display: block;
+	margin-top: 5px;
+}
+.battle_headbox {
+	overflow: auto;
+	margin-bottom: 10px;
+}
+.battle_body .bggray {
+	background: #f5f5f5
+}
+.battle_headbox ul li {
+	float: left;
+}
+.w100 {
+	width: 100px;
+}
+.w120 {
+	width: 120px;
+}
+.w90 {
+	width: 90px;
+}
+.w110 {
+	width: 110px;
+}
+.battle_wrap {
+	width: 680px;
+	float: left;
+	overflow: auto;
+}
+.battle_set {
+	width: 364px;
+	height: 610px;
+	background: #6aa356;
+	float: right;
+	padding:10px 15px;
+}
+.ball_box {
+	width: 362px;
+	height: 552px;
+	background: url(../images/team/ball_park.jpg) no-repeat;
+	margin:0 auto;
+	position: relative;
+}
+.ball_selectbox {
+	padding-left: 2px;
+	font-size: 0;
+	margin-right:-13px;
+}
+.ball_selectbox .custom_select {
+	background: #fff;
+	margin-bottom: 20px;
+	font-size: 14px;
+	margin-right: 9px;
+}
+.ball_box li {
+	width: 24px;
+	height: 24px;
+	background: url(../images/team/team_sprite.png) no-repeat;
+	background-position:-3px -77px;
+	position: absolute;
+}
+.ball_box .forward {
+	left: 50%;
+	top: 50%;
+	margin-left:-12px;
+	margin-top:-75px;
+}
+.ball_box .one {
+	left: 45px;
+	top: 54%;
+}
+.ball_box .two {
+	right: 45px;
+	top: 54%;
+}
+.ball_box .there {
+	left: 45px;
+	bottom: 25%;
+}
+.ball_box .four {
+	right: 45px;
+	bottom: 25%;
+}
+.ball_box .five {
+	left: 50%;
+	margin-left:-12px;
+	bottom: 18%;
+}
+.ball_box .six {
+	left: 50%;
+	margin-left: -12px;
+	bottom: 3px;
+}
+.contest_box {
+	padding:24px 30px;
+	background: #fafafa;
+	margin-bottom: 20px;
+}
+.team_contrast {
+	width: 440px;
+	display: inline-block;
+	*display:inline;*zoom:1;
+	padding:0 30px;
+	vertical-align: middle;
+}
+.team_contrast .groop_logo {
+	width: 56px;
+	margin:0 auto;
+}
+.groop_common {
+	display: inline-block;
+	*display:inline;*zoom:1;
+	padding:15px;
+	text-align: center;
+	vertical-align: middle;
+}
+.groop_ratio {
+	display: inline-block;
+	*display:inline;*zoom:1;
+	width: 110px;
+	text-align: center;
+	vertical-align: middle;
+}
+.game_percentage {
+	font-size: 36px;
+	color: #333333;
+}
+.game_time {
+	font-size: 12px;
+}
+.groop_name {
+	padding-top:20px;
+	font-weight: bold;
+}
+.team_count {
+	display: inline-block;
+	*display:inline;*zoom:1;
+	vertical-align: middle;
+	width:575px;
+	overflow: auto;
+}
+.team_count .left {
+	width: 280px;
+	float: left;
+}
+.team_count .right {
+	width:280px;
+	float: right;
+}
+.team_count .type {
+	text-align: center;
+}
+.count_linebox {
+	width: 100%;
+}
+.count_linebox span {
+	display: inline-block;
+	*display:inline;*zoom:1;
+	width: 30px;
+	text-align: center;
+}
+.count_linebox .line {
+	width: 210px;
+	height: 10px;
+	display: inline-block;
+	*display:inline;*zoom:1;
+	background: #418fdd
+}
+.count_linebox .line .left_line {
+	height: 10px;
+	width: 40%;
+	background: #e5004f;
+}
+.magtop20 {
+	border-top: 20px solid #f1f2f3;
+}
+.zUIpanelScrollBox,.zUIpanelScrollBar {
+	width:6px;
+	top:0px;
+	right:2px;
+	border-radius:5px;
+}
+.zUIpanelScrollBox {
+	background:#f1f2f3;
+}
+.zUIpanelScrollBar {
+	background:#ccc;
+}
+.battle_body .habit {
+	font-size: 12px;
+	color:#999999;
+}
+@media screen and (max-width: 1200px) {
+	.w100 {
+		width: 90px;
+	}
+	.w120 {
+		width: 110px;
+	}
+	.w90 {
+		width: 60px;
+	}
+	.w110 {
+		width: 70px;
+	}
+	.battle_wrap {
+		width: 530px;
+	}
+	.team_count {
+		width: 280px;
+	}
+}

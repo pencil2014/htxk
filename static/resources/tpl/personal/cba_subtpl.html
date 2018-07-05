@@ -1,0 +1,47 @@
+<!-- 赛事数据 -->
+{{each data.list as item index}}
+	<li>
+		<a href="/personal/index/{{item.userId}}" target="_blank">
+		<div class="match_logo">
+			<img src={{item.logoUrl}} width="100%"/>
+		</div>
+		</a>
+		<div class="match_infor">
+			<a href="/match/detail?matchId={{item.id}}" target="_blank">
+			<h2 class="title">{{item.matchName}}</h2>
+			<dl class="details_box">
+				<dt class="list type">
+					<span>运动类型：</span>
+					<span class="text">{{item.matchTypeName}}</span>
+				</dt>
+				<dt class="list position">
+					<span>所在地区：</span>
+					<span class="text">{{item.showArea}}</span>
+				</dt>
+				<dt class="list time">
+					<span>比赛日期：</span>
+					<span class="text">{{item.showMatchTime}}</span>
+				</dt>
+				<dt class="list cost">
+					<span>报名费用：</span>
+					<span class="text">{{item.showSignCost}}</span>
+				</dt>
+			</dl>
+			</a>
+		</div>
+		<div class="match_btn">
+      {{if item.status == 3}} 
+				<a href="javascript:void(0)" class="btn btn_pre">预热中</a>
+			{{else if item.status == 4}} 
+				<a href="javascript:void(0)" class="btn btn_ing">报名中</a>
+			{{else if item.status == 5}}
+				<a href="javascript:void(0)" class="btn btn_end">报名截止</a>
+			{{else if item.status == 6}}
+				<a href="javascript:void(0)" class="btn btn_success">进行中</a>
+			{{else if item.status == 7}}
+				<a href="javascript:void(0)" class="btn btn_end">已结束</a>
+			{{/if}}
+      <div class="text">{{item.showSignTime}}</div>
+		</div>
+	</li>
+{{/each}}

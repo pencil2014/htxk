@@ -1,0 +1,39 @@
+{{each data.list as item index}}
+<tr class="hr_hover">
+	<td width="300px">{{item.contractName}}</td>
+	<td>
+		<!--后台显示：合同状态:0待确认,1确认,2确认失败,3合同关闭，4合同生效，5合同终止，6合同到期'
+		前端显示：合同状态:0待确认,1合同签署中,2合同失效,3合同关闭，4合同生效，5合同终止，6合同到期'-->
+		{{if item.contractStatus == 0}}
+		待确认
+		{{else if item.contractStatus == 1 && (item.signStatus == 0 || item.signStatus == 2)}}
+		<!-- 已同意合同但未签署 -->
+		已确认
+		{{else if item.contractStatus == 1 && (item.signStatus == 1 || item.signStatus == 3)}}
+		<!-- 已同意合同且已签署 -->
+		合同签署中
+		{{else if item.contractStatus == 2}}
+		合同失效
+		{{else if item.contractStatus == 3}}
+		合同关闭
+		{{else if item.contractStatus == 4}}
+		合同生效
+		{{else if item.contractStatus == 5}}
+		合同终止
+		{{else if item.contractStatus == 6}}
+		合同到期
+		{{/if}}
+	</td>
+	<td>{{item.signTime ? item.signTime : '--'}}</td>
+	<td>
+		{{if item.contractStatus == 0 || item.contractStatus == 2 || item.contractStatus == 4 || item.contractStatus == 5 || item.contractStatus == 6}}
+		<a class="btn btn_ing btn_md" data-id={{item.id}} data-status={{item.contractStatus}} href="/sponsor/contract/audit?contractId={{item.id}}">查看合同</a>
+		{{else if item.contractStatus == 1 && (item.signStatus == 0 || item.signStatus == 2)}}
+		<!-- 已同意合同但未签署 -->
+		<button class="btn btn_ing btn_md" data-id={{item.id}} data-status={{item.contractStatus}} id="signContract">签署合同</button>
+		{{else if item.contractStatus == 3}}
+		合同已关闭
+		{{/if}}
+	</td>
+</tr>
+{{/each}}

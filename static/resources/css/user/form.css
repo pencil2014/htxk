@@ -1,0 +1,373 @@
+﻿body.bg_color {
+  background: #ebf0f5;
+}
+.mit_nav {
+  height: 70px;
+  background: #fff;
+}
+.mit_nav .logo_box {
+  width: 170px;
+  height: 70px;
+  float: left;
+  line-height: 70px;
+}
+.mit_nav .logo_box img {
+  vertical-align: middle;
+}
+.login_box .form_text input {
+  width: 100%;
+  max-width: 350px;
+}
+.mit_navtitle {
+  height: 30px;
+  line-height: 30px;
+  padding-left: 20px;
+  margin-top: 20px;
+  float: left;
+  font-size: 20px;
+  font-weight: normal;
+}
+.mit_navtitle:after {
+  position: absolute;
+  left: 10px;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  border-left: 1px dashed #e5e5e5;
+  content: '';
+}
+.form_text {
+  margin-top: 15px;
+  position: relative;
+  overflow: auto;
+}
+.form_text.email_slide {
+  overflow: visible;
+}
+.form_text input {
+  width: 100%;
+  border: 0;
+  border: 1px solid #e5e5e5;
+  background: #fafafa;
+  height: 39px;
+  outline: none;
+  padding-left: 50px;
+  line-height: 37px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  vertical-align: middle;
+  max-width: 350px;
+  width: 350px;
+  float: left;
+}
+.form_text input.form_btn {
+  padding: 0;
+  border: 0;
+  cursor: pointer;
+  font-size: 18px;
+}
+.form_text input:focus {
+  border-color: #00bb90;
+}
+.form_text .form_submit {
+  background: #00bb90;
+  color: #fff;
+  max-width: 350px\0;
+}
+.form_text .form_submit:hover {
+  background: #01a87c;
+}
+.form_text .form_submit.gray {
+  background: #ccc;
+}
+.form_text .forbidden {
+  background: #e5e5e5;
+}
+.form_text.mgin0 {
+  margin: 0;
+}
+.password_span {
+  position: absolute;
+  top: 9px;
+  left: 50px;
+  color: #bbb;
+}
+input.placeholder {
+  color: #bbb;
+}
+.form_text.mgin0 input {
+  padding-left: 10px;
+}
+.userform_icon {
+  position: absolute;
+  width: 18px;
+  height: 20px;
+  background: url(../../images/user/login_icon.png);
+  top: 10px;
+  left: 10px;
+}
+.userform_icon:after {
+  content: '';
+  position: absolute;
+  right: -10px;
+  top: 0;
+  width: 1px;
+  height: 20px;
+  background: #e5e5e5;
+}
+.userform_icon.userid_icon {
+  background-position: -176px -2px;
+}
+.userform_icon.password_icon {
+  background-position: -2px -68px;
+}
+.userform_icon.phone_icon {
+  background-position: -139px -22px;
+}
+.userform_icon.verify_icon {
+  background-position: -139px -68px;
+  width: 19px;
+}
+.userform_icon.message_icon {
+  background-position: -1px -44px;
+  width: 19px;
+}
+.userform_icon.email_icon {
+  background-position: -175px -32px;
+  width: 19px;
+}
+.form_btnbox {
+  background: #fff;
+  border: 0;
+}
+.form_tips {
+  width: 100%;
+  height: 25px;
+  margin: 0;
+  /* margin-left:30px; */
+}
+.form_tips .error {
+  display: block;
+  height: 25px;
+  color: #f00;
+}
+.normal_tips {
+  height: 38px;
+  line-height: 38px;
+  padding-left: 10px;
+  color: #ff0808;
+}
+.item_content {
+  overflow: auto;
+}
+.step_there {
+  padding: 90px 0;
+  text-align: center;
+}
+.step_there h3 {
+  padding: 20px 0;
+  font-size: 30px;
+  font-weight: normal;
+}
+.success_img {
+  width: 36px;
+  height: 36px;
+  background: url(../../images/user/login_icon.png);
+  background-position: -384px 0;
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: -4px;
+  margin-right: 5px;
+}
+.reset_success_img {
+  width: 61px;
+  height: 63px;
+  background: url(../../images/user/login_icon.png);
+  background-position: -161px -98px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.success_error {
+  background-position: -384px -44px;
+  width: 41px;
+  height: 41px;
+}
+.reset_success_error {
+  width: 60px;
+  height: 60px;
+  background-position: -250px -101px;
+}
+.step_box {
+  margin-left: 180px;
+  width: 565px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.step_box .verify_send_message {
+  height: 20px;
+  color: #f00;
+  margin-top: 10px;
+  font-size: 12px;
+  color: #fc6f00;
+}
+.step_box .verify_send_message .nick_tips {
+  margin-left: 0;
+  margin-top: -3px;
+}
+.form_container {
+  width: 710px;
+  height: 420px;
+  background: #fff;
+  padding: 40px 45px;
+  border-top: 100px solid #ebf0f5;
+}
+.verify_box input {
+  width: 206px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.verify_img {
+  width: 134px;
+  height: 40px;
+  overflow: hidden;
+  vertical-align: middle;
+  display: inline-block;
+  margin-left: 10px;
+}
+.verify_img.gray {
+  background: #f1f2f3;
+  color: #fff;
+}
+.complate_box {
+  margin: 0;
+  width: auto;
+  text-align: center;
+  padding-top: 30px;
+}
+.complate_tips {
+  padding: 5px 0 40px;
+}
+.success_tips {
+  font-size: 30px;
+  font-weight: normal;
+  padding: 5px 0 20px;
+}
+.success_tips.error {
+  color: #ff0808;
+}
+.back_home {
+  width: 350px;
+  height: 48px;
+  /* margin:0 auto; */
+  text-align: center;
+  background: #00bb90;
+  color: #fff;
+  display: block;
+  line-height: 48px;
+  font-size: 16px;
+  /* margin-top: 20px; */
+}
+.define_green {
+  color: #00bb90;
+}
+.form_bindbox {
+  font-size: 12px;
+  padding: 5px 0;
+}
+.form_error {
+  height: 90px;
+  background: url(../../images/user/login_icon.png);
+  background-position: -4px -25px;
+  width: 14px;
+  height: 14px;
+  padding-right: 3px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: -1px;
+}
+.account_tips {
+  display: none;
+}
+.count_down {
+  background: #cccccc;
+  color: #fff;
+}
+.count_down .text {
+  display: none;
+}
+.count_down .account_tips {
+  display: block;
+}
+.page_container {
+  width: 720px;
+  margin: 0 auto;
+  padding: 130px;
+  margin-top: 100px;
+  background: #fff;
+  text-align: center;
+}
+.page_container h2 {
+  font-size: 24px;
+  color: #333333;
+  padding: 10px 0;
+}
+.page_img_tips {
+  width: 221px;
+  margin: 0 auto;
+}
+.page_back {
+  width: 130px;
+  height: 40px;
+  line-height: 40px;
+  color: #fff;
+  background: #00bb90;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+.register_agree {
+  cursor: pointer;
+  color: #3983e5;
+}
+.href_tips {
+  color: #999;
+  font-size: 12px;
+  margin-top: 10px;
+}
+.wechat_box span.scan_wechat {
+  font-size: 12px;
+  color: #333;
+  font-weight: normal;
+}
+.complate_error {
+  margin-top: 100px;
+}
+.bind_phone_title {
+  color: #666666;
+}
+.jump_step {
+  position: absolute;
+  bottom: 30px;
+  right: 20px;
+  cursor: pointer;
+  color: #3983e5;
+}
+.mit_footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+.email_login a.login_email {
+  color: #3983e5;
+}
+.prsecond_step .nickname_tips {
+  width: auto;
+  left: 50px;
+}
+@media screen and (max-width: 1200px) {
+  .left_bg {
+    width: 534px;
+  }
+}

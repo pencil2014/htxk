@@ -1,0 +1,11 @@
+<!-- 加入方式模板 -->
+{{if data.fightBall.isManager==1}}
+  <span>加入方式</span>
+  <div name="select_join" class="select_join select_common" data-type="selectbox">
+    <div class="opts">
+      {{each data.joinType as value i}}
+        <a value="{{value.fieldValue}}" class="{{data.fightBall.joinWay==value.fieldValue ? 'selected' :''}}" href="javascript:;">{{value.fieldName}}</a>
+      {{/each}}
+    </div>
+  </div>
+{{/if}}

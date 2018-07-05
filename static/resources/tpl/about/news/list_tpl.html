@@ -1,0 +1,17 @@
+<ul>
+    {{each news.list as item index}}
+    <li>
+        <div class="left_calendar">
+            <div class="day">{{item.day}}</div>
+            <div class="month">{{item.month}}</div>
+        </div>
+        <div class="right_content">
+            <h3 class="title">{{item.title}}</h3>
+            <div class="desc">
+                {{item.desc}}
+            </div>
+            <a class="read_more" target="_blank" href="{{item.href}}">阅读全文></a>
+        </div>
+    </li>
+    {{/each}}
+</ul>

@@ -1,0 +1,63 @@
+<div class="schedule_box detail_box">
+  <h2 class="mod_h1">赛程</h2>
+  {{if roundsData.length}}
+  <div class="schedule_filter_bar">
+    <div class="schedule_wheel active" data-value="1">
+      <div class="schedule_wheel_inner">
+        第<span>1</span>轮
+        <br/>
+        <i class="iconfont">&#xe617;</i>
+      </div>
+      <div class="schedule_wheel_absolute">
+        {{each roundsData as item index}}
+        <a class="schedule_wheel_item {{index==0?'active':''}}">{{item.grade}}</a>
+        {{/each}}
+      </div>
+    </div>
+    <div class="schedule_week">
+      <div class="schedule_week_prev disabled">
+        <i class="iconfont">&#xe915;</i>
+      </div>
+      <ul class="schedule_week_items">
+        {{each dateData as item index}}
+        <li data-value="{{item.scheduleDate}}">
+          <span>{{item.scheduleDate.split('-')[1]}}.{{item.scheduleDate.split('-')[2]}}</span>
+          <h4>{{item.scheduleWeek}}{{page}}</h4>
+          <small>{{item.matchNumber}}场比赛</small>
+        </li>
+        {{/each}}
+        <div class="clearx"></div>
+      </ul>
+      <div class="schedule_week_next">
+        <i class="iconfont">&#xe652;</i>
+      </div>
+    </div>
+  </div>
+  {{/if}}
+  {{if placeData.length}}
+  <div class="schedule_search">
+    比赛地点：
+    <div name="city" class="select_test select_common" data-type="selectbox">
+			<div class="opts hidden">
+        <a class="selected" data-value="{{placeNumberData.join(',')}}" val="" data-name="place">全部场区</a>
+        {{each placeData as item index}}
+        {{if item.placeNumber}}
+				<a data-value="{{item.placeNumber}}" val="{{item.place}}" data-name="place" title="{{item.place}}">{{item.place}}</a>
+        {{/if}}
+        {{/each}}
+			</div>
+		</div>
+    <div name="city" class="select_test select_common" data-type="selectbox">
+			<div class="opts hidden">
+        <a val="" data-name="placeNumber">全部</a>
+        {{each placeNumberData as item}}
+				<a val="{{item}}" data-name="placeNumber" title="{{item}}">{{item}}</a>
+        {{/each}}
+			</div>
+		</div>
+  </div>
+  {{/if}}
+  <div class="schedule_list_wrapper">
+  
+  </div>
+</div>

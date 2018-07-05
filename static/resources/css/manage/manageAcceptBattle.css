@@ -1,0 +1,454 @@
+body,html{
+    width:100%;
+    height:100%;
+}
+.clearx{
+    clear: both;
+}
+.mit_middle{
+    width:1200px;
+    margin:0 auto;
+}
+.web_nav{
+    display: inline-block;
+    height:60px;
+    line-height: 60px;
+    font-size: 12px;
+}
+.web_nav .web_nav_second{
+    color:#999;
+}
+.manage_other{
+    width:284px;
+}
+.manage_other .user_box_list,.manage_other .star_user_list{
+    background: #fff;
+}
+.manage_other .user_box_list{
+    padding-top:20px;
+    margin-bottom:20px;
+}
+.manage_other .star_user_list{
+    margin-top: 0;
+}
+.manage_other .user_list_title{
+    width: 264px;
+    padding-right: 20px;
+}
+.manage_other .user_list_title h3{
+    border-left:4px solid #00bb90;
+    margin-left: 15px;
+    padding-left: 9px;
+    height: 18px;
+    line-height: 18px;
+}
+.manage_other .advertising{
+    margin-top: 20px;
+    display: block;
+}
+.manage_fight{
+    width:896px;
+    background: #eef3f8;
+}
+.fight_title{
+    width:896px;
+    height:180px;
+    background: #fff;
+    overflow: hidden;
+    position: relative;
+}
+.fight_team_logo{
+    width:118px;
+    height:118px;
+    margin:30px 30px 0 60px;
+    float: left;
+}
+.fight_team_logo img{
+	display:block;
+	width:100%;
+	height:100%;
+}
+.fight_title ul{
+    float: left;
+}
+.fight_title .one_li{
+    font-size:24px;
+    color: #333;
+    line-height:30px;
+    height:30px;
+    margin-top:38px;
+}
+.fight_title .one_li span{
+    float: left;
+}
+.fight_title .one_li i{
+    width:70px;
+    height:30px;
+    color:#fff;
+    line-height: 30px;
+    text-align: center;
+    font-size:12px;
+    display: block;
+    float: left;
+    background: #fc6f00;
+    -webkit-border-radius:2px 2px;
+    -moz-border-radius:2px 2px;
+    border-radius:2px 2px;
+    margin-left:20px;
+    cursor: pointer;
+}
+.fight_title .one_li .i{
+    background: #00bb90;
+}
+.fight_title .two_li{
+    height:24px;
+    line-height:24px;
+    margin-top:10px;
+
+}
+.fight_title .two_li span{
+    margin-right:12px;
+    display:block;
+    float: left;
+}
+.fight_title .three_li{
+    line-height:24px;
+}
+.fight_title .four_li{
+    line-height:24px;
+}
+.fight_title .four_li span{
+    font-size:12px;
+    color:#999;
+}
+.fight_title .four_li i{
+    width:14px;
+    height:14px;
+    display: block;
+    background: url(../../images/personal_center.png) no-repeat -156px -38px;
+    float: left;
+    margin-top:5px;
+    margin-right:4px;
+}
+.fight_btn,.fight_title .next_btn{
+    position: absolute;
+    right:40px;
+    top:40px;
+}
+.fight_btn .p_btn,.fight_title .next_btn{
+    width:140px;
+    height:34px;
+    background-color: #00bb90;
+    -webkit-border-radius:2px 2px;
+    -moz-border-radius:2px 2px;
+    border-radius:2px 2px;
+    color:#fff;
+    text-align: center;
+    line-height:34px;
+    cursor: pointer;
+}
+.fight_btn p{
+    font-size:12px;
+    color: #333;
+    line-height:36px;
+}
+.fight_btn p i{
+    color:#fc6f00;
+}
+.fight_show{
+    width:100%;
+    height:125px;
+    border-top:1px solid #eef3f8;
+    background: #fff;
+    display: none;
+}
+.fight_show ul{
+    margin-top:32px;
+    margin-left:60px;
+    height: auto;
+    overflow: hidden;
+}
+.fight_show li{
+    float: left;
+    width:278px;
+    line-height:14px;
+    font-size:14px;
+    color:#333;
+    margin-bottom:20px;
+}
+.fight_togg,.fight_title_togg{
+    width:60px;
+    height:12px;
+    line-height:12px;
+    margin:auto;
+    font-size:12px;
+    color:#999;
+    text-align: center;
+    cursor: pointer;
+}
+.fight_title_togg{
+    position: absolute;
+    bottom:10px;
+    left:50%;
+    margin-left:-30px;
+    /*display: none;*/
+}
+.fight_togg i,.fight_title_togg i{
+    width:12px;
+    height:12px;
+    display: block;
+    float: left;
+    background: url(../../images/manage_icon.png) no-repeat -54px -25px;
+}
+.fight_title_togg i{
+    background: url(../../images/manage_icon.png) no-repeat -54px -14px;
+}
+.fight_message{
+    width:836px;
+    height:590px;
+    margin-top:20px;
+    background: #fff;
+    overflow: hidden;
+    padding-left:60px;
+}
+.fight_message_boxo h3{
+    width:892px;
+    height:18px;
+    font-size:18px;
+    line-height:18px;
+    font-weight:bold;
+    border-left:4px solid #00bb90;
+    margin-top:40px;
+    margin-bottom:28px;
+    color:#333;
+    text-indent:10px;
+}
+.message_ul{
+    width:786px;
+    height:126px;
+    border-bottom:1px solid #f0f0f0;
+}
+.message_ul li{
+    float: left;
+    width:393px;
+    margin-bottom:30px;
+    font-size:14px;
+    line-height:14px;
+    color:#333;
+}
+.message_ul i{
+    width:80px;
+    text-align: right;
+    display: block;
+    float: left;
+}
+
+.fight_message_boxo .remark{
+    margin-top:30px;
+    margin-left:10px;
+    margin-bottom:40px;
+}
+.fight_message_boxo .remark b{
+    display: block;
+    margin-bottom:5px;
+}
+.fight_message_boxo .remark span{
+    width:650px;
+    display: block;
+    line-height:20px;
+    font-size:14px;
+    color:#333;
+}
+.fight_message_boxo .remark p{
+    margin-top:20px;
+}
+.fight_message_boxo .b,.fight_message_boxo .way_ul{
+    margin-left:10px;
+}
+.way_ul li{
+    min-width: 40%;
+    float: left;
+    padding:5px;
+}
+.fight_message_boxo .b{
+    margin-bottom:5px;
+}
+.fight_show_boxo p{
+    margin-left:10px;
+    margin-bottom:30px;
+}
+.page_alert{
+    width:100%;
+    height:100%;
+    position: absolute;
+    left:0;
+    top:0;
+    background: #333;
+    opacity:.3;
+    filter:alpha(opacity=30);
+    display: none;
+}
+/*-------------------申请加入弹窗---------------------------------*/
+.fight_alert{
+    width:600px;
+    height:370px;
+    background-color: #fff;
+    position: absolute;
+    left:50%;
+    top:50%;
+    margin-left:-300px;
+    margin-top:-185px;
+    -webkit-border-radius:5px 5px;
+    -moz-border-radius:5px 5px;
+    border-radius:5px 5px;
+    display: none;
+}
+.fight_alert .alert_tite {
+    width: 600px;
+    height: 61px;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+    text-indent: 20px;
+    line-height: 60px;
+}
+.fight_alert .alert_tite span {
+    width: 16px;
+    height: 16px;
+    display: block;
+    float: right;
+    background: url(../../images/imagetext_manage.png) -141px -106px;
+    margin-right: 20px;
+    margin-top: 23px;
+    cursor: pointer;
+}
+.fight_alert_top{
+    width:100%;
+    height:233px;
+}
+.alert_img{
+    margin:20px 0 0 40px;
+    width:80px;
+    height:80px;
+}
+.fight_alert_left{
+    width:180px;
+    float: left;
+}
+.fight_alert_left p{
+    margin-left:40px;
+    margin-top:16px;
+}
+.fight_alert_left .one_p{
+    font-size:14px;
+    color:#333;
+    font-weight:bold;
+}
+.fight_alert_left .two_p{
+    font-size:12px;
+    color:#00bb90;
+}
+.fight_alert_left .three_p{
+    font-size:12px;
+    color:#999;
+    height:16px;
+    line-height:16px;
+    width:100%;
+}
+.fight_alert_left .three_p span{
+    float: left;
+}
+.fight_alert_left .three_p i{
+    width: 14px;
+    height: 14px;
+    display: block;
+    background: url(../../images/personal_center.png) no-repeat -156px -38px;
+    float: left;
+    margin-top: 2px;
+    margin-right: 4px;
+}
+.fight_alert_right{
+    float: left;
+    width:420px;
+}
+.fight_alert_right p{
+    margin-top:22px;
+    font-size:12px;
+    color:#666666;
+}
+.fight_alert_right textarea{
+    width:356px;
+    height:78px;
+    outline:none;
+    border:1px solid #e5e5e5;
+    resize: none;
+    background: #fafafa;
+    margin-top:10px;
+    padding:10px;
+}
+.fight_alert_right .rb{
+    width:60px;
+}
+.fight_alert_right .label_title{
+    float: left;
+    margin-top: 10px;
+    margin-right:20px;
+}
+.fight_alert_right .compet_box{
+    float: left;
+    margin-top: 6px;
+}
+.fight_alert_btn{
+    width:100%;
+    height:30px;
+}
+.fight_alert_btn input{
+    width:102px;
+    height:34px;
+    -webkit-border-radius:4px 4px;
+    -moz-border-radius:4px 4px;
+    border-radius:4px 4px;
+    outline:none;
+    cursor: pointer;
+}
+.fight_alert_btn .btn_success{
+    margin-left:200px;
+    border:none;
+    margin-right:10px;
+}
+.fight_alert_btn .btn{
+    border:1px solid #e5e5e5;
+    background-color: #fff;
+}
+#launchRefuse{
+	margin-bottom:10px;
+}
+
+/*------------------------媒体查询----------------------------*/
+@media screen and (max-width: 1200px){
+    .mit_middle{
+        width:1000px;
+    }
+    .manage_fight,.fight_title{
+        width:696px;
+    }
+    .fight_show li{
+        width:208px;
+    }
+    .fight_message{
+        width:636px;
+    }
+    .fight_message_boxo h3{
+        width:632px;
+    }
+    .message_ul li{
+        width:293px;
+    }
+    .fight_message_boxo .remark span{
+        width:450px;
+    }
+    .message_ul{
+        width:586px;
+    }
+}

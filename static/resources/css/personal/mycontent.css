@@ -1,0 +1,19 @@
+.my_content .content_menu.hidden{
+	display: block;
+}
+.video .manage_list .content_menu .video,.feed .manage_list .content_menu .feed,.news .manage_list .content_menu .news,.photo  .manage_list .content_menu .photo,.video  .manage_list .content_menu .video{
+	background: #f0fcf9;
+    color: #00bb90;
+    border-left: 2px solid #01a87c;
+}
+.infor_manage .infor_list.manage_ul li .time_status{
+	height:auto;
+	display: inline-block;
+}
+.published_mark{
+	padding: 2px 10px;
+    line-height: 20px;
+    background: #eeeeee;
+    border-radius: 6px;
+    margin-left: 10px;
+}

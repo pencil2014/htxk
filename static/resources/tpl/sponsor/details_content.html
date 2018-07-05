@@ -1,0 +1,139 @@
+<div class="detail_box">
+	<div class="detail_common detail_content">
+		<h2 class="mod_h1">基本信息</h2>
+		<div class="basic_message">
+			<ul class="message_box">
+				<li>
+					<em>运动类型：</em>
+					<span class="sport_type">{{match.matchTypeName ? match.matchTypeName : '--'}}</span>
+				</li>
+				<li>
+					<em>所在地区：</em>
+					<span class="sport_position">{{match.showArea ? match.showArea : '--'}}</span>
+				</li>
+				<li>
+					<em>报名时间：</em>
+					<span class="apply_time">{{match.showSignTime ? match.showSignTime : '--'}} </span>
+				</li>
+				<li>
+					<em>比赛时间：</em>
+					<span class="game_time">{{match.showMatchTime ? match.showMatchTime : '--'}} </span>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="detail_common detail_content">
+		<h2 class="mod_h1">参赛信息</h2>
+		<div class="basic_message">
+			<ul class="message_box">
+				<li>
+					<em>参赛者要求：</em>
+					<span class="sport_ask">{{match.joinRequireName ? match.joinRequireName : '--'}}</span>
+				</li>
+				<li>
+					<em>竞技水平：</em>
+					<span class="sport_ask">{{match.sportingLevelName ? match.sportingLevelName : '--'}}</span>
+				</li>
+				<li>
+					<em>赛制人数：</em>
+					<span class="sport_type">{{match.formatTypeName ? match.formatTypeName : '--'}}</span>
+				</li>
+				<li>
+					<em>赛制类型：</em>
+					<span class="sport_type">{{match.matchFormatName ? match.matchFormatName : '--'}}</span>
+				</li>
+				<li>
+					<em>每队报名人数：</em>
+					<span class="apply_cost">{{match.playerNumber ? match.playerNumber : '--'}} </span>
+				</li>
+				<li>
+					<em>报名费用：</em>
+					<span class="apply_cost">{{match.showSignCost ? match.showSignCost : '--'}} </span>
+				</li>
+				<li>
+					<em>联系人：</em>
+					<span class="apply_cost">{{match.linkMan ? match.linkMan : '--'}} </span>
+				</li>
+				<li>
+					<em>联系方式：</em>
+					<span class="apply_cost">{{match.contactWay ? match.contactWay : '--'}} </span>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="detail_common">
+		<h2 class="mod_h1">主办方信息</h2>
+		<div class="basic_message">
+			<div class="direct_box">
+				<label class="unit_label">主办单位：</label>
+				<ul class="unit_box">
+					{{if matchExt.matchSponsors.length>0}}
+						{{each matchExt.matchSponsors as item index}}
+						<li>{{item}}</li>
+						{{/each}}
+					{{else}}
+						<li>--</li>
+					{{/if}}
+				</ul>
+			</div>
+			<div class="direct_box">
+				<label class="unit_label">承办单位：</label>
+				<ul class="unit_box">
+					{{if matchExt.matchOrganizers.length>0}}
+						{{each matchExt.matchOrganizers as item index}}
+						<li>{{item}}</li>
+						{{/each}}
+					{{else}}
+						<li>--</li>
+					{{/if}}
+				</ul>
+			</div>
+			<div class="direct_box">
+				<label class="unit_label">协办单位：</label>
+				<ul class="unit_box">
+					{{if matchExt.matchCorganizers.length>0}}
+						{{each matchExt.matchCorganizers as item index}}
+						<li>{{item}}</li>
+						{{/each}}
+					{{else}}
+						<li>--</li>
+					{{/if}}
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="detail_common detail_explain">
+		<h2 class="mod_h1">比赛说明</h2>
+		<div class="basic_message">
+			<div class="mask_message">
+				<div class="remark_box">
+					<label class="mask_label">备注：</label>
+					<span class="message">
+						{{#matchDetails.details}}
+					</span>
+				</div>
+				<div class="details_img">
+					{{each matchExt.matchImages as item index}}
+						<p><img width="100%" src="{{item}}"/></p>
+					{{/each}}
+				</div>
+				<!-- <div class="pic_con slide_box">
+					{{if matchExt.matchImages.length>4}}
+					<div class="btn_change left_btn">上一页</div>
+					<div class="btn_change right_btn">下一页</div>
+					{{/if}}
+					<div class="pic_content">
+						<div class="pic_lists">
+							<ul>
+								{{each matchExt.matchImages as item index}}
+									<li><a href="javascript:void(0)"><img width="100%" src="{{item}}"/></a></li>
+								{{/each}}
+							</ul>
+						</div>
+					</div>
+				</div> -->
+			</div>
+		</div>
+	</div>
+</div>
+<div class="space_bottom"></div>

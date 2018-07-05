@@ -1,0 +1,87 @@
+<header class="new-header">
+ <div class="site-nav small">
+  <div class="wrapper">
+   <div class="cellbox cellbox-middle">
+    <div class="cell-item">
+     欢迎来到求苗体育服务平台
+    </div>
+    <div class="cell-item site-nav-sub">
+     <a href="/member/login">登录</a>
+     <span class="space"></span>
+     <span class="space"></span>
+     <span class="space"></span>
+     <a href="/member/register" class="">注册</a>
+    </div>
+   </div>
+  </div>
+ </div>
+ <div class="wrapper">
+  <div class="middle cellbox cellbox-middle">
+   <div class="cell-item">
+    <a href="/" class="nuxt-link-active">
+      <img src="/images/logo.png" width="196" alt="求苗体育" class="logo" />
+    </a>
+   </div>
+  </div>
+ </div>
+ </div>
+</header>
+<style type="text/css">
+  .new-header{
+    background: #fff;
+  }
+  .new-header .nav_menu.fl{
+    float: right;
+  }
+  .new-header .user_slide{
+    background: #fff;
+    border: 1px solid #ddd;
+  }
+  .new-header .user_slide li a{
+    color: #333;
+  }
+  header.new-header .site-nav {
+    line-height: 30px;
+    background: #f6f6f6;
+    height: 30px;
+    border-bottom: 1px solid #e3e3ec;
+    font-size: 12px;
+  }
+  header.new-header .space {
+    margin: 0 5px;
+  }
+  header.new-header .wrapper {
+      width: 1200px;
+      margin: 0 auto;
+  }
+  header.new-header .cellbox {
+      display: table;
+      width: 100%;
+  }
+  header.new-header  .cellbox .cell-item {
+      display: table-cell;
+      vertical-align: top;
+  }
+  header.new-header  .cellbox.cellbox-middle .cell-item {
+      vertical-align: middle;
+  }
+  header.new-header  .cellbox .cell-item:first-child {
+      padding-left: 0!important;
+  }
+  header.new-header .site-nav-sub {
+      text-align: right;
+  }
+  header.new-header .middle {
+      height: 120px;
+  }
+  header.new-header:after {
+      display: block;
+      content: "";
+      height: 4px;
+      background: #15a9da;
+      background: -webkit-gradient(linear,left top,right top,color-stop(1%,#15a9da),color-stop(27%,#48c347),to(#0fa6ea));
+      background: -o-linear-gradient(left,#15a9da 1%,#48c347 27%,#0fa6ea 100%);
+      background: linear-gradient(90deg,#15a9da 1%,#48c347 27%,#0fa6ea);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#15a9da",endColorstr="#0fa6ea",GradientType=1);
+  }
+</style>

@@ -1,0 +1,33 @@
+{{each data.list as item index}}
+	<li class="infor_box">
+		<div class="mit_left infor_img">
+		<a href="/team/index/{{item.orgId}}" target="_blank">
+			<img src="{{item.iconUrl||'/resources/images/default_team_logo.png'}}" width="100%">
+		</a>
+		</div>
+		<div class="mit_right">
+			<h4 class="team_title">
+				<span class="title_text fl">{{item.teamName||''}}</span>
+				<i class="icon_box hidden"></i>
+			</h4>
+			<p class="team_desc">
+				<span class="desc_left">
+					<em class="user_icon"></em>
+					<em>人数：</em>
+					<em class="text">{{item.joins||0}}</em>
+				</span>
+				<span class="desc_right">
+					<em class="desc_label">粉丝：</em>
+					<em class="text">{{item.fans||0}}</em>
+				</span>
+			</p>
+			{{if item.area.length>0}}
+				<p class="team_area">
+					<span class="area_icon"></span>
+					<span class="area_label">地区：</span>
+					<span class="text">{{item.area||''}}</span>
+				</p>
+			{{/if}}
+		</div>
+	</li>
+{{/each}}

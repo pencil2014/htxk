@@ -1,0 +1,1220 @@
+body{
+	background:#ebf0f5;
+}
+.personal_center{
+	width:1200px;
+	margin:0 auto;
+}
+.clearx{
+	clear: both;
+}
+
+/*  --- 网站导航 --- */
+.Web_navigation{
+	margin:30px 0 20px;
+	font-size: 12px;
+}
+.Web_navigation a.index{
+	color:#3983e5;
+}
+.Web_navigation a{
+	color:#999;
+}
+
+/*  --- 个人资料内容 --- */
+
+.personal_intro,.personal_content_title,.local_team,.hot_news{
+	background:#fff;
+}
+.perosnal_content{
+	width:895px;
+	overflow: hidden;
+}
+.personal_intro{
+	padding:24px 50px;
+	border-bottom: 1px solid #ebf0f5;
+}
+.personal_intro .personal_head{
+	width:120px;
+	height:120px;
+	border-radius: 50%;
+	position: relative;
+}
+.personal_intro .personal_head img{
+	display: block;
+	width:100%;
+	height:100%;
+	border-radius: 50%;
+}
+.personal_intro .personal_head i{
+	display: block;
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    top: 86px;
+    right: 2px;
+    background: url("../images/personal_center.png") no-repeat;
+}
+.personal_intro .personal_head i.focus_girl{
+	background-position:0 -32px;
+}
+.personal_intro .personal_head i.focus_boy{
+	background-position:0 0;
+}
+.personal_intro .personal_infor{
+	margin-left: 30px;
+	font-size: 12px;
+}
+.personal_infor h4{
+	margin-top: 10px;
+}
+.personal_infor h4 strong{
+	font-size: 14px;
+}
+.personal_infor h4 span{
+	display: inline-block;
+	margin-left: 10px;
+	padding:2px 14px;
+	background:#fc6f00;
+	color:#fff;
+	border-radius: 4px;
+	cursor: pointer;
+}
+.personal_infor .personal_mark{
+	margin-top: 14px;
+	height:14px;
+}
+.personal_infor .personal_mark span{
+	border:1px solid #00cd9d;
+	padding:2px 6px;
+	border-radius: 4px;	
+
+}
+.personal_infor .personal_place{
+	margin: 12px 0;	
+	color:#999;
+}
+.personal_infor .personal_place i{
+	display: inline-block;
+    width: 10px;
+    height: 14px;
+    background: url(../images/team/team_sprite.png) no-repeat -2px -28px;
+}
+.personal_infor .personal_signature{
+	color:#999;	
+}
+.personal_data{
+	margin-top: 36px;
+}
+.personal_data li{
+	float:left;
+	width:106px;
+	text-align: center;
+	line-height: 25px;
+	border-right:1px solid #f0f0f0; 
+}
+.personal_data li i{
+	display: block;
+	font-size: 18px;
+    color: #333333;
+    font-weight: bold;
+}
+.personal_data li span{
+	color:#999;
+}
+.personal_content_title{
+	padding-left: 40px;
+	width: 100%;
+}
+.personal_content_title li{
+	float:left;
+	width:80px;
+	text-align: center;	
+	line-height: 50px;
+	cursor: pointer;	
+}
+.personal_content_title li.active{
+	color:#00bb90;
+	border-bottom: 2px solid #00bb90;
+	margin-bottom: -2px;	
+}
+.personal_content_list{
+	margin-top: 20px;
+	font-size: 14px;
+	padding:0 40px;
+	background:#fff;
+	width:815px;	
+}
+
+/*  --- 个人内容列表 ---  */
+.personal_title{
+	padding: 30px 0 20px;
+	border-bottom: 1px solid #f2f2f2;
+}
+.personal_title li{
+    float: left;
+    line-height: 18px;
+    width: 55px;
+    text-align: center;
+    margin-right: 20px;
+    padding: 4px 6px;
+    border-radius: 14px;
+    cursor: pointer;		
+}
+.personal_title li.active{
+	background:#00bb90;
+	color:#fff;
+
+}
+/* --- 帖子分享 --- */
+
+.share_post_list,.circle_type,.fans_type{
+	padding:0 20px 30px;
+	overflow: hidden;
+}
+.circle_type.l_circle_type{
+	padding:0px 0px 30px;
+}
+.l_circle_type .circle_type{
+	width:100%;
+}
+.share_post_list li{
+	margin-top: 20px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #f2f2f2;
+}
+.share_post_list li .share_head{
+	width:50px;
+	height:50px;
+	border-radius: 50%
+}
+.share_post_list li .share_head img{
+	display: block;
+	width:100%;
+	height:100%;
+	border-radius: 50%;
+}
+.share_post_list li .share_author{
+	margin:6px 0px 0 20px;
+}
+.share_post_list li .share_author strong{
+	font-size: 16px;
+
+}
+.share_post_list li .share_author  span{
+	display: inline-block;
+	padding:1px 3px;
+	border:1px solid #ffcc00;
+	color:#ffcc00;
+	border-radius: 4px;
+	font-size: 12px;
+	margin-left: 12px;
+}
+.share_post_list li .share_author i{
+	display: block;
+	color:#999;
+	font-size: 12px;
+	margin-top: 6px;
+}
+.share_post_list li .share_headline{
+	margin-top:10px;
+	line-height: 24px;
+	padding:0 6px;
+}
+.share_post_list .share_images{
+	margin:20px 0 10px;
+}
+.share_post_list .share_images li{
+	width:180px;
+	height:100px;
+	margin:0px 10px 10px 0;
+	float:left;
+	border-bottom: 0;
+}
+.share_post_list .share_images li img{
+	display: block;
+	width:100%;
+	height:100%;
+}
+.share_post_list li .share_remark span{
+	padding:2px 12px;
+	background:#f0f0f0;
+	color:#999;
+	margin-right:10px;
+}
+.cbox_tp{
+    float: right;
+    height:18px;
+    margin-top:2px;
+}
+.cbox_tp i{
+    width:14px;
+    height:14px;
+    display: block;
+    float: left;
+}
+.cbox_tp p{
+    height:14px;
+    float: left;
+    color:#999;
+    font-size:12px;
+    line-height:14px;
+    text-indent:4px;
+    cursor: pointer;
+}
+.cbox_tp .op{
+    margin-right:20px;
+}
+.cbox_tp .op i{
+    background: url(../images/sport_other.png)no-repeat -53px -134px;
+
+}
+.cbox_tp .tp i{
+    background: url(../images/manage_team.png)no-repeat -410px -30px;
+
+}
+.cbox_tp .tp .i{
+    background: url(../images/manage_team.png)no-repeat -410px -3px;
+}
+.personal_content_list .viewMore{
+	margin-top: 20px;
+}
+.personal_content_list .viewMore a{
+	display: block;
+	width:100%;
+	height:100%;
+	background:#f1f2f3;
+	line-height: 40px;
+	text-align: center;
+	color:#000;
+}
+
+
+
+/*  --- 热门话题 ---  */
+.hot_news{
+	width:245px;
+	padding:10px 20px 6px;
+	border:1px solid #eee;
+}
+.hot_news a{
+	color:#000;
+}
+.hot_news h3{
+	padding-left:10px;
+	border-left: 4px solid #01a87c;
+	line-height: 20px;
+	font-size: 16px;
+	margin:10px 0;
+}
+
+.hot_news li{
+	padding-left: 13px;
+	width:232px;
+	height:36px;
+	line-height: 36px;
+	display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    position: relative;
+    font-size: 14px;
+}
+.hot_news li i{
+	display: inline-block;
+	width:4px;
+	height:4px;
+	background:url("../images/indexImages/li.png");
+	position: absolute;
+	top:16px;
+	left:0px;
+	border-radius: 50%;
+}
+.hot_news li:hover a{
+	color:#3983e5;
+}
+
+/*  --- 同城用户&推荐用户 --- */
+
+.local_team{
+	width:245px;
+	padding:10px 20px;
+	border:1px solid #e5e5e5;
+	margin-top: 20px;
+}
+.local_team h3{
+	padding-left:10px;
+	border-left: 4px solid #01a87c;
+	line-height: 20px;
+	font-size: 16px;
+	margin:10px 0;
+}
+.local_teams_list{
+	padding-bottom: 10px;
+}
+.local_team .change_other,.recommended_team .change_other{
+	width:60px;
+	display: block;
+	color:#999;
+	font-size: 12px;
+	margin-top:13px;
+}
+.local_team .change_other i{
+	display: inline-block;
+	width:12px;
+	height:12px;
+	margin-right:10px;
+	background:url("../images/sport_icon.png") no-repeat -179px -210px;
+}
+.local_teams_list li{
+	margin-top:20px;
+}
+.local_teams_list li span{
+	margin-left:10px;
+	width:116px;
+	display: -webkit-box;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+	line-height: 46px;
+}
+.local_teams_list li .local_head{
+	display: inline-block;
+	width:46px;
+	height:46px;
+}
+.local_teams_list li .local_head img{
+	width:100%;
+	height:100%;
+}
+.advertising{
+	display: block;
+	margin-top: 20px;
+}
+
+/* --- 分享资讯 --- */
+
+.published li{
+	padding:15px 0;
+	border-bottom:1px solid #f0f0f0;
+	margin-top: 0;
+}
+.published li:hover{
+	background:#fafafa;
+}
+.published li:hover h3{
+	color:#01a87c;
+}
+.published li a,.share_post_list li a{
+	color:#333;
+}
+.published .published_image{
+	width:160px;
+	height:90px;
+	margin-right:22px;
+	position: relative;
+}
+.published .published_image i{
+	display: block;
+	width:100%;
+	height:20px;
+	background:#000;
+	opacity: 0.5;
+	filter: alpha(opacity=50); 
+	position: absolute;
+	left:0;
+	bottom:0;	
+}
+.published .published_image span{
+	position: absolute;
+	left:10px;
+	bottom:2px;
+	z-index: 10;
+	color:#fff;
+	font-size: 12px;	
+}
+.published .published_image span strong{
+	display: inline-block;
+	width:4px;
+	height:10px;
+	background:url("../images/indexImages/playCount.png") no-repeat center;
+	margin-right:6px;
+}
+.published .published_image img{
+	display: block;
+	width:100%;
+	height:100%;
+}
+.published_title h3,.published_title p{
+	line-height: 45px;
+}
+.published_title p{
+	color:#999999;
+	font-size: 10px;
+}
+.published_title p span{
+	margin-right:20px;
+}
+.published_content_count i,.published_praise_count i,.published_look_count i{
+	display: inline-block;
+	width:14px;
+	height:14px;
+	background:url("../images/sport_other.png") no-repeat -53px -134px;
+	margin:0 8px -3px 0;
+}
+.published_praise_count i{
+	background:url("../images/manage_team.png") no-repeat -410px -30px;
+	margin-bottom:-1px;
+}
+.published_look_count i{
+	background-position: -142px -20px;
+}
+
+
+/*   --- 分享图片 ---  */
+.share_photoes{
+	padding:20px 20px 30px;
+}
+.share_photoes li{
+	margin-bottom: 20px;
+}
+.share_photoes span{
+	display: block;
+	margin-bottom:20px;
+	color:#333;
+}
+.share_photoes_list li{
+	border-bottom: 0;
+	float:left;
+	margin:0 10px 10px 0;
+	width:100px;
+	height:100px;
+}
+.share_photoes_list li img{
+	display: block;
+	width:100%;
+	height:100%;
+}
+.personal_content_box .default_page_box{
+	padding:50px 0;
+}
+.share_photoes.share_type .default_page_box{
+	padding:30px 0 50px;
+}
+/*  --- 分享视频 ---  */
+.share_videos{
+	padding:0px 20px 30px;
+}
+
+/*  --- 粉丝 ---  */
+.personal_focus_list{
+	margin-top:20px;
+}
+.personal_focus_list li{
+	padding:20px 0;
+	border-bottom: 1px solid #f2f2f2;
+}
+.personal_focus_head{
+	width:80px;
+	height:80px;
+	border-radius: 50%;
+	margin-right: 26px;
+	position: relative;
+}
+.personal_focus_head i{
+	display: block;
+	width:22px;
+	height:22px;
+	position: absolute;
+	top:50px;
+	right:-2px;
+	background:url("../images/personal_center.png") no-repeat;	
+}
+.personal_focus_head .focus_girl{
+	background-position:-1px -33px;	
+}
+.personal_focus_head .focus_boy{
+	background-position:-1px 0px;	
+}
+.personal_focus_head img{
+	display: block;
+	width:100%;
+	height:100%;
+	border-radius: 50%;
+}
+.personal_focus_intro h4{
+	font-size: 14px;
+	color:#333;
+}
+.personal_focus_intro h4 i{
+	padding:0 4px;
+	border:1px solid #ffcc00;
+	color:#ffcc00;
+	border-radius: 4px;
+	margin-left:8px;
+	display: inline-block;
+	line-height: 16px;
+}
+.personal_focus_count li{
+	float:left;
+	font-size: 12px;
+	padding:0;
+	margin:6px 0;
+	border: 0;
+}
+.personal_focus_count .personal_focus{
+	padding-right:16px;
+	border-right:1px solid #f0f0f0;
+}
+.personal_focus_count .personal_fancs{
+	padding-left:16px;	
+}
+.personal_focus_count li span{
+	color:#999;
+}
+.personal_focus_count li i{
+	color:#fc6f00;
+}
+.personal_focus_address{
+	display: block;
+	color:#999;
+	font-size: 12px;
+	height:20px;
+}
+.personal_focus_address i{
+	display: inline-block;
+	width:14px;
+	height:17px;
+	background:url("../images/team/team_sprite.png") no-repeat 1px 0px;
+}
+.personal_focus_signature{
+	margin-top:6px;
+	color:#999;
+	font-size: 12px;
+}
+.personal_focus_mark{
+	position: relative;
+}
+.personal_focus_mark em{
+	display: block;
+	width:10px;
+	height:10px;
+	position: absolute;
+	right:6px;
+	top:7px;
+	background:url("../images/manage_icon.png") no-repeat -53px -14px;
+	filter: alpha(opacity=0);
+}
+.personal_focus_mark span{
+	/*padding:3px 10px;*/
+	border:1px solid #e5e5e5;
+	color:#666;
+	border-radius: 4px;
+	font-size: 12px;
+	cursor: pointer;
+	position: relative;
+	margin-right: 10px;
+	line-height: 24px;
+}
+.personal_focus_mark .each_other{
+	padding:0 4px;
+}
+.personal_focus_mark span b{
+	font-weight: 400;
+}
+.personal_focus_mark select{
+	display: inline-block;
+	height:24px;
+	border-radius: 4px;	
+	color:#666;	
+	border:1px solid #e5e5e5;
+	outline: none;	
+	appearance:none;
+	-moz-appearance:none;
+	-webkit-appearance:none;
+	width:60px;	
+	padding-left:6px;
+	height:26px;
+	cursor: pointer;
+}
+.personal_focus_mark i{
+	display: inline-block;
+	width:18px;
+	height:10px;
+	background:url("../images/personal_center.png");
+}
+.personal_focus_mark i.together_focus{
+	background-position:  -23px -39px;
+}
+.personal_focus_mark i.already_focus{
+	background-position:  -23px -11px;
+}
+.personal_focus_mark i.add_focus{
+	background-position:  -66px -11px;	
+}
+
+
+
+/*  --- 关注 ---  */
+.foucs_warp_t{
+	padding-top:9px;
+}
+.foucs_warp .guanzhu,.foucs_warp .reguanzhu{
+	display: block;
+	line-height: 24px;
+	border:1px solid #e5e5e5;
+	border-radius: 4px;
+	font-size: 12px;
+	cursor: pointer;
+	text-align: center;
+	width:60px;
+}
+.foucs_warp .guanzhu:hover{
+	background:#00bb90;
+	color:#fff;
+}
+.join_warp .guanzhu:hover{
+	background:#00bb90;
+	color:#fff;
+}
+.foucs_warp .reguanzhu{
+	color:#00bb90;
+}
+.foucs_warp .reguanzhu{
+	display: none;
+}
+.foucs_warp.status .reguanzhu{
+	display: block;
+	border:1px solid #00bb90;	
+}
+.foucs_warp.status .guanzhu{
+	display: none;
+}
+
+/*-------------------------------圈子--------------------------------------*/
+/*--------------------------------球队----------------------------------------*/
+.myteam_list li.infor_box{
+	padding:15px 0;
+	margin:0;
+	border-bottom: 1px solid #f2f2f2;
+}
+.myteam_list .mit_left{
+	width: 80px;
+	display: inline-block;
+	vertical-align: middle;
+	*display:inline;
+	*zoom:1;
+}
+.myteam_list .mit_right{
+	display: inline-block;
+	vertical-align: middle;
+	*display:inline;
+	*zoom:1;
+	margin-left:20px;
+	width: 600px;
+}
+
+.myteam_list .team_title{
+	font-size: 16px;
+	padding:5px 0;
+}
+.myteam_list .icon_box{
+	font-size: 12px;
+	padding:2px 5px;
+	font-weight: normal;
+	border:1px solid #00cd9d;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	border-radius: 3px;
+}
+.myteam_list .team_desc,.myteam_list .team_area{
+	padding:5px 0;
+}
+.team_desc .desc_left{
+	padding-right: 15px;
+	border-right: 1px solid #f0f0f0;
+}
+.team_desc .desc_right{
+	padding-left: 15px;
+}
+
+/*------------------------------拼球-----------------------------------------*/
+.personal_circle .user_show{
+	width:774px;
+	height:180px;
+	border-bottom:1px solid #f2f2f2;
+}
+.personal_circle .user_show .usr_show_img{
+	height:100%;
+	width:50px;
+	float: left;
+	margin-right:18px;
+}
+.personal_circle .user_show .box{
+	width:50px;
+	height:50px;
+	-webkit-border-radius:50%;
+	-moz-border-radius:50%;
+	border-radius:50%;
+	margin-top:20px;
+	position: relative;
+}
+.personal_circle .user_show .box span{
+	display: block;
+	width:18px;
+	height:18px;
+	/*border:2px solid #fff;*/
+	-webkit-border-radius:50%;
+	-moz-border-radius:50%;
+	border-radius:50%;
+	background: url(../images/personal_center.png) -2px -2px;
+	position: absolute;
+	right:-5px;
+	bottom:2px;
+
+}
+.personal_circle .user_show .box .span{
+	background: url(../images/personal_center.png) -3px -35px;
+}
+.personal_circle .user_show .box img{
+	width:100%;
+	height:100%;
+}
+.personal_circle .user_show_content{
+	width:706px;
+	height:100%;
+	float: left;
+	/*background: yellow;*/
+	position: relative;
+}
+.personal_circle .user_show_content .one_li{
+	font-size:14px;
+	color:#333;
+	margin-top:34px;
+	height:16px;
+	line-height:16px;
+}
+.personal_circle .user_show_content .one_li span{
+	font-size:12px;
+	margin-left:14px;
+}
+.personal_circle .user_show_content em{
+	width:14px;
+	height:14px;
+	display: block;
+	float: left;
+	margin-top:5px;
+}
+.personal_circle .user_show_content .two_li{
+	height:24px;
+	font-size:16px;
+	color:#333;
+	margin-top:12px;
+	line-height:24px;
+	text-indent:10px;
+	width: 550px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+}
+#manage_contents a:hover,#manage_contents a:focus{color: #3983e5;}
+.personal_circle .user_show_content .two_li em{
+	background: url(../images/personal_center.png) no-repeat -122px -8px;
+}
+.personal_circle .user_show_content .three_li em{
+	background: url(../images/personal_center.png) no-repeat -214px -38px;
+}
+.personal_circle .user_show_content .four_li em{
+	background: url(../images/personal_center.png) no-repeat -156px -38px;
+}
+.personal_circle .user_show_content .five_li em{
+	background: url(../images/personal_center.png) no-repeat -214px -12px;
+}
+.personal_circle .user_show_content .three_li,.user_show_content .four_li,.user_show_content .five_li{
+	line-height:24px;
+	font-size:12px;
+	color:#666;
+	text-indent:10px;
+}
+.personal_circle .user_show_content .three_li span{
+	margin-right:8px;
+}
+.personal_circle .btn_box{
+	width:110px;
+	height:60px;
+	position: absolute;
+	right:0;
+	top:26px;
+}
+.personal_circle .btn_box .btn{
+	width:110px;
+	height:32px;
+	line-height:30px;
+	text-align: center;
+	font-size:14px;
+	color:#fff;
+	cursor: pointer;
+}
+.personal_circle .btn_box .ibtn{
+	background: #00bb90;
+}
+.personal_circle .btn_box .dbtn{
+	background: #00bb90;
+}
+.personal_circle .btn_box .sbtn{
+	background: #89d035;
+}
+.personal_circle .btn_box .ebtn{
+	background: #bbbbbb;
+}
+.personal_circle .btn_box p{
+	width:110px;
+	height:12px;
+	line-height:12px;
+	font-size:12px;
+	color:#999;
+	margin-top:12px;
+	text-align: center;
+}
+/*--------------------------------约战------------------------------------------*/
+.personal_compet li{
+	height:100px;
+	float: left;
+}
+.personal_compet .one_li{
+	width:130px;
+	font-size:14px;
+	text-align: right;
+	line-height:100px;
+}
+.personal_compet .one_li span{
+	margin-left:12px;
+}
+
+.personal_compet .two_li,.six_li{
+	width:90px;
+	text-align: right;
+	max-height:100px;
+	overflow:hidden;
+}
+.personal_compet .six_li{
+	text-align: left;
+}
+.personal_compet .two_li span,.personal_compet .six_li span{
+	vertical-align:middle;
+	display:inline-block;
+	font-size:12px;
+	font-weight:bold;
+	width:75px;
+	white-space:nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	cursor: default;
+}
+.personal_compet .two_li:after,.personal_compet .six_li:after{
+	content:'';
+	width:0;
+	height:100%;
+	display:inline-block;
+	vertical-align:middle;
+}
+
+.personal_compet .three_li,.personal_compet .five_li{
+	width:49px;
+	line-height:100px;
+}
+.personal_compet .three_li img{
+	width:38px;
+	height:38px;
+	float: right;
+	margin-top:31px;
+	border-radius:50%;
+}
+.personal_compet .four_li{
+	width:140px;
+}
+
+.personal_compet .four_li p{
+	width:100%;
+	text-align: center;
+	height:30px;
+	line-height:30px;
+	font-size:28px;
+	margin-top:30px;
+}
+.personal_compet .four_li .p{
+	width:60px;
+	height:20px;
+	color:#fff;
+	background:#ff9e00;
+	font-size:12px;
+	line-height:20px;
+	text-align: center;
+	margin:40px auto;
+}
+.personal_compet .four_li span{
+	width:100%;
+	display: block;
+	text-align: center;
+	font-size:12px;
+	color:#ff7437;
+
+}
+
+.personal_compet .five_li img{
+	width:38px;
+	height:38px;
+	float: left;
+	margin-top:31px;
+}
+.personal_compet .seven_li{
+	width:50px;
+}
+.personal_compet .seven_li span{
+	width:24px;
+	height:24px;
+	display: block;
+	margin-top:37px;
+	text-align: center;
+	line-height:24px;
+	font-size:12px;
+	color:#fff;
+	-webkit-border-radius:1px 1px;
+	-moz-border-radius:1px 1px;
+	border-radius:1px 1px;
+}
+.personal_compet .seven_li .fsp{
+	background: #3983e5;
+}
+.personal_compet .seven_li .vsp{
+	background: #fa4535;
+}
+.personal_compet .seven_li .dsp{
+	background: #00bb90;
+}
+.personal_compet .eight_li{
+	width:130px;
+	height:74px;
+	padding-top:26px;
+}
+.personal_compet .eight_li p{
+	height:24px;
+	line-height:24px;
+	font-size:12px;
+}
+.personal_compet .nine_li{
+	width:95px;
+	height:74px;
+	padding-top:26px;
+}
+.personal_compet .nine_li p{
+	height:24px;
+	line-height:24px;
+	font-size:12px;
+	color:#01a87c;
+	cursor: pointer;
+}
+.l_circle_type .personal_compet{
+	width:100%;
+}
+.personal_compet {
+	width: 774px;
+	height: 100px;
+	background: #fafafa;
+	color: #333;
+	margin-top: 20px;
+}
+
+/*----------------------------服务-----------------------------------------*/
+/*--------------------------------身份为验证-----------------------------------------*/
+.personal_service{
+	overflow: hidden;
+	padding:0 40px 46px;
+}
+.has_approve{
+	/*display: none;*/
+	padding: 0 14px 0;
+}
+.unapprove,.approve_check{
+	width:800px;
+	height:360px;
+	/*background:#fafafa;*/
+	margin-top:50px;
+	-webkit-border-radius:6px 6px;
+	-moz-border-radius:6px 6px;
+	border-radius:6px 6px;
+	background:url(../images/server_bg.jpg);
+	overflow: hidden;
+}
+.unapprove .pic,.approve_check .pic{
+	width:163px;
+	height:132px;
+	margin:60px auto 0;
+}
+.unapprove .btn,.unapprove .mbtn,.approve_check .btn{
+	width:260px;
+	height:60px;
+	margin:30px auto 0;
+	font-size:24px;
+	color:#999;
+	line-height:60px;
+	text-align: center;
+	background:#ebf0f5;
+	-webkit-border-radius:30px 30px;
+	-moz-border-radius:30px 30px;
+	border-radius:30px 30px;
+	cursor: pointer;
+}
+
+.unapprove .mbtn{
+	background: #00bb90;
+	color:#fff;
+}
+.approve_check .btn{
+	background:#fc6f00;
+	color:#fff;
+}
+.approve_check .pic img{
+	width:100%;
+	height:100%;
+}
+/*-----------------------------------已认证------------------------------------------*/
+.has_approve h3{
+	border-left:4px solid #00bb90;
+	margin:30px 0 20px;
+	text-indent:10px;
+	font-size:16px;
+	color:#333;
+}
+.has_approve .message{
+	padding:30px 0;
+	border-top:1px solid #f2f2f2;
+	border-bottom:1px solid #f2f2f2;
+}
+
+.has_approve .message p{
+	width:100%;
+	min-height:48px;
+	line-height:48px;
+
+}
+.has_approve .message .em{
+	float: left;
+	margin-right:20px;
+	line-height:48px;
+	font-size:14px;
+	color:#333;
+}
+.has_approve .message em{
+	float: left;
+	margin-right:20px;
+	line-height:48px;
+	font-size:14px;
+	color:#333;
+}
+.has_approve .message span{
+	float: left;
+	line-height:48px;
+	font-size:14px;
+	color:#333;
+}
+.has_approve .identity_id img{
+	vertical-align: middle;
+}
+.has_approve .message .description{
+	line-height:48px;
+	margin-left: 62px
+}
+.has_approve .message i{
+	display: block;
+	width:60px;
+	height:16px;
+	border:1px solid #00bb90;
+	font-size:12px;
+	float: left;
+	text-align: center;
+	margin-right:10px;
+	line-height:16px;
+	margin-top:16px;
+}
+.has_approve .broadcast_pic{
+	width:770px;
+	height:432px;
+}
+.has_approve .broadcast_pic img{
+	width:100%;
+	height:100%;
+}
+.personal_right .myteam_container .default_page_tips{
+	margin-top:0;
+}
+
+
+
+
+/* --- 媒体查询 --- */
+@media screen and (max-width:1200px){
+	.personal_center{
+		width:1000px;
+	}
+	.perosnal_content{
+		width:695px;
+	}
+	.personal_content_list{
+		width:615px;
+	}
+	.personal_intro{
+		padding:24px 25px;
+	}
+	.personal_data li{
+		width:78px;
+	}
+	.unapprove, .approve_check,.approving{
+		width:600px;
+	}	
+	.approving span{
+		margin-left:96px;
+	}
+	.has_approve .broadcast_pic{
+		width:570px;
+	}
+	.personal_circle .user_show_content	{
+		width:506px;
+	}
+	.myteam_list .mit_right{
+		width:470px;
+	}
+/*	.personal_compet .one_li {
+		width: 135px;
+	}*/
+	.personal_compet .two_li,.personal_compet .six_li{
+		width:70px;
+	}
+	.personal_compet .two_li span,.personal_compet .six_li span{
+		width:60px;
+	}
+	.personal_compet .three_li,.personal_compet .five_li{
+		width:49px;
+	}
+	.personal_compet .four_li{
+		width:80px;
+	}
+	.personal_compet .seven_li{
+		width:50px;
+	}
+	.personal_compet .eight_li{
+		width:82px;
+	}
+	/*.personal_compet{
+		width:574px;
+	}*/
+}
+
+
+
+
+

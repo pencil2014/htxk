@@ -1,0 +1,94 @@
+<div class="detail_box pt30">
+  <table class="fodder-table">
+    <tr>
+      <td colspan="4">请上传赞助诉求</td>
+    </tr>
+    <tr class="mheight">
+      <td>赞助诉求</td>
+      <td colspan="2">
+        {{if fodderAppeal.id}} {{fodderAppeal.fodderName}}
+        <br> 上传时间：{{fodderAppeal.updateTime}} {{/if}}
+      </td>
+      <td align="right">
+        {{if !fodderAppeal.id}}
+        <a href="javascript:void(0)" class="btn btn_md fodder_upload" data-type="0">上传</a>
+        {{else}}
+        <a href="javascript:void(0)" class="btn btn_md fodder_reupload" data-id="{{fodderAppeal.id}}" data-type="0">重新上传</a>
+        <a href="javascript:void(0)" class="btn btn_md btn_plain fodder_del" data-id="{{fodderAppeal.id}}">删除</a>
+        {{/if}}
+      </td>
+    </tr>
+    {{if !(bidStatus == 1 || bidStatus == 2 || bidStatus == 4  || bidStatus == 0) }}
+    <tr class="title">
+      <td colspan="4">请上传品牌宣传信息</td>
+    </tr>
+    <tr class="mheight">
+      <td>品牌图片</td>
+      {{if fodderLogo.id}}
+      <td width="80">
+        <img src="{{fodderLogo.fodderUrl}}">
+      </td>
+      <td>
+        {{fodderLogo .fodderName}}<br> 上传时间：{{fodderLogo .updateTime}}
+      </td>
+      {{else}}
+      <td></td>
+      <td></td>
+      {{/if}}
+      <td align="right">
+        {{if !fodderLogo.id}}
+        <a href="javascript:void(0)" class="btn btn_md fodder_upload" data-type="1">上传</a>
+        {{else}}
+        <a href="javascript:void(0)" class="btn btn_md fodder_reupload" data-id="{{fodderLogo.id}}" data-type="1">重新上传</a>
+        <a href="javascript:void(0)" class="btn btn_md btn_plain fodder_del" data-id="{{fodderLogo.id}}">删除</a>
+        {{/if}}
+      </td>
+    </tr>
+    <tr class="mheight">
+      <td>视频素材</td>
+      <td colspan="2">
+        {{if fodderVideo.id}} {{fodderVideo.fodderName}}
+        <br> 上传时间：{{fodderVideo.updateTime}} {{/if}}
+      </td>
+      <td align="right">
+        {{if !fodderVideo.id}}
+        <a href="javascript:void(0)" class="btn btn_md fodder_upload" data-type="2">上传</a>
+        {{else}}
+        <a href="javascript:void(0)" class="btn btn_md fodder_reupload" data-id="{{fodderVideo.id}}" data-type="2">重新上传</a>
+        <a href="javascript:void(0)" class="btn btn_md btn_plain fodder_del" data-id="{{fodderVideo.id}}">删除</a>
+        {{/if}}
+      </td>
+    </tr>
+    <tr class="mheight">
+      <td>推广诉求</td>
+      <td colspan="2">
+        {{if fodderPop.id}} {{fodderPop.fodderName}}
+        <br> 上传时间：{{fodderPop.updateTime}} {{/if}}
+      </td>
+      <td align="right">
+        {{if !fodderPop.id}}
+        <a href="javascript:void(0)" class="btn btn_md fodder_upload" data-type="3">上传</a>
+        {{else}}
+        <a href="javascript:void(0)" class="btn btn_md fodder_reupload" data-id="{{fodderPop.id}}" data-type="3">重新上传</a>
+        <a href="javascript:void(0)" class="btn btn_md btn_plain fodder_del" data-id="{{fodderPop.id}}">删除</a>
+        {{/if}}
+      </td>
+    </tr>
+    {{/if}}
+  </table>
+  <div class="fodder-rule">
+    素材要求：
+<br>图片要求：logo图片大小200M以内，bmp、 png、jpeg、 jpg、gif格式； 最佳尺寸为640*640 或者320*320。
+<br>视频要求：200M以下的文件，rm、rmvb、wmv、avi、mpg、 mpeg、 mp4格式。
+<br>素材命名要求：品牌名称 +  "品牌logo" /  品牌名称 +“宣传视频”。    例如:品牌名称为“求球”的产品素材命名, 求苗品牌logo  /  求苗宣传视频。
+<br><br>
+<br>以下类目及商品严禁推广：
+<br>1）严禁推广隐形眼镜、静脉曲张袜、血压计、各类药品等医疗相关的类目。
+<br>2）严禁推广带有减肥、瘦身、纤体、左旋肉碱、排油、消脂、溶脂、燃脂、清脂、脱脂、丰胸、壮阳、增肌、缩阴等描述的产品；表示减肥、丰胸、壮阳、增肌、缩阴功效的天然粉粉类。
+<br>3）严禁推广香烟、烟丝、烟叶、电子烟及烟嘴等商品。
+<br>4）严禁推广成人类目商品（避孕套、计生用品、情趣内衣等 ）。
+<br>5）严禁推广游戏点卡、充值等虚拟商品。
+<br>6）祛疤、祛痘、祛斑、祛皱类美容类商品。
+<br>7）允许推广酒水类商品，但是必须要做年龄定向（必须定向18岁以上人群）。
+  </div>
+</div>

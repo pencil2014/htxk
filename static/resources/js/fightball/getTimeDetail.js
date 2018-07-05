@@ -1,0 +1,1 @@
+define(["jquery"],function(n){return{timeDate:function(n){var r=[],s=(parseInt(n.substring(10,13)),n.substring(10,13)),t=(parseInt(n.substring(14,16)),n.substring(14,16)),u="";for(i=s;i<=23;i++)u=i+1>9?i:"0"+(i+1).toString(),i==s&&t<=30?r.push(s+":30"):i==s&&t>=30||(r.push(u+":00"),r.push(u+":30"));return r.push("24:00"),r}}});

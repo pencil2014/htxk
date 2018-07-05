@@ -1,0 +1,10 @@
+<!-- 用户介绍模板 -->
+<div class="header_icon fl">
+	<img src="{{data.fightBall.userIconUrl == null ? '/resources//images/default_photo.jpg' : data.fightBall.userIconUrl}}">
+</div>
+<span class="fight_ball_user fl" fightId={{data.fightBall.fightId}}  userId={{data.fightBall.userId}} > {{data.fightBall.userName}}</span>
+<span class="user_mark fl">
+	{{if data.fightBall.ipCateUrl!=null}}
+		<img  class="player_mark" src={{data.fightBall.ipCateUrl}}>
+	{{/if}}
+</span>

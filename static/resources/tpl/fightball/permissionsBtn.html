@@ -1,0 +1,43 @@
+<!-- 权限按钮 模板-->
+{{if data.fightBall.isManager==1}}
+    {{if data.fightBall.statusCode == 1}}
+    <span class="btn close_fight_ball" type="button" >关闭拼球</span>
+    <span class="btn init_again" type="button">再次发起</span>
+    {{else if data.fightBall.statusCode == 2}}
+    <span class="btn exit_fight" type="button">退出拼球</span>
+    <span class="btn init_again" type="button">再次发起</span>
+    {{else if data.fightBall.statusCode == 3}}
+    <span class="btn exit_fight" type="button">退出拼球</span>
+    <span class="btn" type="button" id="terminationFight">中止报名</span>
+    <span class="btn init_again" type="button">再次发起</span>
+    {{else if data.fightBall.statusCode == 4 || data.fightBall.statusCode == 6}}
+    <span class="btn exit_fight" type="button">退出拼球</span>
+    <span class="btn init_again" type="button">再次发起</span>
+    {{else if data.fightBall.statusCode == 5}}
+    <span class="btn init_again" type="button">再次发起</span>
+    {{else if data.fightBall.statusCode == 7}}
+    <span class="btn init_again" type="button">再次发起</span>
+    {{else if data.fightBall.statusCode == 8}}
+    <span class="btn init_again" type="button">再次发起</span>
+    {{/if}}
+  {{else}}
+    {{if data.fightBall.statusCode == 1}}
+    <span class="btn join_fight_ball" type="button" joinType="{{data.fightBall.joinWay}}">我要加入</span>
+    {{else if data.fightBall.statusCode == 2}}
+    <span class="fightBall_success">拼球成功</span>
+    {{else if data.fightBall.statusCode == 3}}
+    <span>拼球失败</span>
+    {{else if data.fightBall.statusCode == 4}}
+    <span>拼球关闭</span>
+    {{else if data.fightBall.statusCode == 5}}
+    <span>拼球结束</span>
+    {{else if data.fightBall.statusCode == 6}}
+    <span>已申请，待处理</span>
+    {{else if data.fightBall.statusCode == 7}}
+    <span>已加入</span>
+    {{else if data.fightBall.statusCode == 8}}
+    <span>拼球成功,已加入</span>
+    {{else if data.fightBall.statusCode == 9}}
+    <span>拼球失败,已加入</span>
+    {{/if}}
+  {{/if}}

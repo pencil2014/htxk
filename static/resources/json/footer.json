@@ -1,0 +1,30 @@
+{
+  "links":[
+    {
+      "id":1,
+      "title":"关于我们",
+      "url":"/resources/html/aboutUs/index.html"
+    },
+    {
+      "id":2,
+      "title":"帮助中心",
+      "url":"/helpers"
+    },
+    {
+      "id":3,
+      "title":"相关法律",
+      "url":"/law"
+    },
+    {
+      "id":4,
+      "title":"友情链接",
+      "url":"/friendlylink/"
+    }
+  ],
+  "license_NO":"琼ICP备18000046号",
+  "license_telecom":"粤B2-20160345",
+  "license_www":"粤网文[2016]1273-268号",
+  "copyright":"2017-2018 oooseed.com",
+  "tel":"0755-86338109"
+
+}

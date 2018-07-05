@@ -1,0 +1,14 @@
+<h2 class="welfare_title">{{job.title}}</h2>
+<div class="post_container">
+{{each job.cate as item }}
+    <dl class="post_item">
+        <dt>{{item.title}}</dt>
+        {{each item.list as text}}
+        	<dd>{{text}}</dd>
+        {{/each}}
+    </dl>
+{{/each}}
+</div>
+<div class="join_center_box">
+	<a href="{{job.href}}" target="_blank">招聘中心</a>
+</div>

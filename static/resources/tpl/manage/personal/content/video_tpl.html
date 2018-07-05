@@ -1,0 +1,45 @@
+{{if data.list.length>0}}
+	<ul class="infor_list published manage_ul ">
+		{{each data.list as item index}}
+			<li>
+				<div class="published_image fl">
+					<img src="{{(item.imgUrl)||''}}">
+					<i></i>
+					<span><strong></strong>{{item.playTimeFormat}}</span>
+				</div>
+				<div class="published_title fl">
+					<a href="/video/play/{{item.videoId}}" target="_blank"><h3>{{item.videoName}}</h3></a>
+					<p>
+						<span class="published_time">{{item.createTimeFormat}}</span>
+						{{if (item.status == 0)}}
+							<span class="published_mark">已发布</span>
+						{{else if (item.status == 1)}}
+							<span class="published_mark">转码中</span>
+						{{else if (item.status == 2)}}
+							<span class="published_mark">转码失败</span>
+						{{else if (item.status == 3)}}
+							<span class="published_mark">审核中</span>
+						{{else if (item.status == 4)}}
+							<span class="published_mark">审核不通过</span>
+						{{/if}}
+						<span class="published_look_count"><i></i>{{item.playCount }}</span>
+					</p>
+				</div>
+				<div class="published_handle fr published_del">
+					<a class="editItem"  href="/manage/news/publish/video?videoId={{item.videoId }}">编辑</a>
+					<span class="deleteItem" hhly-newId="{{item.videoId }}">删除</span>
+				</div>
+				<div class="clearx"></div>
+			</li>
+		{{/each}}
+	</ul>
+{{else}}
+	<div class="default_page_box">
+		<div class="default_img_box">
+			<img src="/resources/images/defaultPage/not_video.png" width="100%">
+		</div>
+		<p class="default_page_tips">
+			一个视频都没有
+		</p>
+	</div>
+{{/if}}

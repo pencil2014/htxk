@@ -1,0 +1,31 @@
+<!-- 评论消息 -->
+{{each data.list as item index}}
+	<li>
+		<div class="message_head fl">
+			<a class="message_head_a" href="{{if (item.userInfoBasicRespVO.orgId)}}/team/index/{{item.userInfoBasicRespVO.orgId}}{{else}}/personal/index/{{item.userInfoBasicRespVO.userId}}{{/if}}" target="blank_"><img src="{{(item.userInfoBasicRespVO.iconUrl)||'/resources/images/default_photo.jpg'}}"></a>
+		</div>
+		<div class="message_contents fl">
+			<div class="message_me_name">
+				<strong >{{item.userInfoBasicRespVO.nickName }}</strong>
+				<i>{{item.createTime}}</i>
+				<div class="clearx"></div>
+			</div>
+			<span>{{(item.content)||''}}{{if (item.fileUrl)}}<img src="{{item.fileUrl}}"/>{{/if}}</span>
+			<a href="/personal/index/feedetail/{{item.feedId}}" target="_blank">
+				<p>
+					{{if (item.noticeType == 1)}}
+						<i>{{item.userInfoBasicRespVO.nickName }}</i>评论了你帖子
+					{{else if (item.noticeType == 2)}}
+						<i>{{item.userInfoBasicRespVO.nickName }}</i>引用了你的评论
+					{{/if}}：
+					{{if (item.noticeType == 1)}}
+						{{(item.feedTitle)||''}}
+					{{else if (item.noticeType == 2)}}
+						{{(item.refContent)||''}}
+					{{/if}}
+				</p>
+			</a>
+		</div>
+		<div class="clearx"></div>
+	</li>
+{{/each}}

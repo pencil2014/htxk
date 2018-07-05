@@ -1,0 +1,11 @@
+{
+	"data": [
+		{"link": "http://live.13322.com", "title": "一比分", "src": "images/friend/13322.png"},
+		{"link": "http://dj.13322.com", "title": "乐盈电竞", "src": "images/friend/dj.png"},
+		{"link": "http://game.13322.com/", "title": "乐盈盈", "src": "images/friend/game.png"},
+		{"link": "http://kf.13322.com/", "title": "七讯", "src": "images/friend/71chat.png"},
+		{"link": "http://lawyer.hao13322.com/", "title": "华海律正", "src": "images/friend/lawyer.png"},
+		{"link": "http://sports.huanqiu.com/", "title": "环球求苗", "src": "images/friend/huanqiu.png"},
+		{"link": "", "title": "", "src": "friend/people.png"}
+	]
+}

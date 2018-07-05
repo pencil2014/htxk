@@ -1,0 +1,54 @@
+{{each data.list as item index}}
+  <tr class="hr_hover">
+<!--            <td> 多选支付页以后再做
+      <label class="cb">
+        <input type="checkbox" name="pay_code" value={{index+1}} data-code={{item.goodsSku}} data-money={{item.investmentAmount / 100}}>
+        <div class="check_icon"></div>
+      </label>
+    </td> -->
+    <td width="300px" class="title_item">
+      {{item.title}}/{{item.rightsName}}
+      {{if item.sponsorType == 1}}
+        <p class="title_sub">第{{item.goodsNumber}}期</p>
+      {{/if}}
+    </td>
+    <td>{{item.investmentAmount / 100}}元</td>
+    <td>
+    <!-- goodsStatus: 1：待支付；2：支付成功；3：支付失败；4：支付超时；  sponsorType: 1是现金 2是实物 -->
+    {{if item.sponsorType == 2}}
+      {{if item.goodsStatus == 2}}
+      支付成功
+      {{else}}
+      线下支付
+      {{/if}}
+    {{else}}
+      {{if item.goodsStatus == 1}}
+      待支付
+      {{else if item.goodsStatus == 2}}
+      支付成功
+      {{else if item.goodsStatus == 3}}
+      支付失败
+      {{else}}
+      支付超时
+      {{/if}}
+    {{/if}}
+    </td>
+    <td>
+      {{item.payTime}}
+      {{if item.goodsStatus != 2}}
+        <p><span class="{{item.formatTime < item.nowTime?'last_style':'next_style'}}">{{item.lastTime}}</span></p>
+      {{/if}}
+    </td>
+    <td>
+      {{if item.sponsorType == 1}}
+        {{if item.goodsStatus == 1}}
+        <button class="btn btn_main btn_md payPage " data-address={{item.addressId}} data-code={{item.goodsSku}} data-money={{item.investmentAmount}}>立即支付</button>
+        {{else if item.goodsStatus == 2}}
+        支付成功
+        {{else if item.goodsStatus == 3 || item.goodsStatus == 4 || item.goodsStatus == 0}}
+        <button class="btn btn_main btn_md payPage " data-address={{item.addressId}} data-code={{item.goodsSku}} data-money={{item.investmentAmount}}>重新支付</button>
+        {{/if}}
+      {{/if}}
+    </td>
+  </tr>
+{{/each}}

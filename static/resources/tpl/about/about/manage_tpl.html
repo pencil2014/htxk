@@ -1,0 +1,18 @@
+{{each manage.list as item index}}
+<dt>
+    <div class="left_box">
+        <img src="{{item.icon}}" width="100%">
+    </div>
+    <div class="right_box">
+        <div class="manage_infor">
+            <h2 class="title">{{item.name}}</h2>
+            <p class="post">{{item.duty}}</p>
+            <div class="manage_intro">
+                {{each item.desc as text}}
+                <p>{{text}}</p>
+               {{/each}}
+            </div>
+        </div>
+    </div>
+</dt>
+{{/each}}

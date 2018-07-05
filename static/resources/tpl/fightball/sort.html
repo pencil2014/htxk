@@ -1,0 +1,85 @@
+<div class="mod_sort">
+    <!-- 分类条件搜索 -->
+    <div class="city_sort" id="cityWrap"><!--此处是全城区域的一个数据，对应cityCon--></div>
+    <div id="sportWrap"><!--此处包含运动类型/个人认证和排序的数据，因其是同一接口，对应sportCon--></div>
+</div>
+<script id="cityCon" type="text/html">
+    <!--此处是全城区域的一个数据模板-->
+    <span class="sort_name">全城区域：</span>
+    <div class="sort_con">
+        <ul class="sort_ul cityClick">
+            {{each data as val index}}
+                {{if index == 0  && !(areaId)}}
+                <li area_id={{val.areaId}} class="modHover">{{val.areaName}}</li>
+                {{else}}
+            <li area_id={{val.areaId}} class={{areaId==val.areaId?"modHover":""}}>{{val.areaName}}</li>
+                {{/if}}
+            {{/each}}
+        </ul>
+        {{if data.docWidth > 1200}}
+            {{if data.length > 10}}
+            <span class="sort_more">更多<i class='icon iconfont'>&#xe617;</i></span>
+            {{/if}}
+        {{else}}
+            {{if data.length > 7}}
+            <span class="sort_more">更多<i class='icon iconfont'>&#xe617;</i></span>
+            {{/if}}
+        {{/if}}
+
+    </div>
+</script>
+
+<script id="sportCon" type="text/html">
+    <!--此处是运动类型/个人认证和排序的一个数据模板-->
+    {{if data.sportType.length}}
+    <div class="city_sort">
+        <span class="sort_name">{{data.sportTypeName}}：</span>
+        <div class="sort_con">
+            <ul class="sort_ul sortClick">
+                {{each data.sportType as val index}}
+                {{if index == 0}}
+                <li sport_type={{val.fieldValue}} class="modHover">{{val.fieldName}}</li>
+                {{else}}
+                <li sport_type={{val.fieldValue}}>{{val.fieldName}}</li>
+                {{/if}}
+                {{/each}}
+            </ul>
+            {{if data.docWidth > 1200}}
+                {{if data.sportType.length > 10}}
+                <span class="sort_more">更多<i class='icon iconfont'>&#xe617;</i></span>
+                {{/if}}
+            {{else}}
+                {{if data.sportType.length > 7}}
+                <span class="sort_more">更多<i class='icon iconfont'>&#xe617;</i></span>
+                {{/if}}
+            {{/if}}
+        </div>
+    </div>
+    {{/if}}
+    {{if data.sportSort.length}}
+        <div class="city_sort">
+            <span class="sort_name">{{data.sportSortName}}：</span>
+            <div class="sort_con">
+                <ul class="sort_ul orderClick">
+                    {{each data.sportSort as val index}}
+                    {{if index == 0}}
+                    <li order_id={{val.sortId}} class="modHover">{{val.sortName}}</li>
+                    {{else}}
+                    <li order_id={{val.sortId}}>{{val.sortName}}</li>
+                    {{/if}}
+                    {{/each}}
+                </ul>
+                {{if data.docWidth > 1200}}
+                    {{if data.sportSort.length > 10}}
+                    <span class="sort_more">更多<i class='icon iconfont'>&#xe617;</i></span>
+                    {{/if}}
+                {{else}}
+                    {{if data.sportSort.length > 7}}
+                    <span class="sort_more">更多<i class='icon iconfont'>&#xe617;</i></span>
+                    {{/if}}
+                {{/if}}
+            </div>
+        </div>
+    {{/if}}
+    
+</script>

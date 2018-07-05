@@ -1,0 +1,21 @@
+{{each list as item index}}
+<li>
+	<a class="star_user_head fl" href="/common/center?route={{item.ipType}}&amp;id={{item.ipId}}" target="_blank">
+		<img src="{{item.headerUrl?item.headerUrl:'/resources/images/default_photo.jpg'}}" width="100%" title="{{item.ipName?item.ipName:''}}" />
+	</a>
+	<div class="star_user_name fl">
+		<b>{{item.ipName}}</b>
+		<span><i>{{item.followNum}}</i>粉丝</span>
+	</div>
+	<div class="foucs_warp fr">
+		<a href="javascript:;"
+		{{if item.isFollow}}
+			 class='star_focus' hhly-url='/collect/follow/del/{{item.ipId}}'>取消关注
+		{{else}}
+			hhly-url="/collect/follow/add/{{item.ipId}}">+ 关注
+		{{/if}}
+		</a>
+	</div>
+	<div class="clearx"></div>
+</li>
+{{/each}}

@@ -1,0 +1,164 @@
+.mit_race {
+  width: 1200px;
+  margin: 0 auto;
+}
+.mit_race .mit_content {
+  margin-top: 20px;
+}
+.mit_race .mit_content .match_list .match_logo {
+  border-radius: 0px;
+}
+.mit_race .mit_content .left_box {
+  width: 890px;
+  margin-right: 20px;
+  background: #fff;
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: top;
+  min-height: 500px;
+}
+.mit_race .mit_content .right_box {
+  width: 285px;
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: top;
+}
+.mit_race .mit_content .right_box img {
+  width: 100%;
+}
+.mit_race .details_wrap {
+  margin-top: 100px;
+}
+.mit_race .load_more {
+  width: auto;
+  margin: 20px 50px;
+}
+.react_wrap {
+  background: white;
+  padding: 30px;
+}
+.react_wrap .mod_sort {
+  margin-bottom: 0px;
+}
+.react_wrap .mod_sort .sort_con {
+  width: 90% !important;
+}
+.react_wrap .mod_sort .sort_con .check_box {
+  height: auto;
+  line-height: 20px;
+}
+.react_wrap .mod_sort .sort_con:not('set_money') ul {
+  width: 95% !important;
+}
+.react_wrap .mod_sort .sort_con:not('set_money') ul li {
+  min-width: 70px;
+}
+.react_wrap .mod_sort .date_label {
+  line-height: 30px;
+}
+.match_list {
+  padding: 50px;
+  padding-top: 20px;
+}
+.match_list li {
+  padding: 30px 0px;
+  font-size: 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+.match_list li:hover {
+  background: #fafafa;
+}
+.match_list .match_logo {
+  width: 220px;
+  height: 125px;
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 50%;
+  position: relative;
+}
+.match_list .match_logo img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.match_list .match_logo.tips_wrap {
+  position: relative;
+}
+.match_list .match_logo.tips_wrap .tips_icon {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+}
+.match_list .match_logo.tips_wrap .tips_icon_sm {
+  width: 50px;
+}
+.match_list .match_logo.tips_wrap .tips_icon_md {
+  width: 100px;
+  height: inherit;
+}
+.match_list .match_infor {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 14px;
+  width: 520px;
+  margin-left: 30px;
+}
+.match_list .match_infor .title {
+  font-size: 20px;
+  color: #333;
+  height: 26px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 500;
+}
+.match_list .match_infor .details_box {
+  margin-top: 15px;
+  overflow: hidden;
+}
+.match_list .match_infor .details_box .list {
+  padding: 6px 0;
+  font-size: 12px;
+  color: #666;
+  width: 50%;
+  float: left;
+  font-weight: 500;
+}
+.match_list .match_infor .details_box .list .icon {
+  color: #666;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+.match_list .match_infor .details_box .list .text {
+  max-width: 130px;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: top;
+}
+.match_list .match_btn {
+  display: inline-block;
+  vertical-align: top;
+  float: right;
+  margin-top: 6px;
+}
+.match_list .match_btn .btn {
+  padding: 6px 20px;
+}
+.ranges .cancelBtn {
+  background: #eee;
+  color: #666;
+}
+.ranges .btn {
+  padding: 6px 12px;
+  border: none;
+}
+.ranges .cancelBtn:hover {
+  background: #ccc;
+}
+.ranges .applyBtn:hover {
+  background: #058c68;
+  border: none;
+}

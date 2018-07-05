@@ -1,0 +1,95 @@
+﻿.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.team_box ul li.item {
+  padding: 20px;
+  font-size: 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+.team_box .logo_box {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 14px;
+  *display: inline;
+  *zoom: 1;
+  vertical-align: top;
+}
+.team_box .logo_box img {
+  display: block;
+}
+.team_box .logo_box a {
+  border-radius: 50%;
+  overflow: hidden;
+  display: block;
+  height: 100%;
+}
+.team_box .infor_box {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 14px;
+  *display: inline;
+  *zoom: 1;
+  margin-left: 20px;
+  /*width: 610px;*/
+  width:75%;
+}
+.team_box .infor_box h3{
+  width:auto;
+}
+.team_box .infor_box .user_box {
+  padding: 15px 0;
+  font-size: 14px;
+  color: #333;
+}
+.team_box .infor_box .user_box .approve {
+  display: inline-block;
+  height: 14px;
+  vertical-align: center;
+  margin-left: 20px;
+}
+.team_box .infor_box .title_box {
+  padding: 6px 0;
+}
+.team_box .infor_box .title_box .iconfont {
+  font-size: 14px;
+  font-weight: normal;
+  color: #999;
+}
+.team_box .infor_box .title_box .title {
+  font-size: 16px;
+  margin-left: 5px;
+}
+.team_box .infor_box .title_box .title:hover {
+  color: #3983e5;
+}
+.team_box .infor_box .list {
+  padding: 3px 0;
+}
+.team_box .infor_box .list .iconfont {
+  font-size: 14px;
+  color: #999;
+}
+.team_box .infor_box .list .title {
+  font-size: 12px;
+  color: #999;
+  margin-left: 5px;
+}
+.team_box .btn_box {
+  height: auto;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 14px;
+  *display: inline;
+  *zoom: 1;
+  vertical-align: top;
+  margin-top: 20px;
+}
+.team_box .btn_box span.tips {
+  display: block;
+  margin-top: 15px;
+  text-align: center;
+}

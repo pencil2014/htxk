@@ -1,0 +1,239 @@
+
+/* search */
+.order-list-search .select-status .el-select{
+  width: 130px;
+  margin-right: 10px;
+}
+.order-list-search .select-time .el-form-item__content .el-input{
+  width: 160px !important;
+  margin-right: 10px;
+}
+.order-list-search .el-form-item__content .search-input{
+  width: 231px !important;
+}
+/* order table */
+.order-table-list{
+  border-collapse:collapse;
+}
+.order-table-list tr td{
+  text-align: center;
+  font-size: 14px;
+  color: #323232
+}
+.order-table-list tr.tr-th td{
+  font-size: 12px;
+  color:#9a9a9a;
+}
+.order-table-list th:first-child{
+  text-align: left;
+  padding-left: 50px;
+}
+.order-table-list th{
+  height: 60px;
+  line-height: 60px;
+  font-weight: normal;
+  color: #2c2c2c;
+}
+.order-table-list .tr-th td{
+  text-align: left;
+  height: 50px;
+  line-height: 50px;
+  background: #f9f9f9;
+}
+.order-table-list td.line-td-rl{
+  border-right: 1px solid #e5e5e5;
+  border-left: 1px solid #e5e5e5
+}
+.order-table-list .tr-th .order-num{
+  padding-left: 20px;
+}
+.order-table-list .tr-th .order-num,.order-table-list .tr-th .order-time{
+  padding-right: 60px;
+}
+.order-table-list tbody tr {
+  border: 1px solid #e5e5e5;
+}
+.list-tb tbody tr:hover{
+  background: #f8f8f8;
+}
+.good-item .p-img {
+  float: left;
+  width: 80px;
+  height: 80px;
+  border: 1px solid #efefef;
+  margin: 0 14px 0 0;
+  _display: inline;
+}
+.good-item .p-name{
+  display: table;
+  height:  80px;
+}
+.tr-td .p-name{
+  display: table-cell;
+  vertical-align: middle;
+  color: #333;
+  text-align: left;
+}
+.order-table-list .tr-td td{
+   padding: 30px 10px;
+   vertical-align: middle;
+
+}
+.order-table-list .order-list-img{
+   width: 80px;
+   height: 80px;
+   display: block;
+   overflow: hidden;
+   background-size: cover;
+   background-repeat:no-repeat;
+   background-position: center center
+}
+.order-table-list .order-td-row{
+  border: 1px solid #e5e5e5
+}
+.order-table-list tbody{
+  display: table-row-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+.order-table-list tr:first{
+  height: 0
+}
+.order-detail-link .a-link,.order-detail-link .a-link:hover{
+  color: #3983e5;
+}
+.order-table-list .pay-btn{
+  padding: 8px 18px;
+}
+.order-table-list tr td.coupon-price{
+  padding-bottom: 5px !important
+}
+.order-table-list tr td.coupon-price span{
+  font-weight: normal !important
+}
+.order-del-link{
+  cursor: pointer;
+  margin-top: 8px;
+}
+.order-del-link span{
+  color: #3983e5;
+}
+.order-del-link:hover{
+  color: #24c881;
+}
+.order-table-list tr.sep-row{
+  height: 20px;
+  border: none;
+}
+
+/* order detail */
+.order-state{
+  font-size: 16px;
+  color: #fd6f01;
+}
+.order-state .iconfont{
+  vertical-align: middle;
+  font-size: 22px;
+}
+.order-state span{
+  margin-left: 8px;
+  vertical-align: middle;
+}
+.order-tips{
+  padding-left: 30px;
+}
+.order-info{
+  background: #f8f8f8;
+  height: 40px;
+  line-height: 40px;
+  margin-top: 20px;
+}
+.order-detail-link{
+  color: #a7a7a7;
+}
+.order-table-list tr.pay-total{
+  border: none;
+}
+.order-table-list tr.pay-total td{
+  text-align: right;
+  width: 100%;
+  padding: 25px 0;
+  font-size: 16px;
+}
+.order-table-list tr.pay-total td span{
+  color: #fc6f00;
+  font-weight: bold
+}
+.order-info .iconfont{
+  vertical-align: middle;
+  margin-right: 10px;
+  font-size: 22px;
+}
+.order-info-list{
+  margin: 20px 0 30px 30px;
+}
+.order-table-list .tr-td td.td-good-pd{
+  padding: 30px 20px;
+  cursor: pointer;
+}
+.order-table-list .tr-td td.td-good-pd span{
+  display: inline-block;
+  max-width: 100%;
+  max-height: 100%;
+}
+.order-table-list .tr-td td.td-good-info-pd{
+  vertical-align: middle;
+}
+.order-table-list .tr-td .td-good-info-pd .order-del-link{
+  height: 40px;
+  cursor: text;
+}
+.order-table-list .tr-td td.td-good-detail{
+  vertical-align: middle;
+  border-left:1px solid #efefef;
+  border-right:1px solid #efefef;
+}
+.order-info-list li{
+  padding: 10px 0
+}
+.order-info-list .order-info-time{
+  padding-left: 10px;
+}
+.order-shop-name{
+  float: right;
+  margin-right: 20px;
+}
+.detail-btn{
+  text-align: right;
+  display: block;
+  margin-top: 20px;
+}
+.detail-btn .pay-suc{
+  margin-left: 20px;
+  padding: 10px 30px;
+}
+.order-info-list .info-text{
+  font-weight: bold
+}
+.order-info-list .order-info-num,.order-info-list .order-info-time{
+  display: inline-block;
+  width: 255px;
+  word-wrap:break-word;
+  word-break:break-all;
+  vertical-align: top
+}
+.no-info-list td{
+  padding: 20px 0
+}
+.cancel_order_box .el-dialog--small{
+  width: 430px;
+}
+.cancel_order_box .el-dialog__footer{
+  text-align: right
+}
+.cancel_order_box .el-form{
+  text-align: center;
+}
+.cancel_order_box .el-button{
+  padding: 10px 18px;
+}

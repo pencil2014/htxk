@@ -1,0 +1,171 @@
+/* 分类条件搜索开始 */
+//清楚浮动
+.clearfix {
+  display: block;
+  zoom: 1;
+  &:after {
+    content: " ";
+    display: block;
+    font-size: 0;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+  }
+}
+.sort_wrap{
+	.clearfix;
+	margin:0px 1%;
+}
+.sortHover,.modHover{
+	color:#01a87c !important;
+	// font-weight: 700;
+}
+.mod_sort{
+	margin-bottom: 30px;
+	.sort_hover(){
+		cursor:pointer;
+		&:hover{
+			color:#01a87c;
+		}
+	}
+	.city_sort,.race_sort{
+		&,.sort_con,.sort_ul{
+			.clearfix;
+		}
+		border-bottom:1px #f2f2f2 solid;
+		padding:10px 0px;
+		.sort_name{
+			float: left;
+			font-size:12px;
+			color:#666;
+			display:inline-block;
+			width:70px;
+			text-align: right;
+			margin-right: 20px;
+			line-height: 20px;
+		}
+		.sort_con{
+			width:85%;
+			&,& ul,& ul li{
+				float: left;	
+			}
+			ul{
+				width:90%;
+				height: 25px;
+				overflow:hidden;
+				li{
+					margin-right: 30px;
+					font-size:12px;
+					color:#333;
+					line-height: 25px;
+					margin-bottom: 10px;
+					.sort_hover();
+				}
+			}
+			.check_i{
+				  width: 14px;
+				  height: 14px;
+				  background:data-uri("../images/base_icon.png");
+				  background-position:-112px -20px;
+				  display: inline-block;
+				  vertical-align: middle;
+				  margin-top: -5px;
+				  margin-right: 5px;
+			}
+			.modHover{
+				.check_i{
+					background-position:-112px -40px;
+				}
+
+			}
+			.sort_more{
+				float:right;
+				font-size:12px;
+				color:#999999;
+				.sort_hover();
+				display:inline-block;
+				line-height:20px;
+				.icon{
+					font-size:12px;
+					margin-left:2px;
+				}
+
+			}
+		}
+	}
+	.sort_date{
+		float: left;
+		overflow: hidden;
+		.date_wrap{
+			float: left;
+			position: relative;
+			width:200px;
+			input{
+				width:100%;
+				height: 30px;
+				line-height: 30px;
+				height: 30px;
+			    line-height: 30px;
+			    background: #fafafa;
+			    outline: none;
+			    padding: 0 10px;
+			    box-sizing: border-box;
+			    font-size:12px;
+			    border:1px #e5e5e5 solid;
+			    border-radius: 2px;
+			}
+			.icon{
+				position: absolute;
+				top:6px;
+				right: 6px;
+				color:#ccc;
+			}
+		}
+
+		span{
+			display: inline-block;
+			line-height: 30px;
+			margin:0px 10px;
+			color:#666;
+			float: left;
+		}
+	}
+	.set_money{
+		ul{
+			float: left;
+			width:auto !important;
+		}
+		.set_con{
+			float: left;
+			input[type='text']{
+				width:52px;
+				height:30px;
+				line-height: 30px;
+				box-sizing: border-box;
+				border-radius: 2px;
+				background: #fafafa;
+				border:1px #e5e5e5 solid;
+				outline: none;
+				padding-left: 4px;
+				&:focus{
+					border-color:#01a87c;
+				}
+			}
+			span{
+				line-height: 30px;
+				color:#666;
+			}
+			input[type='button']{
+				margin-left: 8px;
+			}
+			.btn.btn_return:hover{
+				background-color:#fafafa;
+				border-color:#e5e5e5;
+				color:#666;
+				outline: none;
+			}
+		}
+		
+	}
+}
+/* 分类条件搜索结束 */
